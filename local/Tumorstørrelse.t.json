@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "f089508b68ad81c59ebdc21a4eaf3f45",
-      "PARENT:MD5-CAM-1.0.1" : "20D65E757D70D267577AFADBA7149D3B"
+      "MD5-CAM-1.0.1" : "5c290b649669f9a3cf49e97448fd167b",
+      "PARENT:MD5-CAM-1.0.1" : "20D65E757D70D267577AFADBA7149D3B",
+      "sem_ver" : "0.2.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -74,7 +76,7 @@
     }
   },
   "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
-  "differential" : false,
+  "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
     "value" : "openEHR-EHR-CLUSTER.clinicalevidence.v1"
@@ -82,27 +84,17 @@
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "CLUSTER",
-    "occurrences" : "1..1",
     "nodeId" : "at0000.1",
     "attributes" : [ {
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "items",
-      "existence" : "1..1",
-      "cardinality" : {
-        "@type" : "CARDINALITY",
-        "interval" : "1..*",
-        "ordered" : false,
-        "unique" : false
-      },
       "children" : [ {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
-        "occurrences" : "0..1",
         "nodeId" : "at0003.1",
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
           "rmAttributeName" : "value",
-          "existence" : "0..1",
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "DV_CODED_TEXT",
@@ -135,18 +127,7 @@
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
         "nodeId" : "at0004.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "existence" : "0..1",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_TEXT",
-            "occurrences" : "1..1",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       }, {
         "@type" : "C_COMPLEX_OBJECT",
@@ -407,54 +388,8 @@
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
         "nodeId" : "at0006.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "existence" : "0..1",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_DATE_TIME",
-            "occurrences" : "1..1",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
-      }, {
-        "@type" : "ARCHETYPE_SLOT",
-        "rmTypeName" : "CLUSTER",
-        "occurrences" : "0..*",
-        "nodeId" : "at0007",
-        "includes" : [ {
-          "@type" : "ASSERTION",
-          "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.citation(-[a-zA-Z0-9_]+)*\\.v1/}",
-          "expression" : {
-            "@type" : "BINARY_OPERATOR",
-            "type" : "BOOLEAN",
-            "operator" : "matches",
-            "leftOperand" : {
-              "@type" : "MODEL_REFERENCE",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Attribute",
-              "path" : "archetype_id/value"
-            },
-            "rightOperand" : {
-              "@type" : "CONSTRAINT",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Constraint",
-              "item" : {
-                "@type" : "C_STRING",
-                "constraint" : [ "/openEHR-EHR-CLUSTER\\.citation(-[a-zA-Z0-9_]+)*\\.v1/" ]
-              }
-            },
-            "precedenceOverriden" : false
-          },
-          "variables" : [ ]
-        } ],
-        "excludes" : [ ],
-        "closed" : false
       }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
@@ -463,7 +398,6 @@
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
           "rmAttributeName" : "value",
-          "existence" : "0..1",
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "DV_CODED_TEXT",
@@ -500,106 +434,14 @@
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
         "nodeId" : "at0001.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "existence" : "0..1",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_TEXT",
-            "occurrences" : "1..1",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
-      }, {
-        "@type" : "ARCHETYPE_SLOT",
-        "rmTypeName" : "CLUSTER",
-        "occurrences" : "0..*",
-        "nodeId" : "at0018",
-        "includes" : [ {
-          "@type" : "ASSERTION",
-          "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.media_file\\.v1/}",
-          "expression" : {
-            "@type" : "BINARY_OPERATOR",
-            "type" : "BOOLEAN",
-            "operator" : "matches",
-            "leftOperand" : {
-              "@type" : "MODEL_REFERENCE",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Attribute",
-              "path" : "archetype_id/value"
-            },
-            "rightOperand" : {
-              "@type" : "CONSTRAINT",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Constraint",
-              "item" : {
-                "@type" : "C_STRING",
-                "constraint" : [ "/openEHR-EHR-CLUSTER\\.media_file\\.v1/" ]
-              }
-            },
-            "precedenceOverriden" : false
-          },
-          "variables" : [ ]
-        } ],
-        "excludes" : [ ],
-        "closed" : false
-      }, {
-        "@type" : "ARCHETYPE_SLOT",
-        "rmTypeName" : "CLUSTER",
-        "occurrences" : "0..*",
-        "nodeId" : "at0024",
-        "includes" : [ {
-          "@type" : "ASSERTION",
-          "stringExpression" : "archetype_id/value matches {/.*/}",
-          "expression" : {
-            "@type" : "BINARY_OPERATOR",
-            "type" : "BOOLEAN",
-            "operator" : "matches",
-            "leftOperand" : {
-              "@type" : "MODEL_REFERENCE",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Attribute",
-              "path" : "archetype_id/value"
-            },
-            "rightOperand" : {
-              "@type" : "CONSTRAINT",
-              "type" : "STRING",
-              "precedenceOverriden" : false,
-              "referenceType" : "Constraint",
-              "item" : {
-                "@type" : "C_STRING",
-                "constraint" : [ "/.*/" ]
-              }
-            },
-            "precedenceOverriden" : false
-          },
-          "variables" : [ ]
-        } ],
-        "excludes" : [ ],
-        "closed" : false
       }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
         "occurrences" : "0..0",
         "nodeId" : "at0023.1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "value",
-          "existence" : "0..1",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "DV_TEXT",
-            "occurrences" : "1..1",
-            "attributes" : [ ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       } ]
     } ],
@@ -631,127 +473,11 @@
           "description" : "Measurement or value associated with the finding.",
           "comment" : "For example: Mantoux test result."
         },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Clinical evidence",
-          "description" : "Details about findings that support a clinical assertion."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Method description",
-          "description" : "Narrative description of the method/s used to identify the evidence."
-        },
-        "at0003" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Finding",
-          "description" : "Identification of the finding that supports the assertion.",
-          "comment" : "It is recommended that 'Finding' should be coded with a terminology, where possible."
-        },
-        "at0004" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Finding description",
-          "description" : "Narrative description of the finding."
-        },
-        "at0005" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Result",
-          "description" : "Measurement or value associated with the finding.",
-          "comment" : "For example: Mantoux test result."
-        },
-        "at0006" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Date identified",
-          "description" : "The date on which the finding was clinically identified.",
-          "comment" : "For example: The date when the finding was made by or made available to the clinician."
-        },
-        "at0007" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0007",
-          "text" : "Citation",
-          "description" : "Detailed data available about the evidence held in another part of the health record."
-        },
-        "at0018" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0018",
-          "text" : "Multimedia representation",
-          "description" : "Digital image, video or diagram representing the clinical evidence."
-        },
-        "at0022" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Method",
-          "description" : "Type of examination or investigation used to identify the evidence.",
-          "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
-        },
-        "at0023" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Comment",
-          "description" : "Additional narrative about the finding not captured in other fields."
-        },
-        "at0024" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0024",
-          "text" : "Additional details",
-          "description" : "Additional structured details about the finding."
-        },
-        "at0003.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Finding",
-          "description" : "Identification of the finding that supports the assertion.",
-          "comment" : "It is recommended that 'Finding' should be coded with a terminology, where possible."
-        },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Finding description",
-          "description" : "Narrative description of the finding."
-        },
-        "at0005.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Result",
-          "description" : "Measurement or value associated with the finding.",
-          "comment" : "For example: Mantoux test result."
-        },
-        "at0006.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Date identified",
-          "description" : "The date on which the finding was clinically identified.",
-          "comment" : "For example: The date when the finding was made by or made available to the clinician."
-        },
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Clinical evidence",
+          "code" : "at0000.1",
+          "text" : "Tumorstørrelse_Clinical evidence",
           "description" : "Details about findings that support a clinical assertion."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Comment",
-          "description" : "Additional narrative about the finding not captured in other fields."
-        },
-        "at0022.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Method",
-          "description" : "Type of examination or investigation used to identify the evidence.",
-          "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
-        },
-        "at0001.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Method description",
-          "description" : "Narrative description of the method/s used to identify the evidence."
         }
       },
       "nb" : {
@@ -795,108 +521,6 @@
           "text" : "Ukjent tumorstørrelse",
           "description" : "Måling eller verdi knyttet til funnet.",
           "comment" : "For eksempel mantouxtestresultat."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Klinisk grunnlag",
-          "description" : "Grunnlaget for et klinisk utsagn."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Metodebeskrivelse",
-          "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til funnet."
-        },
-        "at0003" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Funn",
-          "description" : "Funnet som støtter utsagnet.",
-          "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig."
-        },
-        "at0004" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Beskrivelse av funn",
-          "description" : "Fritekstbeskrivelse av funnet."
-        },
-        "at0005" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Resultat",
-          "description" : "Måling eller verdi knyttet til funnet.",
-          "comment" : "For eksempel mantouxtestresultat."
-        },
-        "at0006" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Dato",
-          "description" : "Datoen da funnet ble klinisk anerkjent.",
-          "comment" : "For eksempel: Datoen da funnet ble gjort eller gjort tilgjengelig for klinikeren."
-        },
-        "at0007" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0007",
-          "text" : "Referanse",
-          "description" : "Detaljerte data om funnet i andre deler av journalen."
-        },
-        "at0018" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0018",
-          "text" : "Multimediarepresentasjon",
-          "description" : "Digitalt bilde, video eller diagram som representerer det kliniske grunnlaget."
-        },
-        "at0022" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Metode",
-          "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funnet.",
-          "comment" : "Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi."
-        },
-        "at0023" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
-        },
-        "at0024" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0024",
-          "text" : "Ytterligere detaljer",
-          "description" : "Ytterligere strukturerte detaljer om funnet."
-        },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Beskrivelse av funn",
-          "description" : "Fritekstbeskrivelse av funnet."
-        },
-        "at0006.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Dato",
-          "description" : "Datoen da funnet ble klinisk anerkjent.",
-          "comment" : "For eksempel: Datoen da funnet ble gjort eller gjort tilgjengelig for klinikeren."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
-        },
-        "at0022.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Metode",
-          "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funnet.",
-          "comment" : "Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi."
-        },
-        "at0001.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Metodebeskrivelse",
-          "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til funnet."
         }
       },
       "de" : {
@@ -920,128 +544,6 @@
           "text" : "Ergebnis (4)",
           "description" : "Messung oder Wert, der mit dem Befund verbunden ist.",
           "comment" : "Zum Beispiel: Mantoux-Testergebnis."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Klinische Evidenz",
-          "description" : "Details über Befunde, die eine klinische Feststellung stützen."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Beschreibung der Methode",
-          "description" : "Narrative Beschreibung der Methode(n), die zur Festellung der Evidenz verwendet wurde(n)."
-        },
-        "at0003" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Befund",
-          "description" : "Identifizierung des Befundes, der die Feststellung stützt",
-          "comment" : "Es wird nach Möglichkeit empfohlen den Befund mit einer Terminologie zu kodieren."
-        },
-        "at0004" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Befundbeschreibung",
-          "description" : "Narrative Beschreibung des Befundes."
-        },
-        "at0005" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Ergebnis",
-          "description" : "Messung oder Wert, der mit dem Befund verbunden ist.",
-          "comment" : "Zum Beispiel: Mantoux-Testergebnis."
-        },
-        "at0006" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Feststellungsdatum",
-          "description" : "Das Datum, an dem der Befund klinisch festgestellt wurde.",
-          "comment" : "Zum Beispiel: Das Datum, an dem der Befund vom Arzt gemacht oder ihm zur Verfügung gestellt wurde."
-        },
-        "at0007" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0007",
-          "text" : "Zitat",
-          "description" : "Detaillierte Daten über die in einem anderen Teil der Gesundheitsakte enthaltenen Beweise sind verfügbar."
-        },
-        "at0018" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0018",
-          "text" : "Multimediale Darstellung",
-          "description" : "Digitales Bild, Video oder Diagramm, welches die klinischen Evidenz darstellt."
-        },
-        "at0022" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Methode",
-          "description" : "Art der Untersuchung oder Recherche, die zur Feststellung der Evidenz verwendet wird.",
-          "comment" : "Erwägen Sie 'Methode' mit einer Terminologie zu kodieren, wenn möglich. Zum Beispiel: Körperliche Untersuchung, Röntgenaufnahme der Brust, Ergebnis der Histopathologie, Koloskopie."
-        },
-        "at0023" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Zusätzliche Informationen über die Befunde, welche noch nicht an anderer Stelle dokumentiert wurden."
-        },
-        "at0024" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0024",
-          "text" : "*Additional details (en)",
-          "description" : "*Additional structured details about findings. (en)"
-        },
-        "at0003.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Befund",
-          "description" : "Identifizierung des Befundes, der die Feststellung stützt",
-          "comment" : "Es wird nach Möglichkeit empfohlen den Befund mit einer Terminologie zu kodieren."
-        },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Befundbeschreibung",
-          "description" : "Narrative Beschreibung des Befundes."
-        },
-        "at0005.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Ergebnis",
-          "description" : "Messung oder Wert, der mit dem Befund verbunden ist.",
-          "comment" : "Zum Beispiel: Mantoux-Testergebnis."
-        },
-        "at0006.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Feststellungsdatum",
-          "description" : "Das Datum, an dem der Befund klinisch festgestellt wurde.",
-          "comment" : "Zum Beispiel: Das Datum, an dem der Befund vom Arzt gemacht oder ihm zur Verfügung gestellt wurde."
-        },
-        "at0000.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Klinische Evidenz",
-          "description" : "Details über Befunde, die eine klinische Feststellung stützen."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Zusätzliche Informationen über die Befunde, welche noch nicht an anderer Stelle dokumentiert wurden."
-        },
-        "at0022.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Methode",
-          "description" : "Art der Untersuchung oder Recherche, die zur Feststellung der Evidenz verwendet wird.",
-          "comment" : "Erwägen Sie 'Methode' mit einer Terminologie zu kodieren, wenn möglich. Zum Beispiel: Körperliche Untersuchung, Röntgenaufnahme der Brust, Ergebnis der Histopathologie, Koloskopie."
-        },
-        "at0001.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Beschreibung der Methode",
-          "description" : "Narrative Beschreibung der Methode(n), die zur Festellung der Evidenz verwendet wurde(n)."
         }
       },
       "sv" : {
@@ -1065,128 +567,6 @@
           "text" : "Resultat (4)",
           "description" : "Mätning eller värde associerat med fyndet.",
           "comment" : "Till exempel: Mantoux-testresultat."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Kliniska bevis",
-          "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Metodbeskrivning",
-          "description" : "Berättande beskrivning av metoden / metoderna som används för att identifiera bevisen."
-        },
-        "at0003" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Fynd",
-          "description" : "Identifiering av fyndet som stöder påståendet.",
-          "comment" : "Det rekommenderas att fynd ska kodas med en terminologi, där det är möjligt."
-        },
-        "at0004" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Beskrivning av fynd",
-          "description" : "Berättande beskrivning av fynd."
-        },
-        "at0005" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Resultat",
-          "description" : "Mätning eller värde associerat med fyndet.",
-          "comment" : "Till exempel: Mantoux-testresultat."
-        },
-        "at0006" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Identifieringsdatum",
-          "description" : "Datum då fyndet kliniskt identifierades.",
-          "comment" : "Till exempel: Datumet då fynden gjordes av eller gjordes tillgänglig för läkaren."
-        },
-        "at0007" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0007",
-          "text" : "Citat",
-          "description" : "Detaljerad information tillgänglig om bevisen som finns i en annan del av hälsojournalen."
-        },
-        "at0018" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0018",
-          "text" : "Multimedia representation",
-          "description" : "Digital bild, video eller diagram som representerar kliniska bevis."
-        },
-        "at0022" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Metod",
-          "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
-          "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
-        },
-        "at0023" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Ytterligare beskrivning om fynden som inte redan inkluderats."
-        },
-        "at0024" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0024",
-          "text" : "*Additional details (en)",
-          "description" : "*Additional structured details about findings. (en)"
-        },
-        "at0003.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Fynd",
-          "description" : "Identifiering av fyndet som stöder påståendet.",
-          "comment" : "Det rekommenderas att fynd ska kodas med en terminologi, där det är möjligt."
-        },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "Beskrivning av fynd",
-          "description" : "Berättande beskrivning av fynd."
-        },
-        "at0005.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0005",
-          "text" : "Resultat",
-          "description" : "Mätning eller värde associerat med fyndet.",
-          "comment" : "Till exempel: Mantoux-testresultat."
-        },
-        "at0006.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0006",
-          "text" : "Identifieringsdatum",
-          "description" : "Datum då fyndet kliniskt identifierades.",
-          "comment" : "Till exempel: Datumet då fynden gjordes av eller gjordes tillgänglig för läkaren."
-        },
-        "at0000.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Kliniska bevis",
-          "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
-        },
-        "at0023.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0023",
-          "text" : "Kommentar",
-          "description" : "Ytterligare beskrivning om fynden som inte redan inkluderats."
-        },
-        "at0022.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Metod",
-          "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
-          "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
-        },
-        "at0001.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Metodbeskrivning",
-          "description" : "Berättande beskrivning av metoden / metoderna som används för att identifiera bevisen."
         }
       }
     },
