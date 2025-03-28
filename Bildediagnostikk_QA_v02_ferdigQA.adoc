@@ -1,0 +1,315 @@
+= Kartlegging bildediagnostikk
+
+
+== Metadata
+
+
+TemplateId:: Bildediagnostikk_QA_v02_ferdigQA
+
+
+Archetype:: openEHR-EHR-OBSERVATION.investigation_screening.v1
+
+
+
+
+:toc:
+
+
+
+
+== Kartlegging bildediagnostikk
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Kartlegging bildediagnostikk* + 
+OBSERVATION: _openEHR-EHR-OBSERVATION.investigation_screening.v1_
+
+
+Svarene kan være selvrapporterte.
+|at0040| 0..1| DV_CODED_TEXT | Kartleggingsformål
+a|
+* Sarkom (no.onk.bildediagnostikk: 1)
+* Kreft i hode og hals (no.onk.bildediagnostikk: 2)
+* Hjernesvulst (no.onk.bildediagnostikk: 3)
+* Brystkreft (no.onk.bildediagnostikk: 4)
+* Lungekreft (no.onk.bildediagnostikk: 5)
+* Kreft i fordøyelsessystemet (no.onk.bildediagnostikk: 6)
+* Gynekologisk kreft (no.onk.bildediagnostikk: 7)
+* Kreft i nyre og urinveier (no.onk.bildediagnostikk: 8)
+* Benmargs- og blodkreft (no.onk.bildediagnostikk: 9)
+* Lymfom (no.onk.bildediagnostikk: 10)
+* Hudkreft (no.onk.bildediagnostikk: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.bildediagnostikk: 12)
+* Kreft i endokrine kjertler (no.onk.bildediagnostikk: 13)
+* Nevroendokrin kreft (no.onk.bildediagnostikk: 14)
+* Barnekreft (no.onk.bildediagnostikk: 15)
+* Øyekreft (no.onk.bildediagnostikk: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.bildediagnostikk: 17)
+
+
+Designkommentar:
+Dette feltet er navnet no.onk.bildediagnostikk for å si at kartleggingsformålet er om det er gjort noe bildediagnostikk innenfor onkoloki (felles kreftjournalprosjektet). 
+Selve valglisten er hvilke gruppe av krefttyper som er det er kartlagt for. Dette er et internt kodesett. 
+|at0027| 0..1| DV_CODED_TEXT | Er bildediagnostiske undersøkelser gjennomført?
+a|
+* at0028 -> Ja 
+* at0029 -> Nei 
+* at0030 -> Ukjent 
+
+
+Designkommentar:
+Dette er inngangsspørsmålet om det i det hele tatt er gjort noe bildediagnostikk. 
+Dette har man med for å få en avkreftelse om det faktisk er tatt stilling til spm. mao. egentlig for å få med alternativet nei. 
+|at0043| 0..1| DV_TEXT | Overordnet beskrivelse bildediagnostiske undersøkelse
+a|
+
+
+Designkommentar:
+Her kan man skrive et resyme for alle bildediagnostiske undersøkelser uten å spesifisere nærmere hvilken modalitet man faktisk har utført. 
+5+a|*Spesifikk undersøkelse/bildemodalitet* + 
+CLUSTER: _at0026_
+
+
+Designkommentar:
+Bruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser/modaliteter eller gruppering av undersøkelser/modaliteter,
+Her kan man legge inn forskjellige modaliteter eller spesifikke undersøkelser man har gjort. 
+F.eks. hvis man vil ha en instans av UL, MR og CT - da må dette clusteret gjentas for hver hovedgruppe/modalitet. 
+Dato og Resyme  i dette interne CLUSTERet er fjernet, og hvis det er svart   bekreftende på at den er utført (ja) så vil detaljene (dato og resyme samt kroppsdel) bli dokumentert i Klinisk grunnlag arketypen SLOTet inn i ytterligere detaljer i dette interne CLUSTERET.
+|at0021| 1..1| DV_CODED_TEXT | Bildeprosedyre/bildemodalitet navn
+a|
+* Biomagnetic Imaging (DICOM_modality: BI)
+* Bone Mineral Densitometry (DICOM_modality: BMD)
+* Computed Radiography (DICOM_modality: CR)
+* Computed Tomography (DICOM_modality: CT)
+* Confocal Microscopy (DICOM_modality: CFM)
+* Dermoscopy (DICOM_modality: DMS)
+* Diaphanography (DICOM_modality: DG)
+* Digital Radiography (DICOM_modality: DX)
+* Endoscopy (DICOM_modality: ES)
+* External-camera Photography (DICOM_modality: XC)
+* General Microscopy (DICOM_modality: GM)
+* Intra-oral Radiography (DICOM_modality: IO)
+* Intravascular Optical Coherence Tomography (DICOM_modality: IVOCT)
+* Intravascular Ultrasound (DICOM_modality: IVUS)
+* Keratometry (DICOM_modality: KER)
+* Laser Scan (DICOM_modality: LS)
+* Lensometry (DICOM_modality: LEN)
+* Magnetic Resonance (DICOM_modality: MR)
+* Mammography (DICOM_modality: MG)
+* Nuclear Medicine (DICOM_modality: NM)
+* Ophthalmic Axial Measurements (DICOM_modality: OAM)
+* Ophthalmic Mapping (DICOM_modality: OPM)
+* Ophthalmic Photography (DICOM_modality: OP)
+* Ophthalmic Tomography (DICOM_modality: OPT)
+* Ophthalmic Tomography B-scan Volume Analysis (DICOM_modality: OPTBSV)
+* Ophthalmic Tomography En Face (DICOM_modality: OPTENF)
+* Ophthalmic Visual Field (DICOM_modality: OPV)
+* Optical Coherence Tomography (DICOM_modality: OCT)
+* Optical Surface Scanner (DICOM_modality: OSS)
+* Panoramic X-Ray (DICOM_modality: PX)
+* Photoacoustic (DICOM_modality: PA)
+* Positron emission tomography (DICOM_modality: PT)
+* Radiofluoroscopy (DICOM_modality: RF)
+* Radiographic imaging (DICOM_modality: RG)
+* RT Image (DICOM_modality: RTIMAGE)
+* Slide Microscopy (DICOM_modality: SM)
+* Subjective Refraction (DICOM_modality: SRF)
+* Thermography (DICOM_modality: TG)
+* Ultrasound (DICOM_modality: US)
+* Ultrasound Bone Densitometry (DICOM_modality: BDUS)
+* Visual Acuity (DICOM_modality: VA)
+* X-Ray Angiography (DICOM_modality: XA)
+
+
+Designkommentar:
+Her tenker man å legge inn undersøkelsesnavnet til bildeundersøkelsen. 
+Her kan man f.eks. enten bruke SNOMED-CT koder for undersøkelsesprosedyren (113091000 | Magnetic resonance imaging (procedure) |) eller eventuelt DICOM kodesett for modalitet (MR -	Magnetic Resonance). 
+|at0024| 0..1| DV_CODED_TEXT | Er denne undersøkelsen utført?
+a|
+* at0036 -> Ja 
+* at0037 -> Nei 
+
+
+Designkommentar:
+Her er det gjort mulighet for at man kan svare på om den spesifikke bildeprosedyren/modolaiteten er gjennomført ved å svare ja/nei. 
+Hvis man ønsker bare å krysse av at den er gjort, kan dette feltet skjules i bukegrensesnittet. 
+
+5+a|*Klinisk grunnlag prosedyre/modalitet* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis dette CLUSTERet brukes må man alltid sette inn Bildeprosedyre/bildemodalitet navn. 
+
+Her kan man skrive inn dato og resyme for hver modalitet hvis man ikke trenger dette for hver kroppsdel man har tatt bilde av. 
+
+Hvis man ønsker å ha resyme og dato for hver kroppsdel man har tatt ved hjelp av denne modaliteten må man gjenta Klinisk grunnlag modalitet per kroppsdel (Klinisk grunnlag CLUSTER 2) som er slottet inn i Yttligere detaljer i Klinisk grunnlag CLUSTER 1. Da vil også resyme og dato i den overordnede Klinisk grunnlag (CLUSTER 1) være overflødig. Kanskje også Spesifikk metode/tilleggsmetode hvis dette er spesifisert per kroppsdel. 
+
+Hvis man ønsker å skrive dato og resyme for flere kroppsdeler kan man gjenta Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2) per anatomisk lokalisasjon. 
+
+
+|at0005| 0..*| DV_TEXT | Resyme per modalitet
+a|
+
+
+Designkommentar:
+Resyme for den spesifikke undersøkelsen/modaliteten som helhet. 
+Her kan man legge inn resyme for hele MR undersøkelse. Ønsker man å legge inn resyme for hver kroppsdel man har tatt MR på må man bruke resyme i CLUSTERet Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2) som er slottet inn i Ytterligere detaljer. Da kan dette elementet være overflødig.
+|at0006| 0..1| DV_DATE_TIME | Dato per modalitet
+|
+
+
+Designkommentar:
+Dato for den spesifikke undersøkelsen/modaliteten som helhet. 
+Her kan man legge inn dato for at en MR undersøkelse er tatt. Ønsker man å legge inn dato for hver kroppsdel man har tatt MR på (hvis disse avviker fra hverandre), må man bruke dato i CLUSTERet Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2) som er slottet inn i Ytterligere detaljer. Da kan dette elementet være overflødig.
+
+|at0022| 1..1| DV_CODED_TEXT | Bildeprosedyre/bildemodalitet navn
+a|
+* Biomagnetic Imaging (DICOM: BI)
+* Bone Mineral Densitometry (DICOM: BMD)
+* Computed Radiography (DICOM: CR)
+* Computed Tomography (DICOM: CT)
+* Confocal Microscopy (DICOM: CFM)
+* Dermoscopy (DICOM: DMS)
+* Diaphanography (DICOM: DG)
+* Digital Radiography (DICOM: DX)
+* Endoscopy (DICOM: ES)
+* External-camera Photography (DICOM: XC)
+* General Microscopy (DICOM: GM)
+* Intra-oral Radiography (DICOM: IO)
+* Intravascular Optical Coherence Tomography (DICOM: IVOCT)
+* Intravascular Ultrasound (DICOM: IVUS)
+* Keratometry (DICOM: KER)
+* Laser Scan (DICOM: LS)
+* Lensometry (DICOM: LEN)
+* Magnetic Resonance (DICOM: MR)
+* Mammography (DICOM: MG)
+* Nuclear Medicine (DICOM: NM)
+* Ophthalmic Axial Measurements (DICOM: OAM)
+* Ophthalmic Mapping (DICOM: OPM)
+* Ophthalmic Photography (DICOM: OP)
+* Ophthalmic Tomography (DICOM: OPT)
+* Ophthalmic Tomography B-scan Volume Analysis (DICOM: OPTBSV)
+* Ophthalmic Tomography En Face (DICOM: OPTENF)
+* Ophthalmic Visual Field (DICOM: OPV)
+* Optical Coherence Tomography (DICOM: OCT)
+* Optical Surface Scanner (DICOM: OSS)
+* Panoramic X-Ray (DICOM: PX)
+* Photoacoustic (DICOM: PA)
+* Positron emission tomography (DICOM: PT)
+* Radiofluoroscopy (DICOM: RF)
+* Radiographic imaging (DICOM: RG)
+* RT Image (DICOM: RTIMAGE)
+* Slide Microscopy (DICOM: SM)
+* Subjective Refraction (DICOM: SRF)
+* Thermography (DICOM: TG)
+* Ultrasound (DICOM: US)
+* Ultrasound Bone Densitometry (DICOM: BDUS)
+* Visual Acuity (DICOM: VA)
+* X-Ray Angiography (DICOM: XA)
+
+
+Designkommentar:
+Her skal man kopiere den samme koden som man i Bildeprosedyre/bildemodalitet navn under det interne CLUSTERet Spesifikk underesøkelse/bildemodalitet. 
+Dette kan f.eks. være en SNOMED-CT kode eller DICOM modalitetkode. 
+Eksempler:
+726551006	Kontrast mammografi
+241058008	Forstørrelsesmammografi
+450566007	Tomosyntese (DBT)
+1331946003	CT med kontrast
+765172009	Doppler ultrasound (procedure)
+443631006	Ultrasonography with contrast (procedure)
+433231002	Contrast echocardiography (procedure)
+
+|at0022| 0..*| DV_TEXT | Tilleggsmetode
+a|
+
+
+Designkommentar:
+Her skal man kopiere den samme koden som man i Bildeprosedyre/bildemodalitet navn under det interne CLUSTERet Spesifikk underesøkelse/bildemodalitet. 
+Dette kan f.eks. være en SNOMED-CT kode eller DICOM modalitetkode. 
+Eksempler:
+726551006	Kontrast mammografi
+241058008	Forstørrelsesmammografi
+450566007	Tomosyntese (DBT)
+1331946003	CT med kontrast
+765172009	Doppler ultrasound (procedure)
+443631006	Ultrasonography with contrast (procedure)
+433231002	Contrast echocardiography (procedure)
+
+5+a|*Klinisk grunnlag modalitet per kroppsdel* + 
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+
+Designkommentar:
+Hvis man ønsker å legge til hvilke kroppsdel man har gjort den bildediagnostiske undersøkelsen på. 
+Hvis man ønsker kun å ramse opp hvilke kroppsdel man har tatt undersøkelsen på uten å ha med resyme og dato, er alle elementer bortsett fra Anatomisk lokalisering overflødig. Da kan man ha en instans av denne Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2) og kun gjenta CLUSTERet Anatomisk lokalisering i Ytterligere detaljer. 
+
+Hvis man ønsker å ha med Resyme og dato per kroppsdel, samt tilleggsmetode per kroppsdel, kan dette Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2) gjentas per kroppsdel. 
+
+Selve modaliteten settes i Klinisk grunnlag prosedyre/modalitet (CLUSTER 1). 
+|at0005| 0..*| DV_TEXT | Resyme?
+a|
+
+
+Designkommentar:
+Dette resymeet er for hele den spesifikke undersøkelsen inkludert anatomisk lokalisering, f.eks. MR-thorax resyme. 
+Da er det valgt MR på bildeprosedyre/bildemodalitet i Spesifikke undersøkelse/blidemodalitet navn i det interne kartleggingCLUSTER=>  da vil MR automatisk bli satt til Bildeprosedyre/bildenodalitet navn i Klinisk grunnlag prosedyre/modalitet CLUSTER 1).  I tillegg velger man Thorax  i Anatomisk lokalisering i CLUSTERet Anatomisk lokalisering i SLOTet Ytterligere detaljer i Klinisk grunnlag modalitet per kroppsdel (CLUSTER 2). 
+|at0006| 0..1| DV_DATE_TIME | Dato
+|
+|at0022| 1..1| DV_CODED_TEXT | Bildeprosedyre/bildemodalitet navn
+a|
+* MR (DICOM: MR)
+
+
+Designkommentar:
+Her kan man legge inn mer spesifikk prosedyre som er gjennomført for hver enkelt kroppsdel/anatomisk lokalisasjon, for eksempel om det er gjort med kontrast (kontrastmammografi), eller forstørrelsesmammografi, tomosyntese av mamma (DBT), Cone beam CT.
+Eksempler:
+726551006	Kontrast mammografi
+241058008	Forstørrelsesmammografi
+450566007	Tomosyntese (DBT)
+1331946003	CT med kontrast
+765172009	Doppler ultrasound (procedure)
+443631006	Ultrasonography with contrast (procedure)
+433231002	Contrast echocardiography (procedure)
+
+|at0022| 0..*| DV_TEXT | Spesifikk metode/tilleggsmetode
+a|
+
+
+Designkommentar:
+Her kan man legge inn mer spesifikk prosedyre som er gjennomført for hver enkelt kroppsdel/anatomisk lokalisasjon, for eksempel om det er gjort med kontrast (kontrastmammografi), eller forstørrelsesmammografi, tomosyntese av mamma (DBT), Cone beam CT.
+Eksempler:
+726551006	Kontrast mammografi
+241058008	Forstørrelsesmammografi
+450566007	Tomosyntese (DBT)
+1331946003	CT med kontrast
+765172009	Doppler ultrasound (procedure)
+443631006	Ultrasonography with contrast (procedure)
+433231002	Contrast echocardiography (procedure)
+
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+
+Designkommentar:
+Her kan man legge inn hvilke kroppsdel man har tatt bilde av. 
+Hvis man ikke trenger å ha med resyme og dato for hver anatomisk sted man har tatt bilde kan kun dette CLUSTERet gjentas for hver kroppsdel. 
+|at0001| 1..1| DV_CODED_TEXT | Navn på kroppssted
+a|
+* Caput (hode) (SNOMED-CT: 69536005)
+* Columna vertebralis (ryggrad) (SNOMED-CT: 421060004)
+* Thorax (brystkasse) (SNOMED-CT: 51185008)
+* Mamma (bryst) (SNOMED-CT: 76752008)
+* Aksille (SNOMED-CT: 91470000)
+* Lunge (SNOMED-CT: 39607008)
+* Abdomen (SNOMED-CT: 818983003)
+* Lever (SNOMED-CT: 10200004)
+* Pleura (SNOMED-CT: 3120008)
+* Pelvis (bekken) (SNOMED-CT: 12921003)
+* Skjelett (SNOMED-CT: 113192009)
+
+
+Designkommentar:
+Navn på kroppsdel, her bør man bruke et kodeverk, f.eks. SNOMED-CT. Listen bygges ut etter hvert som behov oppstår.
+|====
