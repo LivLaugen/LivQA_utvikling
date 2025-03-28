@@ -1,0 +1,3228 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "5435113b-56fe-4326-b44b-20eb04473a8e",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2025-03-11"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "89878bb1c1d766edb6e439a1c4bfe4c5",
+      "PARENT:MD5-CAM-1.0.1" : "20D65E757D70D267577AFADBA7149D3B",
+      "sem_ver" : "0.1.1",
+      "build_uid" : ""
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-CLUSTER.clinicalevidence.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "CLUSTER",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "existence" : "1..1",
+      "cardinality" : {
+        "@type" : "CARDINALITY",
+        "interval" : "1..*",
+        "ordered" : false,
+        "unique" : false
+      },
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..1",
+        "nodeId" : "at0003.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "SNOMED-CT"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "SNOMED-CT" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "258261001",
+                  "value" : "Tumor volume (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "445207007",
+                  "value" : "Calculated volume of neoplasm using magnetic resonance imaging (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "445604005",
+                  "value" : "Calculated volume of neoplasm based on largest dimension using magnetic resonance imaging"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "399734001",
+                  "value" : "Primary tumor size (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "371479009",
+                  "value" : "Tumor size, largest dimension (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "372299002",
+                  "value" : "Tumor size, dimension 1 (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "372300005",
+                  "value" : "Tumor size, dimension 2 (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "372301009",
+                  "value" : "Tumor size, dimension 3 (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "395512009",
+                  "value" : "Tumor size, additional dimension (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "120001000004108",
+                  "value" : "Greatest length dimension of excised neoplasm (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "396236002",
+                  "value" : "Depth of direct invasion by neoplasm (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "396631001",
+                  "value" : "Surgical margin observable (observable entity)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "371488000",
+                  "value" : "Presence of neoplasm at excised surgical margin (observable entity)"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0004.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..*",
+        "nodeId" : "at0005.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_BOOLEAN",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_IDENTIFIER",
+            "occurrences" : "1..1",
+            "defaultValue" : {
+              "@type" : "DV_IDENTIFIER"
+            },
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_MULTIMEDIA",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_QUANTITY",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_COUNT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE_TIME",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TIME",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DURATION",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_ORDINAL",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_SCALE",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_PROPORTION",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_URI",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_EHR_URI",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_PARSABLE",
+            "occurrences" : "1..1",
+            "defaultValue" : {
+              "@type" : "DV_PARSABLE"
+            },
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_COUNT>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_DATE>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_TIME>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0006.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE_TIME",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "ARCHETYPE_SLOT",
+        "rmTypeName" : "CLUSTER",
+        "occurrences" : "0..*",
+        "nodeId" : "at0007",
+        "includes" : [ {
+          "@type" : "ASSERTION",
+          "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.citation(-[a-zA-Z0-9_]+)*\\.v1/}",
+          "expression" : {
+            "@type" : "BINARY_OPERATOR",
+            "type" : "BOOLEAN",
+            "operator" : "matches",
+            "leftOperand" : {
+              "@type" : "MODEL_REFERENCE",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Attribute",
+              "path" : "archetype_id/value"
+            },
+            "rightOperand" : {
+              "@type" : "CONSTRAINT",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Constraint",
+              "item" : {
+                "@type" : "C_STRING",
+                "constraint" : [ "/openEHR-EHR-CLUSTER\\.citation(-[a-zA-Z0-9_]+)*\\.v1/" ]
+              }
+            },
+            "precedenceOverriden" : false
+          },
+          "variables" : [ ]
+        } ],
+        "excludes" : [ ],
+        "closed" : false
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..*",
+        "nodeId" : "at0022.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "SNOMED-CT"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "SNOMED-CT" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "363679005",
+                  "value" : "Bildediagnostikk (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "108252007",
+                  "value" : "Laboratorieprosedyre"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "108257001",
+                  "value" : "Patologisk undersøkelser (Anatomic pathology procedure) (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "714797009",
+                  "value" : "Histologisk test (Histologic test) (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "252416005",
+                  "value" : "Histopatologisk test (Histopathology test) (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "116147009",
+                  "value" : "Cytologisk test (cytologisk laboratorie test) (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "168440009",
+                  "value" : "Cytologi (generell cytologi) (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "405824009",
+                  "value" : "Genetic test (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "363779003",
+                  "value" : "Genotype determination (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "19851009",
+                  "value" : "Microbiology procedure (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "396550006",
+                  "value" : "Undersøkelse av blodprøve (procedure)"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "48684007",
+                  "value" : "Pharmacokinetic study (procedure)"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0001.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "ARCHETYPE_SLOT",
+        "rmTypeName" : "CLUSTER",
+        "occurrences" : "0..*",
+        "nodeId" : "at0018",
+        "includes" : [ {
+          "@type" : "ASSERTION",
+          "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.media_file\\.v1/}",
+          "expression" : {
+            "@type" : "BINARY_OPERATOR",
+            "type" : "BOOLEAN",
+            "operator" : "matches",
+            "leftOperand" : {
+              "@type" : "MODEL_REFERENCE",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Attribute",
+              "path" : "archetype_id/value"
+            },
+            "rightOperand" : {
+              "@type" : "CONSTRAINT",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Constraint",
+              "item" : {
+                "@type" : "C_STRING",
+                "constraint" : [ "/openEHR-EHR-CLUSTER\\.media_file\\.v1/" ]
+              }
+            },
+            "precedenceOverriden" : false
+          },
+          "variables" : [ ]
+        } ],
+        "excludes" : [ ],
+        "closed" : false
+      }, {
+        "@type" : "ARCHETYPE_SLOT",
+        "rmTypeName" : "CLUSTER",
+        "occurrences" : "0..*",
+        "nodeId" : "at0024",
+        "includes" : [ {
+          "@type" : "ASSERTION",
+          "stringExpression" : "archetype_id/value matches {/.*/}",
+          "expression" : {
+            "@type" : "BINARY_OPERATOR",
+            "type" : "BOOLEAN",
+            "operator" : "matches",
+            "leftOperand" : {
+              "@type" : "MODEL_REFERENCE",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Attribute",
+              "path" : "archetype_id/value"
+            },
+            "rightOperand" : {
+              "@type" : "CONSTRAINT",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Constraint",
+              "item" : {
+                "@type" : "C_STRING",
+                "constraint" : [ "/.*/" ]
+              }
+            },
+            "precedenceOverriden" : false
+          },
+          "variables" : [ ]
+        } ],
+        "excludes" : [ ],
+        "closed" : false
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "CLUSTER",
+        "occurrences" : "0..1",
+        "nodeId" : "at0024.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-004.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0023.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Clinical evidence",
+          "description" : "Details about findings that support a clinical assertion."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Method description",
+          "description" : "Narrative description of the method/s used to identify the evidence."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Finding",
+          "description" : "Identification of the finding that supports the assertion.",
+          "comment" : "It is recommended that 'Finding' should be coded with a terminology, where possible."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Finding description",
+          "description" : "Narrative description of the finding."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result",
+          "description" : "Measurement or value associated with the finding.",
+          "comment" : "For example: Mantoux test result."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Date identified",
+          "description" : "The date on which the finding was clinically identified.",
+          "comment" : "For example: The date when the finding was made by or made available to the clinician."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Citation",
+          "description" : "Detailed data available about the evidence held in another part of the health record."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Multimedia representation",
+          "description" : "Digital image, video or diagram representing the clinical evidence."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Method",
+          "description" : "Type of examination or investigation used to identify the evidence.",
+          "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Comment",
+          "description" : "Additional narrative about the finding not captured in other fields."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Additional details",
+          "description" : "Additional structured details about the finding."
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Finding",
+          "description" : "Identification of the finding that supports the assertion.",
+          "comment" : "It is recommended that 'Finding' should be coded with a terminology, where possible."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Additional details",
+          "description" : "Additional structured details about the finding."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Finding description",
+          "description" : "Narrative description of the finding."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result",
+          "description" : "Measurement or value associated with the finding.",
+          "comment" : "For example: Mantoux test result."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Date identified",
+          "description" : "The date on which the finding was clinically identified.",
+          "comment" : "For example: The date when the finding was made by or made available to the clinician."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Clinical evidence",
+          "description" : "Details about findings that support a clinical assertion."
+        },
+        "at0023.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Comment",
+          "description" : "Additional narrative about the finding not captured in other fields."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Method",
+          "description" : "Type of examination or investigation used to identify the evidence.",
+          "comment" : "Consider coding 'Method' with a terminology, where possible. For example: Physical examination, Chest x-ray, Histopathology result, Colonoscopy."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Method description",
+          "description" : "Narrative description of the method/s used to identify the evidence."
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Biomarkør",
+          "description" : "Grunnlaget for et klinisk utsagn.",
+          "comment" : "Designkommentar:\nIkke sikker på om vi trenger denne i det hele tatt hvis man bruker Analyseresultat i clusteret, i alle fall for Laboratorieprøver. Men man kunne kanskje brukt denne hvis det var snakk om bildediagnostikk. \n\nEventuelt kan man kode med en direktekode her, f.eks. \n*416053008 | Estrogen receptor positive tumor (disorder) | \n*166561008 | Alpha-fetoprotein above reference range (finding) | - -> med tallresultat i Resultat elementet. \n*396701002 | Finding of serum tumor marker level (finding) |\n*396152005 | Prostate specific antigen above reference range (finding) | --> med faktisk nivå/tallverdi i Resultat \n*166159005 | Prostate specific antigen within reference range (finding) |"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003.1",
+          "text" : "Biomarkør navn",
+          "description" : "Funnet som støtter utsagnet.",
+          "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultat",
+          "description" : "Måling eller verdi knyttet til funnet.",
+          "comment" : "For eksempel mantouxtestresultat.\n\nFor eksempel verdien til tumorvolum, eller tumorstørrelse. \nHvis man f.eks. har funnet tumorstørrelse ved hjelp av bildediagnostikk kan man bruke SNOMED-CT koden  258261001 - Tumor volume (observable entity), og på resultat skrive tallverdi, og metode velge Bildediagnostikk (eller 113091000 | MR |). Eventulet kan man direktekode Biomarkørnavn med  445207007 | Calculated volume of neoplasm using magnetic resonance imaging |, uten å sette metode.\n\nHvis man vil ha tumorstørrelse i flere lengder gjort med bildediagnostikk "
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Klinisk grunnlag",
+          "description" : "Grunnlaget for et klinisk utsagn."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Metodebeskrivelse",
+          "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til funnet."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Funn",
+          "description" : "Funnet som støtter utsagnet.",
+          "comment" : "Det anbefales å kode \"Funn\" med en terminologi, der det er mulig."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Beskrivelse av funn",
+          "description" : "Fritekstbeskrivelse av funnet."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultat",
+          "description" : "Måling eller verdi knyttet til funnet.",
+          "comment" : "For eksempel mantouxtestresultat."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Dato",
+          "description" : "Datoen da funnet ble klinisk anerkjent.",
+          "comment" : "For eksempel: Datoen da funnet ble gjort eller gjort tilgjengelig for klinikeren."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Referanse",
+          "description" : "Detaljerte data om funnet i andre deler av journalen."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Multimediarepresentasjon",
+          "description" : "Digitalt bilde, video eller diagram som representerer det kliniske grunnlaget."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Metode",
+          "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funnet.",
+          "comment" : "Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Ytterligere detaljer",
+          "description" : "Ytterligere strukturerte detaljer om funnet."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Ytterligere detaljer",
+          "description" : "Ytterligere strukturerte detaljer om funnet."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Beskrivelse av funn",
+          "description" : "Fritekstbeskrivelse av funnet."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Dato",
+          "description" : "Datoen da funnet ble klinisk anerkjent.",
+          "comment" : "For eksempel: Datoen da funnet ble gjort eller gjort tilgjengelig for klinikeren."
+        },
+        "at0023.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Ytterligere informasjon om funnet, som ikke kan registreres i andre felter."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Metode",
+          "description" : "Typen undersøkelse eller utredning som er utført for å komme fram til funnet.",
+          "comment" : "Metoden bør vurderes kodet med en terminologi der dette er mulig. For eksempel fysisk undersøkelse, røntgen thorax, patologisvar, koloskopi."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Metodebeskrivelse",
+          "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til funnet."
+        }
+      },
+      "de" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Klinische Evidenz",
+          "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Beschreibung der Methode",
+          "description" : "Narrative Beschreibung der Methode(n), die zur Festellung der Evidenz verwendet wurde(n)."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Befund",
+          "description" : "Identifizierung des Befundes, der die Feststellung stützt",
+          "comment" : "Es wird nach Möglichkeit empfohlen den Befund mit einer Terminologie zu kodieren."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Befundbeschreibung",
+          "description" : "Narrative Beschreibung des Befundes."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Ergebnis",
+          "description" : "Messung oder Wert, der mit dem Befund verbunden ist.",
+          "comment" : "Zum Beispiel: Mantoux-Testergebnis."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Feststellungsdatum",
+          "description" : "Das Datum, an dem der Befund klinisch festgestellt wurde.",
+          "comment" : "Zum Beispiel: Das Datum, an dem der Befund vom Arzt gemacht oder ihm zur Verfügung gestellt wurde."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Zitat",
+          "description" : "Detaillierte Daten über die in einem anderen Teil der Gesundheitsakte enthaltenen Beweise sind verfügbar."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Multimediale Darstellung",
+          "description" : "Digitales Bild, Video oder Diagramm, welches die klinischen Evidenz darstellt."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Methode",
+          "description" : "Art der Untersuchung oder Recherche, die zur Feststellung der Evidenz verwendet wird.",
+          "comment" : "Erwägen Sie 'Methode' mit einer Terminologie zu kodieren, wenn möglich. Zum Beispiel: Körperliche Untersuchung, Röntgenaufnahme der Brust, Ergebnis der Histopathologie, Koloskopie."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Zusätzliche Informationen über die Befunde, welche noch nicht an anderer Stelle dokumentiert wurden."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details about findings. (en)"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Befund",
+          "description" : "Identifizierung des Befundes, der die Feststellung stützt",
+          "comment" : "Es wird nach Möglichkeit empfohlen den Befund mit einer Terminologie zu kodieren."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details about findings. (en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Befundbeschreibung",
+          "description" : "Narrative Beschreibung des Befundes."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Ergebnis",
+          "description" : "Messung oder Wert, der mit dem Befund verbunden ist.",
+          "comment" : "Zum Beispiel: Mantoux-Testergebnis."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Feststellungsdatum",
+          "description" : "Das Datum, an dem der Befund klinisch festgestellt wurde.",
+          "comment" : "Zum Beispiel: Das Datum, an dem der Befund vom Arzt gemacht oder ihm zur Verfügung gestellt wurde."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Klinische Evidenz",
+          "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+        },
+        "at0023.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Zusätzliche Informationen über die Befunde, welche noch nicht an anderer Stelle dokumentiert wurden."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Methode",
+          "description" : "Art der Untersuchung oder Recherche, die zur Feststellung der Evidenz verwendet wird.",
+          "comment" : "Erwägen Sie 'Methode' mit einer Terminologie zu kodieren, wenn möglich. Zum Beispiel: Körperliche Untersuchung, Röntgenaufnahme der Brust, Ergebnis der Histopathologie, Koloskopie."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Beschreibung der Methode",
+          "description" : "Narrative Beschreibung der Methode(n), die zur Festellung der Evidenz verwendet wurde(n)."
+        }
+      },
+      "sv" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Kliniska bevis",
+          "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Metodbeskrivning",
+          "description" : "Berättande beskrivning av metoden / metoderna som används för att identifiera bevisen."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Fynd",
+          "description" : "Identifiering av fyndet som stöder påståendet.",
+          "comment" : "Det rekommenderas att fynd ska kodas med en terminologi, där det är möjligt."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Beskrivning av fynd",
+          "description" : "Berättande beskrivning av fynd."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultat",
+          "description" : "Mätning eller värde associerat med fyndet.",
+          "comment" : "Till exempel: Mantoux-testresultat."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Identifieringsdatum",
+          "description" : "Datum då fyndet kliniskt identifierades.",
+          "comment" : "Till exempel: Datumet då fynden gjordes av eller gjordes tillgänglig för läkaren."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Citat",
+          "description" : "Detaljerad information tillgänglig om bevisen som finns i en annan del av hälsojournalen."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Multimedia representation",
+          "description" : "Digital bild, video eller diagram som representerar kliniska bevis."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Metod",
+          "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
+          "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Ytterligare beskrivning om fynden som inte redan inkluderats."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details about findings. (en)"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Fynd",
+          "description" : "Identifiering av fyndet som stöder påståendet.",
+          "comment" : "Det rekommenderas att fynd ska kodas med en terminologi, där det är möjligt."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details about findings. (en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Beskrivning av fynd",
+          "description" : "Berättande beskrivning av fynd."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultat",
+          "description" : "Mätning eller värde associerat med fyndet.",
+          "comment" : "Till exempel: Mantoux-testresultat."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Identifieringsdatum",
+          "description" : "Datum då fyndet kliniskt identifierades.",
+          "comment" : "Till exempel: Datumet då fynden gjordes av eller gjordes tillgänglig för läkaren."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Kliniska bevis",
+          "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+        },
+        "at0023.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Kommentar",
+          "description" : "Ytterligare beskrivning om fynden som inte redan inkluderats."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Metod",
+          "description" : "Typ av undersökning eller utredning som används för att identifiera bevisen.",
+          "comment" : "Överväg att koda 'Metod' med en terminologi, där det är möjligt. Till exempel: Fysisk undersökning, bröströntgen, resultat av histopatologi, koloskopi."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Metodbeskrivning",
+          "description" : "Berättande beskrivning av metoden / metoderna som används för att identifiera bevisen."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "103c6bb4-26af-3bc0-9ab3-c3113b60fc0f",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Biomarkør - klinisk grunnlag",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2e665a8b-5b13-4fe3-8687-2fdaaadc17e4",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "321E99EBE45472D3EF4E9DEEA09ACBFB"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Dient zur Erfassung von einzelnen Ergebniswerten für Labor-Analyten, die in der klinischen Diagnostikanalyse wie medizinische Biochemie, Hämatologie, Immunologie und Transfusionsmedizin zu finden ist.",
+          "keywords" : [ "Labor", "Pathologie", "Analyt", "Bestandteil", "Ergebnis" ],
+          "use" : "Dient zur Erfassung von einzelnen Ergebniswerten für Labor-Analyten, die in der klinischen Diagnostik verbreitet sind, wie z. B. biochemische, hämatologische, immunologische und transfusionsmedizinische Tests. Diese können auch in anatomisch-pathologischen Berichten als \"zusätzliche Untersuchungen\" vorkommen.\r\n \r\nEine oder mehrere Instanzen dieses Archetyps können im SLOT \"Testergebnis\" des Archetyps OBSERVATION.laboratory_test_result verschachtelt werden.\r\n\r\nUnter Umständen kann dieser Archetyp in einem CLUSTER.laboratory_test_panel Archetyp verwendet werden - zusammen mit andere Analyten, die normalerweise als Teil eine Panels oder Profils getestet und/oder befundet werden.\r\n\r\nDieser Archetyp kann im Rahmen einer komplexerem Labor/Pathologie-Befundung, z.B. in anatomisch-pathologischen Befunden verwendet werden, in denen oft quantitative Resultate, wie Durchfluss-Zytometrie-Analysen neben den üblichen makroskopischen und mikroskopischen Ergebnissen dokumentiert werden.\r\n",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Registrering av ett enskilt laboratorieanalysresultat som vanligtvis förekommer i klinisk patologitestning såsom medicinsk biokemi, hematologi, immunologi och transfusionsmedicin.\r\n",
+          "keywords" : [ "laboratorium", "labb", "patologi", "analyt", "analys", "resultat", "svar" ],
+          "use" : "Används för registrering av ett enda laboratorieresultat inom områden såsom medicinsk biokemi, hematologi, immunologi och transfusionsmedicin. Arketypen kan också användas för ytterligare patologiska undersökningar.\r\n\r\nEn eller flera instanser av denna arketyp kan nästlas i SLOT för \"Undersökningsresultat\" i arketypen OBSERVATION.laboratory_test_result.\r\n\r\nI vissa sammanhang kan denna arketyp användas i arketypen CLUSTER.laboratory_test_panel tillsammans med andra analyser som vanligtvis utförs tillsammans som en del av en analysgrupp.\r\n\r\nDenna arketyp kan användas i mer komplexa laboratorie-/patologirapporter där kvantitativa svar såsom flödescytometri rapporteras i samband med konventionella makroskopiska och mikroskopiska undersökningar.",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere ett enkelt laboratorieresultat innenfor områder som medisinsk biokjemi, hematologi, immunologi og transfusjonsmedisin.",
+          "keywords" : [ "laboratorie", "analytt", "analyse", "svar", "resultat" ],
+          "use" : "For å registrere ett enkelt laboratorieresultat innenfor områder som medisinsk biokjemi, hematologi, immunologi og transfusjonsmedisin. Arketypen kan også brukes til tilleggsundersøkelser innenfor patologi.\r\n\r\nEn eller flere instanser av denne arketypen kan nøstes i SLOTet \"Undersøkelsesresultat\" i arketypen OBSERVATION.laboratory_test_result.\r\n\r\nI noen sammenhenger kan denne arketypen brukes i arketypen CLUSTER.laboratory_test_panel, sammen med andre analytter som vanligvis utføres sammen som del av en analysegruppe.\r\n\r\nDenne arketypen kan brukes innenfor mer komplekse laboratorie/patologirapporter der kvantitative svar som for eksempel flowcytometri rapporteres sammen med konvensjonelle makroskopiske og mikroskopiske undersøkelser.",
+          "misuse" : "Skal ikke brukes til å registrere funn ved patologiundersøkelser, annet enn for tilleggsundersøkelser som flowcytometri.\r\n\r\nSkal ikke brukes til å registrere mikrobiologiske dyrkningssvar.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar valores únicos e individuais de resultados laboratoriais de analitos comuns a testes patológicos clínicos como bioquímica, hematologia e imunologia.\r\n",
+          "keywords" : [ "laboratório", "patologia", "analito", "componente", "resultado" ],
+          "use" : "Para gravar valores únicos e individuais de resultados laboratoriais de analitos comuns a testes patológicos clínicos como bioquímica, hematologia e imunologia. Normalmente usados conjuntamente com o arquétipo parental OBSERVATION.laboratory_test_result e em algumas circunstâncias será carregado dentro de um arquétipo CLUSTER.laboratory_test_panel, junto com outros analitos que são normalmente testados e/ou reportados como parte de uma bateria, painel e perfil, embora não seja necessário e.e múltiplos analitos podem ser carregados diretamente dentro do OBSERVATION.laboratory_test.\r\n\r\nO atributo do nome do elemento \"Resultado do analito\" é normalmente substituído em uma especialização, template ou em tempo de execução para carregar o nome do analito específico, p.e., \"hemoglobina\", frequentemente codificado com uma terminologia de referência como LOINC, SNOMED CT ou NPU.\r\n\r\nEste arquétipo pode ser usado dentro do contexto de relatórios laboratoriais/de patologia mais complexos como em relatórios de histopatologia/anatomia onde resultados quantitativos como de estudos de citometria de fluxo e testes genéticos são frequentemente reportados junto com relatórios macroscópicos e microscópicos convencionais.",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a single value laboratory analyte result, commonly found in clinical pathology testing such as medical biochemistry, haematology, immunology and transfusion medicine.",
+          "keywords" : [ "laboratory", "pathology", "analyte", "constituent", "result" ],
+          "use" : "Use to record a single value laboratory analyte result, commonly found in clinical pathology testing such as medical biochemistry, haematology, immunology and transfusion medicine. They may also be found in anatomical pathology reports as 'ancillary tests'.\r\n\r\nOne or more instances of this archetype may be nested within the 'Test result' SLOT in the OBSERVATION.laboratory_test_result. \r\n\r\nIn some circumstances this archetype may be carried within a CLUSTER.laboratory_test_panel archetype, together with other analytes which are normally tested and/or reported as part of a battery, panel or profile. \r\n\r\nThis archetype may be used within the setting of more complex laboratory/pathology reporting such as anatomical pathology reports where quantitative results such as cytometric flow studies are often reported alongside conventional macroscopic and microscopic reporting.",
+          "misuse" : "Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Voor het vastleggen van een enkele laboratorium analyt uitslag, gebruikelijk in klinische chemische onderzoeken zoals medische biochemie, hematologie, immunologie en transfusiegeneeskunde.",
+          "keywords" : [ "laboratorium", "klinische chemie", "analyt", "bepaling", "uitslag" ],
+          "use" : "Gebruik voor het vastleggen van een enkele laboratorium analyt uitslag, gebruikelijk in de klinsiche chemie zoals biochemie, haematologie, immunologie and tranfusiegeneeskunde. Kan ook gebruikt worden voor aanvullend onderzoek binnen een anatomisch pathologisch onderzoek.",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        },
+        "nb" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code",
+            "Strukturert krefjournal" : "Her kan man bruke flere kodesystemer. Det er anbefalt å kode gener ut fra HGNC.  Ved bruk av SNOMED-CT: hvis man skal skrive et kontret svar bør man ved bruk av SNOMED-CT har ((observable entity) koden for målingen. Hvis man kun vil ha en bekreftelse på at noe er gjort kan man bruke SNOMED-CT (procedure) koden."
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]",
+            "Strukrurert kreftjournal" : "Her kan man ha flere typer svar ut i fra hva man ønsker å gi svar på f.eks.: *Fritekstfelt for beskrivelse *Quantity/tallverdi *tilstede/ikke tilstede (boolean) *Pos/neg/inkonklusiv (coded text) *prosenter (proportion).   Det er mulig å gjenta analyseresultatet hvis man i grensesnittet vil angi f.eks. både en tallverdi og tekst (6 + negativ)"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        },
+        "pt-br" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+            "fhir_mapping" : "*Observation.code(en)"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "*NTE.3(en)",
+            "fhir_mapping" : "*Observation.comments(en)"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+            "fhir_mapping" : "*status(en)"
+          }
+        },
+        "de" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        },
+        "nl" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        },
+        "sv" : { }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.laboratory_test_analyte.v1",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-004.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0027.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0024.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "defaultValue" : {
+                "value" : "AFP",
+                "@type" : "DV_TEXT"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..*",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "ARCHETYPE_SLOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..*",
+          "nodeId" : "at0014",
+          "includes" : [ {
+            "@type" : "ASSERTION",
+            "stringExpression" : "archetype_id/value matches {/.*/}",
+            "expression" : {
+              "@type" : "BINARY_OPERATOR",
+              "type" : "BOOLEAN",
+              "operator" : "matches",
+              "leftOperand" : {
+                "@type" : "MODEL_REFERENCE",
+                "type" : "STRING",
+                "precedenceOverriden" : false,
+                "referenceType" : "Attribute",
+                "path" : "archetype_id/value"
+              },
+              "rightOperand" : {
+                "@type" : "CONSTRAINT",
+                "type" : "STRING",
+                "precedenceOverriden" : false,
+                "referenceType" : "Constraint",
+                "item" : {
+                  "@type" : "C_STRING",
+                  "constraint" : [ "/.*/" ]
+                }
+              },
+              "precedenceOverriden" : false
+            },
+            "variables" : [ ]
+          } ],
+          "excludes" : [ ],
+          "closed" : false
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0028.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "local_terms"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "local_terms" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "local_terms",
+                    "code" : "363679005",
+                    "value" : "Bildediagnostikk (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "108252007",
+                    "value" : "Laboratorieprosedyre"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "108257001",
+                    "value" : "Patologisk undersøkelser (Anatomic pathology procedure) (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "714797009",
+                    "value" : "Histologisk test (Histologic test) (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "252416005",
+                    "value" : "Histopatologisk test (Histopathology test) (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "116147009",
+                    "value" : "Cytologisk test (cytologisk laboratorie test) (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "168440009",
+                    "value" : "Cytologi (generell cytologi) (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "405824009",
+                    "value" : "Genetic test (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "363779003",
+                    "value" : "Genotype determination (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "19851009",
+                    "value" : "Microbiology procedure (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "396550006",
+                    "value" : "Undersøkelse av blodprøve (procedure)"
+                  }, {
+                    "terminologyId" : "local_terms",
+                    "code" : "48684007",
+                    "value" : "Pharmacokinetic study (procedure)"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "existence" : "1..1",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "occurrences" : "1..1",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboratory analyte result",
+            "description" : "The result of a laboratory test for a single analyte value."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyte result",
+            "description" : "The value of the analyte result.",
+            "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Comment",
+            "description" : "Additional narrative about the analyte result, not captured in other fields.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Reference range guidance",
+            "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+            "comment" : "For example, 'within normal limits for age and sex'."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Result status",
+            "description" : "The status of the analyte result value.",
+            "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Result status time",
+            "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Analyte result detail",
+            "description" : "Further detail regarding an individual result."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Registered",
+            "description" : "The existence of the test is registered in the Laboratory Information System, but there is nothing yet available."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Partial",
+            "description" : "This is a partial (e.g. initial, interim or preliminary) Test Result: data in the Test Result may be incomplete or unverified."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Preliminary",
+            "description" : "Verified early results are available, but not all results are final. This is a sub-category of 'Partial'."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Final",
+            "description" : "The Test result is complete and verified by an authorised person."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "Corrected",
+            "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'."
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Amended",
+            "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed."
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Appended",
+            "description" : "Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged. This is a sub-category of 'Amended'."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Entered in error",
+            "description" : "The Test Result has been withdrawn following previous Final release."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Cancelled",
+            "description" : "The result is unavailable because the test was not started or not completed (also sometimes called 'aborted')."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analyte name",
+            "description" : "The name of the analyte result.",
+            "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Validation time",
+            "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+            "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identification of the specimen used for the analyte result.",
+            "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyte result sequence",
+            "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+            "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Test method",
+            "description" : "Description about the method used to perform the test on this analyte only.",
+            "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Validation time",
+            "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+            "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analyte name",
+            "description" : "The name of the analyte result.",
+            "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Comment",
+            "description" : "Additional narrative about the analyte result, not captured in other fields.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyte result sequence",
+            "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+            "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Reference range guidance",
+            "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+            "comment" : "For example, 'within normal limits for age and sex'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Result status",
+            "description" : "The status of the analyte result value.",
+            "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identification of the specimen used for the analyte result.",
+            "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Result status time",
+            "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Test method",
+            "description" : "Description about the method used to perform the test on this analyte only.",
+            "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboratory analyte result",
+            "description" : "The result of a laboratory test for a single analyte value."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyte result",
+            "description" : "The value of the analyte result.",
+            "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          }
+        },
+        "nb" : {
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Biomarkør navn",
+            "description" : "Navnet på analyseresultatet.",
+            "comment" : "Designkommentar:\nHer kan man bruke flere kodesystemer. Det er anbefalt å kode gener ut fra HGNC. \nVed bruk av SNOMED-CT: hvis man skal skrive et kontret svar bør man ved bruk av SNOMED-CT har ((observable entity) koden for målingen. Hvis man kun vil ha en bekreftelse på at noe er gjort kan man bruke SNOMED-CT (procedure) koden. \n\nSNOMED-CT f.eks. \n*412936001-Måling av total-hCG i CSF (procedure). -> Bruker man denne koden ville man kanskje lagt inn et fritekstfelt i Analyseresultat. Hvis man ikke legger inn noe er det kun en bekreftelse på at man har gjort analysen, evt. kan man legge inn en boolean.\n*412935002-Måling av AFP i CSF (procedure)\n*445028008 - Presence of estrogen receptor in neoplasm (observable entity) -> her ville man ha lagt inn pos/neg/inkonklusivt i Analyseresultat. \n*1255078008 - Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm by immunohistochemistry\n\nNLK (norsk laboratoriekodeverk) f.eks.:\n*NPU19029-DNA-BRCA1\n*NPU38851-DNA-PTEN\nHer ville man  lagt inn enten pos/neg/inkonklusiv i Analyseresultat, eller et tallsvar hvis analysen tilsier det.\n\nNORPAT (norsk patologikodeverk):\n*P36555 - HER2 (human epidermal vekstfaktor 2) immunhistokjemi\n\nHGNC (HUGO Gene Nomenclature Committee.) f.eks:\n*HGNC:26144-DNA-PALB2\n*HGNC:11389-DNA-STK11 ->\nHer ville man ha lagt inn coded text pos/neg/inkonklusiv i Analyseresultat, eller en tilstede/ikke tilstede (boolean, eller coded text)\n",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyseresultat",
+            "description" : "Verdien av analyseresultatet.",
+            "comment" : "Designkommentar:\nHer kan man ha flere typer svar ut i fra hva man ønsker å gi svar på f.eks.:\n*Fritekstfelt for beskrivelse\n*Quantity/tallverdi\n*tilstede/ikke tilstede (boolean)\n*Pos/neg/inkonklusiv (coded text)\n*prosenter (proportion). \n\nDet er mulig å gjenta analyseresultatet hvis man i grensesnittet vil angi f.eks. både en tallverdi og tekst (6 + negativ)\n\nNoen eksempler:\nIntern kodesett:\n1-<10% (Negativ)\n2->10 < 50% (Positiv)\n3->50% (Positiv)\n\nSNOMED-CT:\n*260385009-Negativt\n*10828004-Positivt\n*442754001-Inkonklusiv\n*385660001-Ikke utført\n*705105000- HER2 (human epidermal growth factor 2) gene amplification negative (finding)\n*1162602001 - HER2 (human epidermal growth factor receptor 2) gene amplification detected (finding)\n*168442001 - Vevscytologi normal (finding)\n\nNORPAT (norsk patologikodeverk):\n*F29601 - HER2 reseptor normal ekspresjon\n*F29602 - HER2 reseptor borderline ekspresjon\n*F29603 - HER2 reseptor overekspresjon\n\n\n\n\n\n",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Analyseresultat",
+            "description" : "Resultatet av en individuell laboratorieanalyse."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyseresultat",
+            "description" : "Verdien av analyseresultatet.",
+            "comment" : "For eksempel \"7,3 mmol/L\" eller \"Forhøyet\". Datatypen \"Udefinert datatype\" må begrenses til en passende datatype i en spesialisering, et templat eller i applikasjonen. Datatypen Quantity har attributter fra referansemodellen som dekker flagg for normalt/unormalt, referanseområder og approksimeringer. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for mer detaljer.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Ytterligere fritekst om analyseresultatet som ikke fanges opp av andre elementer.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Veileder for referanseområde",
+            "description" : "Veileder for å finne ut om referanseverdien er relevant for dette resultatet. Kan inneholde tekst eller kodet tekstlig råd for om resultatet ligger innenfor normalområdet.",
+            "comment" : "For eksempel \"innenfor normale grenseverdier i forhold til alder og kjønn\"."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Resultatstatus",
+            "description" : "Status for analyseresultatet.",
+            "comment" : "Verdiene er valgt spesifikt for å samsvare med verdiene i HL7 FHIR-ressursen \"Diagnostic report\", som historisk sett kommer fra praksis i HL7 v2. Andre lokale koder eller termer kan brukes ved å bruke datatypen \"Fri eller kodet tekst\".\r\n\r\nDette elementet kan repeteres for å imøtekomme brukstilfeller der det er mer enn en type status som må implementeres.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tidspunkt for statusendring",
+            "description" : "Datoen og tidspunktet da analyseresultatet ble utstedt for den aktuelle \"Analyseresultatstatus\".",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Detaljer om analyseresultat",
+            "description" : "Ytterligere detaljer knyttet til et enkelt analyseresultat."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Registrert",
+            "description" : "Analysen er registrert i laboratoriesystemet, men resultatet er ikke tilgjengelig per nå."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Ufullstendig",
+            "description" : "Dette er et delvis (dvs initalt, foreløpig eller preliminært) svar: Data i resultatet kan være ukomplett eller ubekreftet."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Foreløpig",
+            "description" : "Verifiserte tidlige resultater er tilgjengelige, men ikke alle resultater er endelige. Dette er en underkategori av \"Delvis\"."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Endelig",
+            "description" : "Resultatet er komplett og er bekreftet av ansvarlig person."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "Korrigert",
+            "description" : "Etter å ha vært satt som status \"Endelig\", har det blitt lagt nytt innhold til rapporten. Det eksisterende innholdet er uendret. Dette er en underkategori av \"Revidert\""
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Revidert",
+            "description" : "Resultatet har blitt modifisert etter å ha vært i status \"Endelig\", og er komplett og verifisert av ansvarlig person, og resultatdata er endret."
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Tillegg",
+            "description" : "Etter å ha vært satt som status \"Endelig\", har det blitt lagt nytt innhold til rapporten. Det eksisterende innholdet er uendret. Dette er en underkategori av \"Revidert\"."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Feilregistrert",
+            "description" : "Analyseresultatet har blitt trukket tilbake etter å ha vært i status Endelig."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Kansellert",
+            "description" : "Resultatet er utilgjengelig fordi analysen ikke ble påbegynt eller ferdigstilt (også kalt \"avbrutt\")."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analysenavn",
+            "description" : "Navnet på analyseresultatet.",
+            "comment" : "Verdien for dette elementet blir vanligvis lagt inn i en spesialisering av denne arketypen, i en templat, eller i applikasjonen. For eksempel \"serum natrium\" eller \"hemoglobin\". Det er sterkt anbefalt å kode dette elementet med en terminologi, for eksempel Norsk laboratoriekodeverk, NPU, LOINC, SNOMED CT eller lokale kodesett.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tidspunkt for medisinsk validering",
+            "description" : "Datoen og tidspunktet da analyseresultatet ble medisinsk validert i laboratoriet.",
+            "comment" : "I mange myndighetsområder omfatter \"Resultatstatus\" implisitt medisinsk validering, det vil si at et resultat med status \"Endelig\" vil antas å være medisinsk validert. I andre myndighetsområder kan dette registreres og rapporteres separat ved hjelp av dette dataelementet."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Prøvemateriale",
+            "description" : "Identifikator eller link til prøvematerialet som ble brukt i analysen.",
+            "comment" : "I noen situasjoner vil én Laboratorieresultat-arketype inneholde flere Prøvemateriale-arketyper og flere Analyseresultat-arketyper. I disse situasjonene må man bruke dette elementet for å kunne koble resultatene til de korrekte prøvematerialene."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Resultatrekkefølge",
+            "description" : "Plasseringen av dette analyseresultatet i den overordnede rekkefølgen av resultater.",
+            "comment" : "For eksempel \"1\", \"2\", \"3\". Dersom det er flere analyseresultater i en rapport gjør \"Resultatrekkefølge\" rekkefølgen i svarrapporten eksplisitt."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmetode",
+            "description" : "Beskrivelse av metoden brukt for analysering av denne analytten.",
+            "comment" : "Hvis testmetoden gjelder for hele testpanelet kan metoden beskrives ved å bruke \"Testing method\" (Testmetode) dataelementet i arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat)."
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tidspunkt for medisinsk validering",
+            "description" : "Datoen og tidspunktet da analyseresultatet ble medisinsk validert i laboratoriet.",
+            "comment" : "I mange myndighetsområder omfatter \"Resultatstatus\" implisitt medisinsk validering, det vil si at et resultat med status \"Endelig\" vil antas å være medisinsk validert. I andre myndighetsområder kan dette registreres og rapporteres separat ved hjelp av dette dataelementet."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Ytterligere fritekst om analyseresultatet som ikke fanges opp av andre elementer.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Resultatrekkefølge",
+            "description" : "Plasseringen av dette analyseresultatet i den overordnede rekkefølgen av resultater.",
+            "comment" : "For eksempel \"1\", \"2\", \"3\". Dersom det er flere analyseresultater i en rapport gjør \"Resultatrekkefølge\" rekkefølgen i svarrapporten eksplisitt."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Veileder for referanseområde",
+            "description" : "Veileder for å finne ut om referanseverdien er relevant for dette resultatet. Kan inneholde tekst eller kodet tekstlig råd for om resultatet ligger innenfor normalområdet.",
+            "comment" : "For eksempel \"innenfor normale grenseverdier i forhold til alder og kjønn\"."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Resultatstatus",
+            "description" : "Status for analyseresultatet.",
+            "comment" : "Verdiene er valgt spesifikt for å samsvare med verdiene i HL7 FHIR-ressursen \"Diagnostic report\", som historisk sett kommer fra praksis i HL7 v2. Andre lokale koder eller termer kan brukes ved å bruke datatypen \"Fri eller kodet tekst\".\r\n\r\nDette elementet kan repeteres for å imøtekomme brukstilfeller der det er mer enn en type status som må implementeres.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Prøvemateriale",
+            "description" : "Identifikator eller link til prøvematerialet som ble brukt i analysen.",
+            "comment" : "I noen situasjoner vil én Laboratorieresultat-arketype inneholde flere Prøvemateriale-arketyper og flere Analyseresultat-arketyper. I disse situasjonene må man bruke dette elementet for å kunne koble resultatene til de korrekte prøvematerialene."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tidspunkt for statusendring",
+            "description" : "Datoen og tidspunktet da analyseresultatet ble utstedt for den aktuelle \"Analyseresultatstatus\".",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmetode",
+            "description" : "Beskrivelse av metoden brukt for analysering av denne analytten.",
+            "comment" : "Hvis testmetoden gjelder for hele testpanelet kan metoden beskrives ved å bruke \"Testing method\" (Testmetode) dataelementet i arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat)."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Analyseresultat",
+            "description" : "Resultatet av en individuell laboratorieanalyse."
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "*Laboratory analyte result(en)",
+            "description" : "*The result of a laboratory test for a single analyte value.(en)"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "*Analyte result(en)",
+            "description" : "*The value of the analyte result.(en)",
+            "comment" : "*For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.(en)",
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "*Comment(en)",
+            "description" : "*Additional narrative about the analyte result, not captured in other fields.(en)",
+            "hl7v2_mapping" : "*NTE.3(en)",
+            "fhir_mapping" : "*Observation.comments(en)"
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "*Reference range guidance(en)",
+            "description" : "*Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.(en)",
+            "comment" : "*For example, 'within normal limits for age and sex'.(en)"
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "*Result status(en)",
+            "description" : "*The status of the analyte result value.(en)",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+            "fhir_mapping" : "*status(en)"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "*Result status time(en)",
+            "description" : "*The date and time that the analyte result was issued for the recorded ‘Result status’.(en)",
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Detalhes do resultado do analito",
+            "description" : "Detalhes adicionais relativos a um resultado individual."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Registrado",
+            "description" : "A existência do teste é registrada no sistema de informação do laboratório, mas não há nada disponível ainda."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Parcial",
+            "description" : "Este é um resultado de teste parcial (p.e. inicial, intermediário ou preliminar): dados no resultado do teste podem estar incompletos ou não verificados."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Preliminar",
+            "description" : "Resultados iniciais verificados estão disponíveis, mas nem todos os resultados são definitivos. Esta é uma sub-categoria de \"Parcial\"."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Final",
+            "description" : "O resultado final está completo e verificado por uma pessoa autorizada."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "*Corrected(en)",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "*Amended(en)",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "*Appended(en)",
+            "description" : "*Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged. This is a sub-category of 'Amended'.(en)"
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Entrada com erro",
+            "description" : "O resultado do teste foi retirado após ser finalizado."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Cancelado",
+            "description" : "O resultado está indisponível porque o teste não foi iniciado ou não foi completado (algumas vezes chamado de \"abortado\")."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "*Analyte name(en)",
+            "description" : "*The name of the analyte result.(en)",
+            "comment" : "*The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.(en)",
+            "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+            "fhir_mapping" : "*Observation.code(en)"
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "*Validation time(en)",
+            "description" : "*The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.(en)",
+            "comment" : "*In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element.(en)"
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "*Specimen(en)",
+            "description" : "*Identification of the specimen used for the analyte result.(en)",
+            "comment" : "*In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens.(en)"
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "*Analyte result sequence(en)",
+            "description" : "*"
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "*Test method (en)",
+            "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+            "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "*Validation time(en)",
+            "description" : "*The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.(en)",
+            "comment" : "*In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element.(en)"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "*Analyte name(en)",
+            "description" : "*The name of the analyte result.(en)",
+            "comment" : "*The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.(en)",
+            "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+            "fhir_mapping" : "*Observation.code(en)"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "*Comment(en)",
+            "description" : "*Additional narrative about the analyte result, not captured in other fields.(en)",
+            "hl7v2_mapping" : "*NTE.3(en)",
+            "fhir_mapping" : "*Observation.comments(en)"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "*Analyte result sequence(en)",
+            "description" : "*"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "*Reference range guidance(en)",
+            "description" : "*Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.(en)",
+            "comment" : "*For example, 'within normal limits for age and sex'.(en)"
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "*Result status(en)",
+            "description" : "*The status of the analyte result value.(en)",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+            "fhir_mapping" : "*status(en)"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "*Specimen(en)",
+            "description" : "*Identification of the specimen used for the analyte result.(en)",
+            "comment" : "*In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens.(en)"
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "*Result status time(en)",
+            "description" : "*The date and time that the analyte result was issued for the recorded ‘Result status’.(en)",
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "*Test method (en)",
+            "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+            "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "*Laboratory analyte result(en)",
+            "description" : "*The result of a laboratory test for a single analyte value.(en)"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "*Analyte result(en)",
+            "description" : "*The value of the analyte result.(en)",
+            "comment" : "*For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.(en)",
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboranalyt-Ergebnis",
+            "description" : "Ergebnis einer Laboranalyse für einen bestimmten Analytwert.",
+            "comment" : "Beispiele: \"Natrium\", \"Leukozytenzahl\", \"T3\". Üblicherweise über eine externe Terminologie codiert."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyt-Ergebnis",
+            "description" : "(Mess-)Wert des Analyt-Resultats.",
+            "comment" : "z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Kommentar zum Analyt-Ergebnis, soweit noch nicht in anderen Feldern erfasst.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Referenzbereichs-Hinweise",
+            "description" : "Zusätzliche Hinweise zur Anwendbarkeit des Referenzbereichs für dieses Resultat oder (codierter) Text, ob das Resultat im Referenzbereich ist oder nicht.",
+            "comment" : "z.B.: 'im Referenzbereich, bezogen auf Alter und Geschlecht'."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Ergebnis-Status",
+            "description" : "Status des Analyseergebnisses.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Zeitpunkt Ergebnis-Status",
+            "description" : "Datum und/oder Zeitpunkt an dem der Status für das Analyseergebnis gesetzt wurde.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Analyseergebnis-Details",
+            "description" : "Weitere Details zu einem einzelnen Ergebnis."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Erfasst",
+            "description" : "Der Test ist im Laborinformationssystem erfasst, aber noch kein Ergebnis verfügbar."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Unvollständig",
+            "description" : "Das Testresultat ist ein Anfangs- oder Interimswert, vorläufig oder nicht verifiziert/validiert."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Vorläufig",
+            "description" : "Erste, verifizierte Resultate sind vorhanden, der Test ist aber noch nicht abgeschlossen (Sub-Kategorie von 'Unvollständig')."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Endbefund",
+            "description" : "Das Analyseergebnis ist vollständig und durch eine autorisierte Person verifiziert."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "Endbefund, korrigiert",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Endbefund, geändert",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Endbefund, ergänzt",
+            "description" : "Nach Abschluss wurde der Bericht durch das Hinzufügen neuer Inhalte abgeändert. Die vorhandene Inhalte sind unverändert. Dies ist eine Unterkategorie von \"Endbefund, geändert\"."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Endbefund, widerrufen",
+            "description" : "Das Testergebnis wurde nach Endbefundung zurückgezogen."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Storniert",
+            "description" : "Das Testergebnis ist nicht verfügbar, weil der Test nicht (vollständig) durchgeführt oder abgebrochen wurde."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Untersuchter Analyt",
+            "description" : "Der Name des untersuchten Analyts.",
+            "comment" : "Der Wert dieses Elements wird normalerweise, meist durch eine Spezialisierung, in einem Template oder zur Laufzeit der Anwendung geliefert, um den aktuellen Analyt wiederzugeben. Zum Beispiel: 'Natrium im Serum', 'Hämoglobin'. \r\nDie Codierung mit einer externen Terminologie, wie LOINC, NPU, SNOMED-CT oder lokalen Labor-Terminologien wird dringend empfohlen.\r\n",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Zeitpunkt der Validierung",
+            "description" : "Datum und Zeit, an dem das Analyseergebnis im Labor medizinisch validiert wurde.",
+            "comment" : "In vielen Gerichtsbarkeiten wird angenommen, dass der 'Ergebnisstatus' die medizinische Validierung einschliesst, in anderen wird diese anhand dieses Datenelements separat erfasst und befundet."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Probe",
+            "description" : "Kennung der Probe, die für das Analyseergebnis verwendet wurde.",
+            "comment" : "In manchen Situationen wird ein einzelner Laborergebnis-Archetyp mehrere Probe- und Laboranalyt-Ergebnis-Archetypen enthalten. In diesen Fällen wird dieses \"Probe\"-Datenelement benötigt, um die Ergebnisse mit den richtigen Proben zu verknüpfen."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyseergebnis-Reihenfolge",
+            "description" : "Die beabsichtigte Position dieses Analyseergebnisses in der Reihenfolge aller Analyseergebnisse.",
+            "comment" : "z.B. '1', '2', '3'. Werden mehrere Analysenergebnisse berichtet, gibt die Analyseergebnis-Reihenfolge explizit die Reihenfolge der Analyseergebnisse an."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmethode",
+            "description" : "Die Beschreibung der Methode, mit der der Test nur für diesen Analyten durchgeführt wurde.",
+            "comment" : "Wenn die Testmethode für ein gesamtes Panel gilt, kann die Testmethode mithilfe des Datenelements \"Testmethode\" im Ergebnis OBSERVATION.laboratory_test_result erfasst werden."
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Zeitpunkt der Validierung",
+            "description" : "Datum und Zeit, an dem das Analyseergebnis im Labor medizinisch validiert wurde.",
+            "comment" : "In vielen Gerichtsbarkeiten wird angenommen, dass der 'Ergebnisstatus' die medizinische Validierung einschliesst, in anderen wird diese anhand dieses Datenelements separat erfasst und befundet."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Untersuchter Analyt",
+            "description" : "Der Name des untersuchten Analyts.",
+            "comment" : "Der Wert dieses Elements wird normalerweise, meist durch eine Spezialisierung, in einem Template oder zur Laufzeit der Anwendung geliefert, um den aktuellen Analyt wiederzugeben. Zum Beispiel: 'Natrium im Serum', 'Hämoglobin'. \r\nDie Codierung mit einer externen Terminologie, wie LOINC, NPU, SNOMED-CT oder lokalen Labor-Terminologien wird dringend empfohlen.\r\n",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Kommentar zum Analyt-Ergebnis, soweit noch nicht in anderen Feldern erfasst.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyseergebnis-Reihenfolge",
+            "description" : "Die beabsichtigte Position dieses Analyseergebnisses in der Reihenfolge aller Analyseergebnisse.",
+            "comment" : "z.B. '1', '2', '3'. Werden mehrere Analysenergebnisse berichtet, gibt die Analyseergebnis-Reihenfolge explizit die Reihenfolge der Analyseergebnisse an."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Referenzbereichs-Hinweise",
+            "description" : "Zusätzliche Hinweise zur Anwendbarkeit des Referenzbereichs für dieses Resultat oder (codierter) Text, ob das Resultat im Referenzbereich ist oder nicht.",
+            "comment" : "z.B.: 'im Referenzbereich, bezogen auf Alter und Geschlecht'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Ergebnis-Status",
+            "description" : "Status des Analyseergebnisses.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Probe",
+            "description" : "Kennung der Probe, die für das Analyseergebnis verwendet wurde.",
+            "comment" : "In manchen Situationen wird ein einzelner Laborergebnis-Archetyp mehrere Probe- und Laboranalyt-Ergebnis-Archetypen enthalten. In diesen Fällen wird dieses \"Probe\"-Datenelement benötigt, um die Ergebnisse mit den richtigen Proben zu verknüpfen."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Zeitpunkt Ergebnis-Status",
+            "description" : "Datum und/oder Zeitpunkt an dem der Status für das Analyseergebnis gesetzt wurde.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmethode",
+            "description" : "Die Beschreibung der Methode, mit der der Test nur für diesen Analyten durchgeführt wurde.",
+            "comment" : "Wenn die Testmethode für ein gesamtes Panel gilt, kann die Testmethode mithilfe des Datenelements \"Testmethode\" im Ergebnis OBSERVATION.laboratory_test_result erfasst werden."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboranalyt-Ergebnis",
+            "description" : "Ergebnis einer Laboranalyse für einen bestimmten Analytwert.",
+            "comment" : "Beispiele: \"Natrium\", \"Leukozytenzahl\", \"T3\". Üblicherweise über eine externe Terminologie codiert."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analyt-Ergebnis",
+            "description" : "(Mess-)Wert des Analyt-Resultats.",
+            "comment" : "z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboratorium analyt uitslag",
+            "description" : "Het resultaat van een laboratorium test voor een bepaling van een enkele bepaling."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Uitslag van een analyt",
+            "description" : "De waarde van een analyt uitslag.",
+            "comment" : "Bijvoorbeeld: '7.3 mmol/l', 'Verhoogd'. Om het daadwerkelijke analyt result weer te geven dient het 'Any' data type gespecificeerd te worden tot een toepasselijk data type in een specialisatie, een template of terwijl de applicatie loopt.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Opmerking",
+            "description" : "Extra beschrijving van de analyt uitslag, die niet past binnen andere velden.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Referentiebereik aanwijzing",
+            "description" : "Extra advies over de toepasselijkheid van het referentiebereik van deze uitslag; mag ook een textuele of gecodeerd textuele aanwijzing bevatten of het resultaat binnen het normale bereik valt.",
+            "comment" : "Bijvoorbeeld: 'binnen het normale bereik voor leeftijd en geslacht'"
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Uitslag status",
+            "description" : "De status van de waarde van de analyt uitslag.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tijd van de status van de uitslag",
+            "description" : "De datum en tijd van de 'Status van de uitslag' van de analyt uitslag.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Analyte uitslag details",
+            "description" : "Verdere details over een individuele uitslag."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Vastgelegd",
+            "description" : "Het bestaan van de test is vastgelegd in het Laboratorium informatie systeem, maar er is nog niets beschikbaar."
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Gedeeltelijk",
+            "description" : "Dit is een gedeeltelijke (bijvoorbeeld initiële, tussentijdse of voorlopige) Test Uitslag: data in de Test Uitslag kan incompleet of ongevalideerd zijn."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Voorlopig",
+            "description" : "Gevalideerde uitslagen zijn beschikbaar, maar niet alle uitslagen zijn definitief. Dit is een subcategorie van 'Gedeeltelijk'."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Definitief",
+            "description" : "De Test uitslag is compleet en geverifieerd door een bevoegd persoon."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "Gewijzigd",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Aangepast",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Informatie toegevoegd",
+            "description" : "Er is nieuwe informatie toegevoegd nadat het verslag eerder Definitief was. De bestaande informatie is onveranderd. Dit is een subcategorie van 'Aangepast'."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Verkeerd ingevoerd",
+            "description" : "De Tets Uitslag is teruggetrokken nadat hij eerder definitief was."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Geanuleerd",
+            "description" : "De uitslag is niet beschikbaar omdat de test niet gestart of niet compleet was."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Naam van het Analyt",
+            "description" : "De naam van de analyt uitslag",
+            "comment" : "De waarde voor dit element wordt normaal bepaald in een specialisatie, in een template of terwijl de applicatie loopt om het daadwerkelijke analyt weer te geven. Bijvoorbeeld: 'Serum natrium' of 'Haemoglobine'. Het wordt sterk aanbevolen te coderen met een externe terminologie, zoals LOINC, NPU, SNOMED CT, of een lokale lab terminologie.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tijd van validatie",
+            "description" : "De datum en tijd waarop de analyt uitslag werd gevalideerd in het laboratorium door een gezondheidsprofessional.",
+            "comment" : "In veel jurisdicties wordt aangenomen dat de 'Status van de uitslag' een medische validatie bevat, bijvoorbeeld: een 'definitieve' uitslag wordt opgevat als medisch gevalideerd, maar in de andere gebieden wordt deze status apart vastgelegd in dit data element."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identificatie van het specimen/monster gebruikt voor de analyt uitslag",
+            "comment" : "In sommige situaties, zal een enkel Laboratorium test archetype meerdere Specimen archetypes en meerdere Analyt uitslag archetypes bevatten. In deze situaties is dit 'Specimen' data element nodig om de uitslag met het juiste monster te verbinden."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyt uitslag volgore",
+            "description" : "De bedoelde positie van deze analyt uitslag binnen de gehele volgorde van analyt uitslagen.",
+            "comment" : "Bijvoorbeeld: '1', '2' of '3'. Waar meerdere analyt uitslagen worden gerapporteerd, maakt de 'Analyt uitslag volgorde' de volgorde waarin de uitslagen worden gerapporteerd expliciet."
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "*Test method (en)",
+            "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+            "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tijd van validatie",
+            "description" : "De datum en tijd waarop de analyt uitslag werd gevalideerd in het laboratorium door een gezondheidsprofessional.",
+            "comment" : "In veel jurisdicties wordt aangenomen dat de 'Status van de uitslag' een medische validatie bevat, bijvoorbeeld: een 'definitieve' uitslag wordt opgevat als medisch gevalideerd, maar in de andere gebieden wordt deze status apart vastgelegd in dit data element."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Naam van het Analyt",
+            "description" : "De naam van de analyt uitslag",
+            "comment" : "De waarde voor dit element wordt normaal bepaald in een specialisatie, in een template of terwijl de applicatie loopt om het daadwerkelijke analyt weer te geven. Bijvoorbeeld: 'Serum natrium' of 'Haemoglobine'. Het wordt sterk aanbevolen te coderen met een externe terminologie, zoals LOINC, NPU, SNOMED CT, of een lokale lab terminologie.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Opmerking",
+            "description" : "Extra beschrijving van de analyt uitslag, die niet past binnen andere velden.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyt uitslag volgore",
+            "description" : "De bedoelde positie van deze analyt uitslag binnen de gehele volgorde van analyt uitslagen.",
+            "comment" : "Bijvoorbeeld: '1', '2' of '3'. Waar meerdere analyt uitslagen worden gerapporteerd, maakt de 'Analyt uitslag volgorde' de volgorde waarin de uitslagen worden gerapporteerd expliciet."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Referentiebereik aanwijzing",
+            "description" : "Extra advies over de toepasselijkheid van het referentiebereik van deze uitslag; mag ook een textuele of gecodeerd textuele aanwijzing bevatten of het resultaat binnen het normale bereik valt.",
+            "comment" : "Bijvoorbeeld: 'binnen het normale bereik voor leeftijd en geslacht'"
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Uitslag status",
+            "description" : "De status van de waarde van de analyt uitslag.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identificatie van het specimen/monster gebruikt voor de analyt uitslag",
+            "comment" : "In sommige situaties, zal een enkel Laboratorium test archetype meerdere Specimen archetypes en meerdere Analyt uitslag archetypes bevatten. In deze situaties is dit 'Specimen' data element nodig om de uitslag met het juiste monster te verbinden."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tijd van de status van de uitslag",
+            "description" : "De datum en tijd van de 'Status van de uitslag' van de analyt uitslag.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "*Test method (en)",
+            "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+            "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Laboratorium analyt uitslag",
+            "description" : "Het resultaat van een laboratorium test voor een bepaling van een enkele bepaling."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Uitslag van een analyt",
+            "description" : "De waarde van een analyt uitslag.",
+            "comment" : "Bijvoorbeeld: '7.3 mmol/l', 'Verhoogd'. Om het daadwerkelijke analyt result weer te geven dient het 'Any' data type gespecificeerd te worden tot een toepasselijk data type in een specialisatie, een template of terwijl de applicatie loopt.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Analysresultat",
+            "description" : "Resultatet av ett laboratorietest för ett enskilt analytvärde."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analysresultat",
+            "description" : "Värdet av analysresultatet.",
+            "comment" : "Till exempel \"7,3 mmol / L\" eller \"Förhöjd\". Datatypen \"Any\", som är en odefinierad datatyp, måste begränsas till en lämplig datatyp i en specialisering, mall eller applikation. Datatypen \"Quantity\" har attribut från referensmodellen som täcker flaggor för normal/onormal, referensområden och approximationer.\r\nSe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class för mer information."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Ytterligare fritext om analysresultatet som inte fångas av andra dataelement."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Vägledning för referensintervall",
+            "description" : "Vägledning för att ta reda på om referensintervallet är tillämpbart för detta resultat. Kan innehålla text eller kodade textuella råd om resultatet ligger inom det normala intervallet.\r\n",
+            "comment" : "Till exempel \"inom normala gränsvärden avseende ålder och kön\"."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Resultatstatus",
+            "description" : "Status för analysresultatvärdet.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)"
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tidsangivelse för resultatstatus",
+            "description" : "Datum och tid då analysresultatet utfärdades för den aktuella resultatstatusen."
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Detaljer om analysresultat",
+            "description" : "Mer information om ett enskilt analysresultat."
+          },
+          "at0015" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015",
+            "text" : "Registrerad",
+            "description" : "Analysen är registrerad i laboratoriesystemet, men resultatet finns för närvarande inte.\r\n\r\n"
+          },
+          "at0016" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0016",
+            "text" : "Partiellt resultat",
+            "description" : "Detta är ett partiellt (dvs. initialt, preliminärt eller preliminärt) testresultat: Data i resultatet kan vara ofullständiga eller obekräftade."
+          },
+          "at0017" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017",
+            "text" : "Preliminärt resultat",
+            "description" : "Verifierade tidiga resultat är tillgängliga, men inte alla resultat är slutgiltiga. Detta är en underkategori av \"Partiell\"."
+          },
+          "at0018" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0018",
+            "text" : "Slutgiltigt resultat",
+            "description" : "Testresultatet är fullständigt och verifierat av en auktoriserad person."
+          },
+          "at0019" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0019",
+            "text" : "Slutgiltigt resultat, korrigerat",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+          },
+          "at0020" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0020",
+            "text" : "Slutgiltigt resultat, reviderat",
+            "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+          },
+          "at0021" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021",
+            "text" : "Slutgiltigt resultat, tillägg",
+            "description" : "Efter att ha slutförts har resultatrapporten ändrats genom att nytt innehåll har inkluderats. Det befintliga innehållet är oförändrat. Detta är en underkategori av ”Slutgiltigt svar, reviderat”."
+          },
+          "at0022" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022",
+            "text" : "Felaktigt registrerat resultat",
+            "description" : "Analysresultatet har dragits tillbaka efter att ha varit i status \"Slutgiltigt resultat\"."
+          },
+          "at0023" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0023",
+            "text" : "Inställt",
+            "description" : "Resultatet är inte tillgängligt eftersom testet inte har startats eller inte slutförts (kallas även ibland för \"avbrutet\")."
+          },
+          "at0024" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analysnamn",
+            "description" : "Namnet på analysresultatet.",
+            "comment" : "Värdet för detta element anges vanligtvis i en specialisering av den här arketypen, i en mall eller i applikationen. Till exempel \"serumnatrium\" eller \"hemoglobin\". Det rekommenderas starkt att koda detta element med en terminologi såsom exempelvis NPU, LOINC, SNOMED CT eller lokala koduppsättningar."
+          },
+          "at0025" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tidpunkt för validering",
+            "description" : "Datum och tid då analysresultatet validerades medicinskt i laboratoriet.\r\n",
+            "comment" : "I många fall antas 'resultatstatus' inkludera medicinsk validering, dvs. ett \"slutligt\" resultat antas vara medicinskt validerat, men i andra kommer detta att registreras och rapporteras separat med hjälp av detta dataelement.\r\n"
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Provmaterial",
+            "description" : "Identifiering av det provmaterial som använts för analysresultatet.",
+            "comment" : "I vissa situationer kommer en arketyp för laboratorietestresultat (OBSERVATION.Laboratory_test_result) att innehålla flera arketyper för provmaterial (Specimen) och flera arketyper för analysresultat (Laboratory_analyte_result). I dessa situationer måste man använda detta dataelement för att kunna koppla resultaten till rätt provmaterial."
+          },
+          "at0027" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Resultatordning",
+            "description" : "Den avsedda positionen för detta analysresultat i den totala resultatordningen.\r\n\r\n\r\n",
+            "comment" : "Till exempel: \"1\", \"2\", \"3\". Om flera analysresultat rapporteras, indikerar \"Resultatordning\" ordningen på analysresultaten.\r\n\r\n"
+          },
+          "at0028" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmetod",
+            "description" : "Beskrivning av metoden som används för att utföra testet endast på denna analyt. \r\n",
+            "comment" : "Om testmetoden gäller för en hel panel kan testmetoden fångas med hjälp av dataelementet 'Testmetod' i OBSERVATION.laboratory_test_result."
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tidpunkt för validering",
+            "description" : "Datum och tid då analysresultatet validerades medicinskt i laboratoriet.\r\n",
+            "comment" : "I många fall antas 'resultatstatus' inkludera medicinsk validering, dvs. ett \"slutligt\" resultat antas vara medicinskt validerat, men i andra kommer detta att registreras och rapporteras separat med hjälp av detta dataelement.\r\n"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analysnamn",
+            "description" : "Namnet på analysresultatet.",
+            "comment" : "Värdet för detta element anges vanligtvis i en specialisering av den här arketypen, i en mall eller i applikationen. Till exempel \"serumnatrium\" eller \"hemoglobin\". Det rekommenderas starkt att koda detta element med en terminologi såsom exempelvis NPU, LOINC, SNOMED CT eller lokala koduppsättningar."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kommentar",
+            "description" : "Ytterligare fritext om analysresultatet som inte fångas av andra dataelement."
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Resultatordning",
+            "description" : "Den avsedda positionen för detta analysresultat i den totala resultatordningen.\r\n\r\n\r\n",
+            "comment" : "Till exempel: \"1\", \"2\", \"3\". Om flera analysresultat rapporteras, indikerar \"Resultatordning\" ordningen på analysresultaten.\r\n\r\n"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Vägledning för referensintervall",
+            "description" : "Vägledning för att ta reda på om referensintervallet är tillämpbart för detta resultat. Kan innehålla text eller kodade textuella råd om resultatet ligger inom det normala intervallet.\r\n",
+            "comment" : "Till exempel \"inom normala gränsvärden avseende ålder och kön\"."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Resultatstatus",
+            "description" : "Status för analysresultatvärdet.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Provmaterial",
+            "description" : "Identifiering av det provmaterial som använts för analysresultatet.",
+            "comment" : "I vissa situationer kommer en arketyp för laboratorietestresultat (OBSERVATION.Laboratory_test_result) att innehålla flera arketyper för provmaterial (Specimen) och flera arketyper för analysresultat (Laboratory_analyte_result). I dessa situationer måste man använda detta dataelement för att kunna koppla resultaten till rätt provmaterial."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Tidsangivelse för resultatstatus",
+            "description" : "Datum och tid då analysresultatet utfärdades för den aktuella resultatstatusen."
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmetod",
+            "description" : "Beskrivning av metoden som används för att utföra testet endast på denna analyt. \r\n",
+            "comment" : "Om testmetoden gäller för en hel panel kan testmetoden fångas med hjälp av dataelementet 'Testmetod' i OBSERVATION.laboratory_test_result."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Analysresultat",
+            "description" : "Resultatet av ett laboratorietest för ett enskilt analytvärde."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Analysresultat",
+            "description" : "Värdet av analysresultatet.",
+            "comment" : "Till exempel \"7,3 mmol / L\" eller \"Förhöjd\". Datatypen \"Any\", som är en odefinierad datatyp, måste begränsas till en lämplig datatyp i en specialisering, mall eller applikation. Datatypen \"Quantity\" har attribut från referensmodellen som täcker flaggor för normal/onormal, referensområden och approximationer.\r\nSe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class för mer information."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0015", "at0016", "at0017", "at0018", "at0020", "at0019", "at0021", "at0023", "at0022" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "59797323-6827-4b73-8015-3dd2538f9ae4",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser, Antje Wulff, Natalia Strauch",
+        "organisation" : "Department of Infectious Diseases, Heidelberg University Hospital, PLRI for Medical Informatics Medical School Hannover and TU Braunschweig, Medizinische Hochschule Hannover",
+        "email" : "michael.lieser@med.uni-heidelberg.de, wulff.antje@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin",
+        "organisation" : "Region Stockholm, Karolinska University Hospital",
+        "email" : "linda.aulin@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "liv.laugen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
