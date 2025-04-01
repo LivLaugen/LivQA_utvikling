@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "763783902f83a15cca572d9d982c09e6",
-      "PARENT:MD5-CAM-1.0.1" : "B54C8E41D6A32E4A769F4F9240A53D63"
+      "MD5-CAM-1.0.1" : "80e4fb4371b737ad4522a750e278b515",
+      "PARENT:MD5-CAM-1.0.1" : "B54C8E41D6A32E4A769F4F9240A53D63",
+      "sem_ver" : "0.2.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -77,7 +79,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-CLUSTER.clinicalevidence (4).v1"
+    "value" : "openEHR-EHR-CLUSTER.clinicalevidence_(4).v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -263,8 +265,8 @@
       "en" : {
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Clinical evidence (4)",
+          "code" : "at0000.1",
+          "text" : "Biokjemisk biomarkør blod",
           "description" : "Details about findings that support a clinical assertion."
         }
       },
@@ -312,7 +314,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "9f618897-5a63-3a3f-a664-62706e73d00c",
+  "buildUid" : "73c01575-51db-3fdb-b324-089fddef138f",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
