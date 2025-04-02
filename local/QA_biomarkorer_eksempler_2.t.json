@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "a158117c42bb8ca705c50c1d2d3d7433"
+      "MD5-CAM-1.0.1" : "a9e61615b29c4a61f43320712dc616dc"
     },
     "details" : {
       "de" : {
@@ -175,6 +175,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-investigation_screening-002.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.20",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-002.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -1355,7 +1364,14 @@
           "attributeTuples" : [ ]
         } ]
       } ],
-      "attributeTuples" : [ ]
+      "attributeTuples" : [ ],
+      "attributeCustomizations" : {
+        "protocol" : {
+          "aliases" : {
+            "nb" : "protocol"
+          }
+        }
+      }
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
@@ -32573,6 +32589,15 @@
                       "attributeTuples" : [ ],
                       "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-023.v1",
                       "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0065.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-006.v1",
+                      "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -40661,6 +40686,15 @@
           "nodeId" : "at0045.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..1",
+          "nodeId" : "at0083.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-001.v1",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -49123,7 +49157,7 @@
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
+              "rmTypeName" : "DV_TEXT",
               "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -49193,15 +49227,6 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-001.v1",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0024.3",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-001.v1",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -64677,6 +64702,3372 @@
           "value" : "ISO_639-1"
         },
         "codeString" : "nb"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "e122bd26-a4f2-40ff-abd4-8e4cfceae9cc",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "430B520EC4563F96465173ED840F7A4A"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-006.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : { },
+        "sl" : { },
+        "en" : { },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Anatomisk lokalisering (likt som for bilde)",
+            "description" : "Et fysisk sted på eller inne i menneskekroppen."
+          }
+        },
+        "pt-br" : { },
+        "de" : { },
+        "nl" : { },
+        "sv" : { },
+        "fr" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "a35e9727-a67b-469f-ab59-a7216d21f7df",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Darin Leonhardt",
+        "organisation" : "PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Linda Aulin, Romi Shweta Pathak, Henna Haapa Hybinette, sofia Lång Janstad, Sajjad Saffari Miandoab",
+        "organisation" : "Region Östergötland, Region Stockholm, Karolinska universitetssjukhuset, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, linda.aulin@sll.se, romi.pathak@regionstockholm.se, henna.haapa-hybinette@regionstockholm.se, sofia.lang-janstad@regionstockholm.se, sajjad.saffari-miandoab@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen, Vebjørn Arntzen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway, Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Biljana Princic"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Michiel Klitsie",
+        "organisation" : "Nedap Healthcare",
+        "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4f4d5daf-b6b7-475f-ae49-66b3c5003e6f",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "22CC4D6E678D5921D1235F94FF1DDDB1"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Details zu einer physischen Probe, die von einer Person zum Zwecke der Untersuchung, Kontrolle oder Analyse entnommen wurde oder sich auf eine Person bezieht.",
+          "keywords" : [ "Probe", "Labor", "Laborprobe", "Entnahme", "Probenahme", "Biopsie", "Gewebe", "Zytologie", "Mikrobiologie", "Pathologie", "Histopathologie", "Histologie", "Laboratorium", "Flüssigkeit", "Abstrich", "Blut", "Exsudat", "Serum", "Plasma", "Urin", "Speichel", "Sekretion", "synovial", "Lymphe", "Kot", "Stuhl", "Exkremente", "Aszites", "Auswurf", "Tupfer", "Muttermilch", "Eiter", "Drainageflüssigkeit", "Knochenmark", "Kultur", "Ausschabung", "Aspirat", "Aderlass", "Test", "zerebrospinale Flüssigkeit", "Pleuraflüssigkeit", "Resektion", "Exzision" ],
+          "use" : "Zur Darstellung von Details zu einer physischen Probe, die von einer Person zum Zwecke der Untersuchung, Kontrolle oder Analyse entnommen wurde oder sich auf eine Person bezieht.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung in den folgenden Anwendungsfällen entwickelt: \r\n- innerhalb von INSTRUCTION.service_request oder einem anderen laborbezogenen INSTRUCTION-Archetyp, um eine zu entnehmende Probe zu beschreiben, oder um eine Probe zu beschreiben, die einer Labordienstleistungsanforderung beigefügt ist;\r\n- innerhalb eines laborbezogenen ACTION-Archetyps zur Beschreibung der Probenentnahme oder einer entnommenen Probe; oder\r\n- innerhalb von OBSERVATION.laboratory_test_result oder anderen OBSERVATION-Archetypen im Laborbericht, um die berichtete Probe zu beschreiben.\r\nDarüber hinaus kann dieser Archetyp auch in andere ENTRY- oder CLUSTER-Archetypen eingebettet werden, wenn dies klinisch angemessen ist. \r\n\r\nDer Detaillierungsgrad dieses Archetyps wird wahrscheinlich den derzeit in den meisten Labors erfassten Levels übersteigen. Es wurde bewusst für eine einfache einzelne Probeentnahme konzipiert, gleichzeitige Entnahme mehrerer Proben mit einer einzigen Anforderung und komplexe Situationen, in denen es erforderlich ist, kleinste Details über die Verarbeitung und Aufteilung einer einzelnen Probe darzustellen.\r\n\r\nDie genaue Semantik mehrerer Elemente dieses Archetyps, kann sich, basierend auf dem vom Container-Archetyp bereitgestellten Kontext, ändern. Beispielsweise ist das Element \"Methode der Probenentnahme\" im Kontext eines INSTRUCTION-Archetyps die angeforderte Entnahmemethode, während das gleiche Element im Kontext eines ACTION-Archetyps im Status \"Abgeschlossen\" die tatsächliche Entnahmemethode ist.\r\n\r\nDieser Archetyp soll mit anderen CLUSTER-Archetypen wie \"Probenbehälter\", \"Probenverarbeitung\" und „Probentransport“ ergänzt werden.\r\n\r\nDieser Archetyp kann zusammen mit dem Archetyp \"Probenbehälter\" auf zwei Arten verwendet werden: \r\n- \"Probenbehälter\" verschachtelt in \"Probe\" (z.B. wenn eine venöse Blutprobe in zwei Röhrchen aufgeteilt wird oder ein ganzer Dickdarm in drei Behälter aufgeteilt wird); oder \r\n- \"Probe\" in \"Probenbehälter\" verschachtelt (z.B. wenn ein Eimer mit Formalin einen Abschnitt des Dickdarms und ein Rektum enthält oder ein Gefäß fünf einzeln markierte Muttermale enthält).\r\n\r\nDer Begriff \"Entnahme\" (EN: collection), das in diesem Archetyp verwendet wird, bezieht sich immer auf die Aktivität, die Probe von einer Person zu erhalten. Er soll nicht den Transport der Probe von der Person zum Testlabor darstellen.",
+          "misuse" : "Nicht zur Erfassung von Informationen über Proben, die sich nicht auf eine bestimmte Person beziehen. Zum Beispiel für routinemäßige Wasserproben aus einem Wasserwerk oder für Stichproben aus Einrichtungen der Lebensmittelproduktion.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera detaljer om ett fysiskt provmaterial som tagits från eller relaterat till en individ för undersökning eller analys.",
+          "keywords" : [ "provmaterial", "laboratoriu", "prov", "provtagning", "samplimg", "biopsi", "vävnad", "kroppsvävnad", "vävnadsprov", "cytologi", "mikobiologi", "patologi", "histopatologi", "histologi", "labb", "vätska", "utstryk", "blod", "exudat", "serum", "plasma", "urin", "saliv", "sekret", "cysta", "lymfa", "avföring", "faeces", "ascites", "hostar upp", "sekret", "kompress", "bröstmjölk", "pus", "var", "dränagevätska", "benmärg", "mikroorganism", "odling", "skrapning", "aspirat", "venesektion", "test", "cerebrospinalvätska", "pleuravätska", "resektion", "excision" ],
+          "use" : "Används för att registrera detaljer om ett fysiskt provmaterial som tagits från eller relaterat till en individ för undersökning eller analys.\r\n\r\nDenna CLUSTER-arketyp är utformad för användning i de tre huvudkontexterna som beskrivs nedan:\r\n- Inom INSTRUCTION.service_request eller annan laboratorierelaterad INSTRUCTION-arketyp för att beskriva ett provmaterial som ska tas eller för att beskriva ett prov som åtföljer en begäran om laboratorietjänst.\r\n- Inom en laboratorierelaterad ACTION-arketyp för att beskriva provtagning eller provtaget material.\r\n- Inom OBSERVATION.laboratory_test_result eller annan laboratorierelaterad OBSERVATION-arketyp för att beskriva det provmaterial som ett laboratorieresultat bygger på.\r\nDessutom kan arketypen också användas inom andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.\r\n\r\nDetaljnivån i denna arketyp överstiger sannolikt det som för närvarande registreras i de flesta laboratorier. Arketypen är avsedd att vara användbar för en enkel provtagning, samtidig provtagning av flera provmaterial utifrån en och samma beställning eller komplexa situationer där minsta detalj om beredning och uppdelning av ett provmaterial måste registreras.\r\n\r\nDe specifika betydelserna för flera element i den här arketypen kommer att ändras beroende på den överordnade arketyp där arketypen för provmaterial är infogad. Till exempel kommer elementet \"Provtagningsmetod\" i samband med en INSTRUCTION-arketyp att vara den erforderliga provtagningsmetoden, medan samma element i sammanhanget av en ACTION-arketyp i det \"färdiga\" tillståndet är den faktiska provtagningsmetod som används.\r\n\r\nDenna arketyp kompletteras av andra CLUSTER-arketyper för begrepp som exempelvis behållare, provberedning, transport och lagring av provmaterial.\r\n\r\nDen här arketypen har utformats för att användas med arketypen ”Specimen Container” på två huvudsakliga sätt:\r\n- ”Specimen Container” nästlad i ”Specimen” (till exempel när ett venöst blodprov är uppdelat mellan två injektionsflaskor eller om en hel tjocktarm är uppdelad i tre hinkar) eller\r\n- \"Specimen\" nästlad i \" Specimen Container\" (till exempel när en hink med formalin innehåller en sektion av tjocktarmen och en rektum).\r\n\r\nOBS! Termen \"provtagning\" i denna arketyp är avsedd att betyda aktiviteten för att samla in provmaterial från en individ. Det är inte avsett att representera transporten från individen till laboratoriet.\r\n",
+          "misuse" : "Ej avsedd att användas för att registrera information om provmaterial som inte är relaterat till en viss individ, såsom exempelvis rutinprover från vattenverk eller slumpmässiga prover från livsmedelsproduktion.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om et fysisk prøvemateriale tatt fra eller relatert til et individ, for undersøkelse eller analyse.",
+          "keywords" : [ "laboratorium", "prøve", "prøvetaking", "laboratorieprøve", "prøvemateriale", "prøveeksemplar", "preparat", "prøvesamling", "biopsi", "vevsprøve", "celleprøve", "mikrobiologi", "patologi", "histologi", "lab", "væske", "utstryk", "blod", "sårvæske", "serum", "plasma", "urin", "spytt", "sekret,", "leddvæske", "lymfe", "avføring", "ascites", "ekspektorat", "pensel", "morsmelk", "puss", "drensvæske", "beinmarg", "kultur", "avskrap", "aspirat" ],
+          "use" : "Brukes for å registrere detaljer om et fysisk prøvemateriale tatt fra eller relatert til et individ, for undersøkelse eller analyse.\r\n\r\nDenne CLUSTER-arketypen er laget for å brukes i de tre hovedsammenhengene beskrevet under:\r\n- Innenfor INSTRUCTION.service_request eller en annen laboratorierelatert INSTRUCTION-arketype for å beskrive et prøvemateriale som skal tas, eller for å beskrive prøvematerialet som ligger ved en laboratorierekvisisjon.\r\n- Innenfor en laboratorierelatert ACTION-arketype for å beskrive prøvetaking eller et prøvemateriale som er tatt\r\n- Innenfor OBSERVATION.laboratory_test_result eller en annen laboratorierelatert OBSERVATION-arketype for å beskrive prøvematerialet som ligger til grunn for et laboratorieresultat.\r\nI tillegg kan arketypen også brukes innenfor andre ENTRY- eller CLUSTER-arketyper, der det er klinisk passende.\r\n\r\nDet er sannsynlig at detaljnivået i denne arketypen overgår nåværende dataregistrering i de fleste laboratorier. Den er ment for å være brukbar både for en enkel prøvetaking, samtidig innhenting av flere prøvematerialer med én rekvisisjon, og komplekse situasjoner det det må registreres mye detaljer om preparering og oppdeling av et prøvemateriale.\r\n\r\nDe spesifikke betydningene av flere elementer i denne arketypen vil endre seg ut fra den overordnede arketypen som Prøvemateriale-arketypen settes inn i. For eksempel vil elementet \"Prøvetakingsmetode\" i kontekst av en INSTRUCTION-arketype være den rekvirerte prøvetakingsmetoden, mens det samme elementet i kontekst av en ACTION-arketype i tilstanden \"completed\" være den faktiske prøvetakingsmetoden som ble brukt.\r\n\r\nDenne arketypen kompletteres av andre CLUSTER-arketyper for konsepter som Prøvebeholder, Prøvepreparering, og transport og lagring av prøvemateriale.\r\n\r\nDenne arketypen kan brukes sammen med Prøvebeholder-arketypen på to hovedmåter:\r\n- Ved nøsting av \"Prøvebeholder\" inni \"Prøvemateriale\" (for eksempel når et vakuumglass med venøst blod fordeles på to mindre glass, eller en hel tykktarm deles på tre bøtter)\r\n- Med \"Prøvemateriale\" nøstet inni \"Prøvebeholder\" (for eksempel når en bøtte inneholder en seksjon av en tykktarm og en endetarm, eller et glass inneholder fem individuelt merkede føflekker)\r\n\r\nNB! Uttrykket \"prøvetaking\" er i denne arketypen ment å bety aktiviteten å ta en prøve fra et individ. Det er ikke ment å representere transporten fra individet til laboratoriet.",
+          "misuse" : "Ikke ment å brukes til å registrere informasjon om prøvemateriale som ikke er relaterte til et spesifikt individ, som for eksempel rutineprøver fra vannverk eller stikkprøver fra matvareproduksjon.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes de um espécime laboratorial. Será frequentemente usado em diferentes contextos, p.e, dentro de um arquétipo tipo Instruction para descrever os espécimes que devem ser obtidos, ou descrevendo o espécime que acompanha a solicitação laboratorial. Pode ocorre dentro de um arquétipo tipo Action, p.e., descrevendo espécimes retirados como parte de um procedimento cirúrgico. \r\n\r\nSerá finalmente utilizado dentro de um arquétipo de resultado laboratorial para descrever o espécime reportado.",
+          "keywords" : [ "*specimen (en)", "*laboratory (en)", "*sample (en)", "*collection (en)", "*sampling (en)", "*biopsy (en)", "*tissue (en)", "*cytology (en)", "*microbiology (en)", "*pathology (en)", "*histopathology (en)", "*histology (en)", "*lab (en)", "*fluid (en)", "*smear (en)", "*blood (en)", "*exudate (en)", "*serum (en)", "*plasma (en)", "*urine (en)", "*saliva (en)", "*secretion (en)", "*synovial (en)", "*lymph (en)", "*feces (en)", "*faeces (en)", "*fæces (en)", "*ascites (en)", "*expectorate (en)", "*swab (en)", "*breast milk (en)", "*pus (en)", "*drain fluid (en)", "*bone marrow (en)", "*culture (en)", "*scraping (en)", "*aspirate (en)", "*phlebotomy (en)", "*test (en)", "*cerebrospinal fluid (en)", "*pleural fluid (en)", "*resection (en)", "*excision (en)" ],
+          "use" : "Geralmente utilizado dentro de OBSERVATION. laboratory_test.v1 e outros arquétipos tipo Instruction ou Action relacionados.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a physical sample collected from, or related to, an individual for the purpose of investigation, examination or analysis.",
+          "keywords" : [ "specimen", "laboratory", "sample", "collection", "sampling", "biopsy", "tissue", "cytology", "microbiology", "pathology", "histopathology", "histology", "lab", "fluid", "smear", "blood", "exudate", "serum", "plasma", "urine", "saliva", "secretion", "synovial", "lymph", "feces", "faeces", "fæces", "ascites", "expectorate", "swab", "breast milk", "pus", "drain fluid", "bone marrow", "culture", "scraping", "aspirate", "phlebotomy", "test", "cerebrospinal fluid", "pleural fluid", "resection", "excision" ],
+          "use" : "Use to record details about a physical sample collected from, or related to, an individual for the purpose of investigation, examination or analysis.\r\n\r\nThis archetype has been specifically designed to be used in the following use cases:\r\n- within INSTRUCTION.service_request or another laboratory-related INSTRUCTION archetype to describe a specimen that is to be collected, or to describe a specimen that accompanies a laboratory service request; \r\n- within a laboratory-related ACTION archetype to describe specimen collection or a specimen that has been collected; or\r\n- within OBSERVATION.laboratory_test_result or other laboratory reporting OBSERVATION archetypes to describe the specimen being reported.\r\nIn addition this archetype can also be nested within other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThe level of detail in this archetype is likely to exceed that currently collected in most laboratories. It has deliberately been designed to cater for a simple, single specimen collection; simultaneous collection of multiple specimens with a single request; and complex situations where it is required to record minute detail about the preparation and subdivision of a single specimen.\r\n\r\nThe exact semantics of several elements of this archetype may change based on the context provided by the parent archetype in which it is nested. For example, the 'Collection method' element in the context of an INSTRUCTION archetype is the requested collection method, while the same element in the context of an ACTION archetype in the 'completed' state is the actual collection method.\r\n\r\nOther complementary archetypes will carry the detail about 'Specimen container', 'Specimen preparation', and 'Specimen transport'.\r\n\r\nThis archetype has been designed to be used with the Specimen container archetype in two main ways: \r\n- 'Specimen container' nested within 'Specimen' (for example when a venous blood specimen is divided between two vials, or a whole large intestine is divided into three buckets); or\r\n- 'Specimen' nested within 'Specimen container' (for example when a bucket of formalin contains a section of large intestine and a rectum, or a jar contains five individually marked moles).\r\n\r\nPlease note: The term 'collection' used in this archetype always refers to the activity of obtaining a specimen from an individual. It is not intended to represent the transport of the specimen from the individual to the testing laboratory.",
+          "misuse" : "Not intended to be used for recording information about specimens that are not related to a specific individual. For example routine water samples from a waterworks, or spot samples from food production facilities.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل تفاصيل حول عينة بالمعمل. \r\nيستخدم غالبا في سياقات مختلفة, مثلا: في داخل نموذج (تعليمات) ليصف العينة التي ينبغي أخذها, أو يصف العينة المرافقة لطلب معملي. \r\nو قد يحدث ذلك في داخل نموذج (فعل), مثال: وصف العينات التي تم أخذها كجزء من إجراء طبي جراحي. \r\nو سيستخدم أخيرا في داخل نموذج نتيجة اختبار المعمل ليصف العينة التي يتم تقديم عينة حولها.",
+          "keywords" : [ "*specimen (en)", "*laboratory (en)", "*sample (en)", "*collection (en)", "*sampling (en)", "*biopsy (en)", "*tissue (en)", "*cytology (en)", "*microbiology (en)", "*pathology (en)", "*histopathology (en)", "*histology (en)", "*lab (en)", "*fluid (en)", "*smear (en)", "*blood (en)", "*exudate (en)", "*serum (en)", "*plasma (en)", "*urine (en)", "*saliva (en)", "*secretion (en)", "*synovial (en)", "*lymph (en)", "*feces (en)", "*faeces (en)", "*fæces (en)", "*ascites (en)", "*expectorate (en)", "*swab (en)", "*breast milk (en)", "*pus (en)", "*drain fluid (en)", "*bone marrow (en)", "*culture (en)", "*scraping (en)", "*aspirate (en)", "*phlebotomy (en)", "*test (en)", "*cerebrospinal fluid (en)", "*pleural fluid (en)", "*resection (en)", "*excision (en)" ],
+          "use" : "يستخدم عادةً في داخل نموذج (ملاحظة. معمل) و النماذج الأخرى تعليمات و فعل المتعلقة بالمعمل.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "ar-sy" : {
+          "/items[at0071]" : {
+            "fhir_mapping" : "*Specimen.collection.collector(en)"
+          },
+          "/items[at0070]" : {
+            "fhir_mapping" : "*Specimen.collection.collector(en)"
+          },
+          "/items[at0013]" : {
+            "fhir_mapping" : "*Specimen.collection.sourceSite(en)"
+          },
+          "/items[at0001]" : {
+            "fhir_mapping" : "*Specimen.accessionIdentifier(en)"
+          },
+          "/items[at0034]" : {
+            "fhir_mapping" : "*Specimen.receivedTime(en)"
+          },
+          "/items[at0027]" : {
+            "fhir_mappings" : "*Specimen.collection.quantity(en)"
+          },
+          "/items[at0007]" : {
+            "fhir_mapping" : "*Specimen.collection.method(en)"
+          },
+          "/items[at0029]" : {
+            "fhir_mapping" : "*Specimen.type(en)"
+          }
+        },
+        "en" : {
+          "/items[at0071]" : {
+            "fhir_mapping" : "Specimen.collection.collector"
+          },
+          "/items[at0070]" : {
+            "fhir_mapping" : "Specimen.collection.collector"
+          },
+          "/items[at0088]" : {
+            "fhir_mapping" : "Specimen.identifier"
+          },
+          "/items[at0013]" : {
+            "fhir_mapping" : "Specimen.collection.sourceSite"
+          },
+          "/items[at0001]" : {
+            "fhir_mapping" : "Specimen.accessionIdentifier"
+          },
+          "/items[at0034]" : {
+            "fhir_mapping" : "Specimen.receivedTime"
+          },
+          "/items[at0045]" : {
+            "fhir_mapping" : "Specimen.note"
+          },
+          "/items[at0027]" : {
+            "fhir_mapping" : "Specimen.collection.quantity"
+          },
+          "/items[at0007]" : {
+            "fhir_mapping" : "Specimen.collection.method"
+          },
+          "/items[at0029]" : {
+            "fhir_mapping" : "Specimen.type"
+          }
+        },
+        "pt-br" : { },
+        "nb" : { },
+        "de" : {
+          "/items[at0071]" : {
+            "fhir_mapping" : "Specimen.collection.collector"
+          },
+          "/items[at0070]" : {
+            "fhir_mapping" : "Specimen.collection.collector"
+          },
+          "/items[at0088]" : {
+            "fhir_mapping" : "Specimen.identifier"
+          },
+          "/items[at0013]" : {
+            "fhir_mapping" : "Specimen.collection.bodySite"
+          },
+          "/items[at0001]" : {
+            "fhir_mapping" : "Specimen.accessionIdentifier"
+          },
+          "/items[at0034]" : {
+            "fhir_mapping" : "Specimen.receivedTime"
+          },
+          "/items[at0045]" : {
+            "fhir_mapping" : "Specimen.note"
+          },
+          "/items[at0027]" : {
+            "fhir_mapping" : "Specimen.collection.quantity"
+          },
+          "/items[at0007]" : {
+            "fhir_mapping" : "Specimen.collection.method"
+          },
+          "/items[at0029]" : {
+            "fhir_mapping" : "Specimen.type"
+          }
+        },
+        "sv" : {
+          "/items[at0027]" : {
+            "fhir_mapping" : "Specimen.collection.quantity"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.specimen.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-specimen-005.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0029.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0098.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0097.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0099.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0088.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0034.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0007.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SMOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SMOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "122548005",
+                    "value" : "Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "771625002",
+                    "value" : "Vakuumbiopsi av lesjon i mamma"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "274331003",
+                    "value" : "Kirurgisk biopsi av mamma"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "10940003",
+                    "value" : "Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi)"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "234271004",
+                    "value" : "Biopsi av aksillær lymfeknute (grovnål)"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "58347006",
+                    "value" : "Kirurgisk eksisjon av lymfeknute (tilfeldig funn av lymfeknute) (lymfadenektomi)"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "387736007",
+                    "value" : "FNAC (finnålsaspirasjon) av mamma"
+                  }, {
+                    "terminologyId" : "SMOMED-CT",
+                    "code" : "234282007",
+                    "value" : "FNAC (finnålsaspirasjon) av lymfeknute i aksille"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0079.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0087.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0015.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0067.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0070.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0080.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "magnitude",
+                "children" : [ {
+                  "@type" : "C_INTEGER",
+                  "rmTypeName" : "Integer",
+                  "occurrences" : "1..1",
+                  "constraint" : [ {
+                    "lower" : 0,
+                    "lowerIncluded" : true,
+                    "upperIncluded" : false,
+                    "lowerUnbounded" : false,
+                    "upperUnbounded" : true
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0042.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0052", "at0053", "at0089", "at0094", "at0054", "at0055", "at0090", "at0095", "at0091", "at0092" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0041.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0062", "at0063", "at0064" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0045.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : { },
+        "en" : { },
+        "pt-br" : { },
+        "nb" : {
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Lesjon/funn navn/ID",
+            "description" : "Et navn eller etikett som beskriver prøvematerialet.",
+            "comment" : "Vanligvis kun relevant for anatomiske patologiprøver. For eksempel: 'Sigmoidreseksjon med et stykke blærevegg' eller 'Aggregat av flere hudbiopsifragmenter'"
+          }
+        },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "2135a42f-2b06-49c7-a71b-dd68896fa178",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Antje Wulff, Natalia Strauch",
+        "organisation" : "PLRI for Medical Informatics Medical School Hannover and TU Braunschweig, Medizinische Hochschule Hannover",
+        "email" : "Ballout.Sarah@mh-hannover.de, wulff.antje@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin, Erik Sundvall",
+        "organisation" : "Region Stockholm, Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University",
+        "email" : "linda.aulin-lundeqvist@regionstockholm.se, erik.sundvall@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Kristian Berg, Gro-Hilde Ulriksen, Line Silsand, Silje Ljosland Bakke, Liv Laugen",
+        "organisation" : "Universitetssykehuset Nord-Norge, Helse Vest IKT AS, ​Oslo University Hospital, Norway",
+        "email" : "kristian.berg@unn.no, gro-hilde.ulriksen@unn.no, line.silsand@unn.no, silje.ljosland.bakke@helse-vest-ikt.no, liv.laugen@ous-hf.no"
+      },
+      "accreditation" : "*",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "f86cd61b-0e0e-4a18-8c07-9c4e537bb4e4",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "81F6C7D9E6F6BD129786FA973FD930FF"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Dient der Darstellung von einzelnen Ergebniswerten für Labor-Analyten, die in der klinischen Diagnostikanalyse wie medizinische Biochemie, Hämatologie, Immunologie und Transfusionsmedizin zu finden ist.",
+          "keywords" : [ "Labor", "Pathologie", "Analyt", "Bestandteil", "Ergebnis" ],
+          "use" : "Dient zur Erfassung von einzelnen Ergebniswerten für Labor-Analyten, die in der klinischen Diagnostik verbreitet sind, wie z. B. biochemische, hämatologische, immunologische und transfusionsmedizinische Tests. Diese können auch in anatomisch-pathologischen Berichten als \"zusätzliche Untersuchungen\" vorkommen.\r\n \r\nEine oder mehrere Instanzen dieses Archetyps können im SLOT \"Testergebnis\" des Archetyps OBSERVATION.laboratory_test_result verschachtelt werden.\r\n\r\nUnter Umständen kann dieser Archetyp in einem CLUSTER.laboratory_test_panel Archetyp verwendet werden - zusammen mit andere Analyten, die normalerweise als Teil eine Panels oder Profils getestet und/oder befundet werden.\r\n\r\nDieser Archetyp kann im Rahmen einer komplexerem Labor/Pathologie-Befundung, z.B. in anatomisch-pathologischen Befunden verwendet werden, in denen oft quantitative Resultate, wie Durchfluss-Zytometrie-Analysen neben den üblichen makroskopischen und mikroskopischen Ergebnissen dokumentiert werden.\r\n",
+          "misuse" : "Nicht zur Darstellung von makroskopischen / mikroskopischen Befunde in der anatomischen Pathologie zu verwenden, außer für zusätzliche Tests wie durchflußzytometrischen Studien.\r\n\r\nNicht zur Darstellung von Ergebnissen für Mikrobiologische Befunde verwenden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Registrering av ett enskilt laboratorieanalysresultat som vanligtvis förekommer i undersökningar inom exempelvis klinisk kemi, kliniska mikrobiologi, klinisk genetik, immunologi och transfusionsmedicin.\r\n",
+          "keywords" : [ "laboratorium", "labb", "patologi", "analyt", "analys", "resultat", "analysresultat", "svar", "komponent" ],
+          "use" : "Används för registrering av ett enskilt laboratorieresultat inom områden såsom medicinsk biokemi, hematologi, immunologi och transfusionsmedicin. Arketypen kan även användas för kompletterande undersökningar.\r\n\r\nEn eller flera instanser av denna arketyp kan nästlas i den SLOT för \"Undersökningsresultat\" som finns i arketypen OBSERVATION.laboratory_test_result. \r\n\r\nI vissa sammanhang kan denna arketyp användas i arketypen CLUSTER.laboratory_test_panel tillsammans med andra analyser som vanligtvis utförs eller rapporteras tillsammans som en del av en analysgrupp, -paket eller -panel.\r\n\r\nDenna arketyp kan även användas i mer komplexa laboratorie- och patologirapporter där kvantitativa svar såsom flödescytometri rapporteras tillsammans med konventionella makroskopiska och mikroskopiska undersökningar.",
+          "misuse" : "Ska inte användas för att registrera makroskopiska eller mikroskopiska patologifynd, förutom för ytterligare undersökningar såsom flödescytometri. Ska heller inte användas för att registrera resultat från mikrobiologiska odlingar. I dessa fall krävs specialiserade arketyper för att fånga informationen på rätt sätt. \r\n\r\nSka heller inte användas för patientbunden diagnostik såsom radiologiska och fysiologiska undersökningar.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere ett enkelt laboratorieresultat innenfor områder som medisinsk biokjemi, hematologi, immunologi og transfusjonsmedisin.",
+          "keywords" : [ "laboratorie", "analytt", "analyse", "svar", "resultat" ],
+          "use" : "For å registrere ett enkelt laboratorieresultat innenfor områder som medisinsk biokjemi, hematologi, immunologi og transfusjonsmedisin. Arketypen kan også brukes til tilleggsundersøkelser innenfor patologi.\r\n\r\nEn eller flere instanser av denne arketypen kan nøstes i SLOTet \"Undersøkelsesresultat\" i arketypen OBSERVATION.laboratory_test_result.\r\n\r\nI noen sammenhenger kan denne arketypen brukes i arketypen CLUSTER.laboratory_test_panel, sammen med andre analytter som vanligvis utføres sammen som del av en analysegruppe.\r\n\r\nDenne arketypen kan brukes innenfor mer komplekse laboratorie/patologirapporter der kvantitative svar som for eksempel flowcytometri rapporteres sammen med konvensjonelle makroskopiske og mikroskopiske undersøkelser.",
+          "misuse" : "Skal ikke brukes til å registrere funn ved patologiundersøkelser, annet enn for tilleggsundersøkelser som flowcytometri.\r\n\r\nSkal ikke brukes til å registrere mikrobiologiske dyrkningssvar.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar valores únicos e individuais de resultados laboratoriais de analitos comuns a testes patológicos clínicos como bioquímica, hematologia e imunologia.\r\n",
+          "keywords" : [ "laboratório", "patologia", "analito", "componente", "resultado" ],
+          "use" : "Para gravar valores únicos e individuais de resultados laboratoriais de analitos comuns a testes patológicos clínicos como bioquímica, hematologia e imunologia. Normalmente usados conjuntamente com o arquétipo parental OBSERVATION.laboratory_test_result e em algumas circunstâncias será carregado dentro de um arquétipo CLUSTER.laboratory_test_panel, junto com outros analitos que são normalmente testados e/ou reportados como parte de uma bateria, painel e perfil, embora não seja necessário e.e múltiplos analitos podem ser carregados diretamente dentro do OBSERVATION.laboratory_test.\r\n\r\nO atributo do nome do elemento \"Resultado do analito\" é normalmente substituído em uma especialização, template ou em tempo de execução para carregar o nome do analito específico, p.e., \"hemoglobina\", frequentemente codificado com uma terminologia de referência como LOINC, SNOMED CT ou NPU.\r\n\r\nEste arquétipo pode ser usado dentro do contexto de relatórios laboratoriais/de patologia mais complexos como em relatórios de histopatologia/anatomia onde resultados quantitativos como de estudos de citometria de fluxo e testes genéticos são frequentemente reportados junto com relatórios macroscópicos e microscópicos convencionais.",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a single value laboratory analyte result, commonly found in clinical pathology testing such as medical biochemistry, haematology, immunology and transfusion medicine.",
+          "keywords" : [ "laboratory", "pathology", "analyte", "constituent", "result" ],
+          "use" : "Use to record a single value laboratory analyte result, commonly found in clinical pathology testing such as medical biochemistry, haematology, immunology and transfusion medicine. They may also be found in anatomical pathology reports as 'ancillary tests'.\r\n\r\nOne or more instances of this archetype may be nested within the 'Test result' SLOT in the OBSERVATION.laboratory_test_result. \r\n\r\nIn some circumstances this archetype may be carried within a CLUSTER.laboratory_test_panel archetype, together with other analytes which are normally tested and/or reported as part of a battery, panel or profile. \r\n\r\nThis archetype may be used within the setting of more complex laboratory/pathology reporting such as anatomical pathology reports where quantitative results such as cytometric flow studies are often reported alongside conventional macroscopic and microscopic reporting.",
+          "misuse" : "Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Voor het vastleggen van een enkele laboratorium analyt uitslag, gebruikelijk in klinische chemische onderzoeken zoals medische biochemie, hematologie, immunologie en transfusiegeneeskunde.",
+          "keywords" : [ "laboratorium", "klinische chemie", "analyt", "bepaling", "uitslag" ],
+          "use" : "Gebruik voor het vastleggen van een enkele laboratorium analyt uitslag, gebruikelijk in de klinsiche chemie zoals biochemie, haematologie, immunologie and tranfusiegeneeskunde. Kan ook gebruikt worden voor aanvullend onderzoek binnen een anatomisch pathologisch onderzoek.",
+          "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar el resultado de un analito de laboratorio de valor único, normalmente en pruebas de patología clínica como bioquímica médica, hematología, inmunología y medicina transfusional.",
+          "keywords" : [ "laboratorio", "patología", "analito", "componente", "resultado" ],
+          "use" : "Se utiliza para registrar el resultado de un analito de laboratorio de valor único, normalmente en pruebas de patología clínica como bioquímica médica, hematología, inmunología y medicina transfusional. También puede encontrarse en informes de anatomía patológica como 'pruebas auxiliares'.\r\n\r\nUna o más instancias de este arquetipo pueden estar anidadas dentro del SLOT 'Resultado de la prueba', dentro de OBSERVATION.laboratory_test_result.\r\n\r\nEn algunas circunstancias, este arquetipo puede incluirse dentro de un arquetipo CLUSTER.laboratory_test_panel, junto con otros analitos que normalmente se analizan y/o informan como parte de una serie, panel o perfil.\r\n\r\nEste arquetipo se puede utilizar para informes de laboratorio/patología más complejos, como informes de anatomía patológica, donde los resultados cuantitativos, como los estudios de citometría de flujo, a menudo se informan junto con los informes macroscópicos y microscópicos convencionales.",
+          "misuse" : "No debe utilizarse para registrar hallazgos macroscópicos/microscópicos de anatomía patológica, excepto para pruebas adicionales como estudios de citometría de flujo.\r\n\r\nNo debe utilizarse para registrar resultados de cultivos microbiológicos.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar un resultat de laboratori d'un analit de valor únic, normalment de proves de patologia clínica, com ara bioquímica mèdica, hematologia, immunologia i medicina transfusional.",
+          "keywords" : [ "laboratori", "patologia", "analit", "component", "resultat" ],
+          "use" : "S'utilitza per registrar un resultat de laboratori d'un analit de valor únic, normalment de proves de patologia clínica, com ara bioquímica mèdica, hematologia, immunologia i medicina transfusional. També es pot trobar en informes d'anatomia patològica com a 'proves auxiliars'.\r\n\r\nUna o més instàncies d'aquest arquetip poden estar niades dins del SLOT 'Resultat de la prova', dins OBSERVATION.laboratory_test_result.\r\n\r\nEn algunes circumstàncies, aquest arquetip pot incloure's dins d'un arquetip CLUSTER.laboratory_test_panel, juntament amb altres analits que normalment s'analitzen i/o informen com a part d'una sèrie, panell o perfil.\r\n\r\nAquest arquetip es pot utilitzar per a informes de laboratori/patologia més complexos, com ara informes d'anatomia patològica, on els resultats quantitatius, com els estudis de citometria de flux, sovint s'informen juntament amb els informes macroscòpics i microscòpics convencionals.",
+          "misuse" : "No s'ha d'utilitzar per registrar troballes macroscòpiques/microscòpiques d'anatomia patològica, excepte per a proves addicionals com a estudis de citometria de flux.\r\n\r\nNo s'ha de fer servir per registrar resultats de cultius microbiològics.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在用于记录单值型的实验室检验结果，常见于医学生物化学、血液学、免疫学和输血医学等临床病理学/检验医学检测当中。",
+          "keywords" : [ "实验室", "病理学", "检验医学", "检验", "分析物", "检验项目", "检验结果", "化验结果", "构成要素" ],
+          "use" : "旨在用于记录单值型的实验室检验结果，常见于医学生物化学、血液学、免疫学和输血医学等临床病理学/检验医学检测当中。在解剖病理学报告当中，也可能会以“辅助检查”的形式出现。\r\n\r\n实验室检验结果原始型 OBSERVATION.laboratory_test_result 的“测试结果” 槽位之中可能会嵌套本原始型的一个或多个实例。\r\n\r\n在某些情况下，本原始型可能与通常作为组套（组合或套餐）的组成部分而进行检测和/或报告的其他检验结果一起存在于实验室检验项目组合原始型 CLUSTER.laboratory_test_panel 当中。\r\n\r\n这种原始型可以用于更复杂的实验室/病理学报告，如解剖病理学报告〔其中，定量结果（如流式细胞检查）常常会与传统的大体和显微镜检报告一起报告〕。",
+          "misuse" : "并非旨在用于记录解剖病理学大体和显微镜检所见，除非用于流式细胞检查之类的其他检测。\r\n\r\n并非旨在用于记录微生物培养所见方面的结果。",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "nb" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "pt-br" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+            "fhir_mapping" : "*Observation.code(en)"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+            "fhir_mapping" : "*status(en)"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "de" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "nl" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "sv" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "es" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "ca" : {
+          "/items[at0024]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0005]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.laboratory_test_analyte.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-030.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0027.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0024.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "260385009",
+                    "value" : "Negativt"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "10828004",
+                    "value" : "Positivt"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "64957009",
+                    "value" : "Usikker"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "385660001",
+                    "value" : "Ikke utført"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0028.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "nodeId" : "at0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "nodeId" : "at0.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_MULTIMEDIA",
+              "nodeId" : "at0.3",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "nodeId" : "at0.4",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "nodeId" : "at0.5",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "nodeId" : "at0.6",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE",
+              "nodeId" : "at0.7",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TIME",
+              "nodeId" : "at0.8",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DURATION",
+              "nodeId" : "at0.9",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_ORDINAL",
+              "nodeId" : "at0.10",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_SCALE",
+              "nodeId" : "at0.11",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_PROPORTION",
+              "nodeId" : "at0.12",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "nodeId" : "at0.13",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "nodeId" : "at0.14",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "nodeId" : "at0.15",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_PARSABLE",
+              "nodeId" : "at0.16",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.17",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.18",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.19",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.20",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.21",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL",
+              "nodeId" : "at0.22",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "nodeId" : "at0.23",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0015", "at0016", "at0017", "at0018", "at0020", "at0019", "at0021", "at0023", "at0022" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "The result of a laboratory test for a single analyte value."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "The value of the analyte result.",
+            "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          }
+        },
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Analyseresultat",
+            "description" : "Verdien av analyseresultatet.",
+            "comment" : "F",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.1",
+            "text" : "Analysenavn (HUGO)",
+            "description" : "Navnet på analyseresultatet.",
+            "comment" : "Kodes med HGNC (hugo)",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "*The result of a laboratory test for a single analyte value.(en)"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "*The value of the analyte result.(en)",
+            "comment" : "*For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.(en)",
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "Ergebnis einer Laboranalyse für einen bestimmten Analytwert."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Zeitpunkt der Validierung",
+            "description" : "Datum und Zeit, an dem das Analyseergebnis im Labor medizinisch validiert wurde.",
+            "comment" : "In vielen Gerichtsbarkeiten wird angenommen, dass der 'Ergebnisstatus' die medizinische Validierung einschliesst, in anderen wird diese anhand dieses Datenelements separat erfasst und befundet."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Untersuchter Analyt",
+            "description" : "Der Name des untersuchten Analyts.",
+            "comment" : "Der Wert dieses Elements wird normalerweise, meist durch eine Spezialisierung, in einem Template oder zur Laufzeit der Anwendung geliefert, um den aktuellen Analyt wiederzugeben. Zum Beispiel: 'Natrium im Serum', 'Hämoglobin'. \r\nDie Codierung mit einer externen Terminologie, wie LOINC, NPU, SNOMED-CT oder lokalen Labor-Terminologien wird dringend empfohlen.\r\n",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Referenzbereichs-Hinweise",
+            "description" : "Zusätzliche Hinweise zur Anwendbarkeit des Referenzbereichs für dieses Resultat oder (codierter) Text, ob das Resultat im Referenzbereich ist oder nicht.",
+            "comment" : "z.B.: 'im Referenzbereich, bezogen auf Alter und Geschlecht'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Ergebnis-Status",
+            "description" : "Status des Analyseergebnisses.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        },
+        "nl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "Het resultaat van een laboratorium test voor een bepaling van een enkele bepaling."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "De waarde van een analyt uitslag.",
+            "comment" : "Bijvoorbeeld: '7.3 mmol/l', 'Verhoogd'. Om het daadwerkelijke analyt result weer te geven dient het 'Any' data type gespecificeerd te worden tot een toepasselijk data type in een specialisatie, een template of terwijl de applicatie loopt.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "*Test method (en)",
+            "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+            "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "Resultatet för en enskild analys i en laboratorieundersökning."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "Analysresultatets värde",
+            "comment" : "Till exempel \"7,3 mmol/L\" eller \"Förhöjd\". Datatypen \"Any\", som är en odefinierad datatyp, måste begränsas till en lämplig datatyp i en specialisering, mall eller applikation. Datatypen \"Quantity\" har attribut från referensmodellen som täcker flaggor för normal/onormal, referensområden och approximationer.\r\nSe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class för mer information.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Tidpunkt för validering",
+            "description" : "Datum och tid då analysresultatet validerades medicinskt i laboratoriet.\r\n",
+            "comment" : "I många fall antas 'resultatstatus' inkludera medicinsk validering, dvs. ett \"slutligt\" resultat antas vara medicinskt validerat, men i andra kommer detta att registreras och rapporteras separat med hjälp av detta dataelement.\r\n"
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analysnamn",
+            "description" : "Namnet på analysresultatet.",
+            "comment" : "Värdet för detta element anges vanligtvis i en specialisering av den här arketypen, i en mall eller i applikationen. Till exempel \"serumnatrium\" eller \"hemoglobin\". Det rekommenderas starkt att koda detta element med en terminologi såsom exempelvis NPU, LOINC, SNOMED CT eller lokala koduppsättningar."
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Resultatordning",
+            "description" : "Den avsedda positionen för detta analysresultat i den totala resultatordningen.\r\n\r\n\r\n",
+            "comment" : "Till exempel: \"1\", \"2\", \"3\". Om flera analysresultat rapporteras, indikerar \"Resultatordning\" ordningen på analysresultaten.\r\n\r\n"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Vägledning för referensintervall",
+            "description" : "Vägledning för att ta reda på om referensintervallet är tillämpbart för detta resultat. Kan innehålla text eller kodade textuella råd om resultatet ligger inom det normala intervallet.\r\n",
+            "comment" : "Till exempel \"inom normala gränsvärden avseende ålder och kön\"."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Resultatstatus",
+            "description" : "Status för analysresultatvärdet.",
+            "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Testmetod",
+            "description" : "Beskrivning av metoden som används för att utföra testet endast på denna analyt. \r\n",
+            "comment" : "Om testmetoden gäller för en hel panel kan testmetoden fångas med hjälp av dataelementet 'Testmetod' i OBSERVATION.laboratory_test_result."
+          }
+        },
+        "es" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "Resultado de una prueba de laboratorio para un valor de analito único."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "Valor del resultado del analito.",
+            "comment" : "Por ejemplo, \"7,3 mmol/l\", \"Elevado\". El tipo de datos \"Cualquiera\" deberá limitarse a un tipo de datos adecuado en una especialización, una plantilla o en tiempo de ejecución para reflejar el resultado real del analito. El tipo de dato \"Cantidad\" tiene atributos de modelo de referencia que incluyen indicadores de normalidad/anormalidad, rangos de referencia y aproximaciones (para más información, véase https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class).",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Validation time",
+            "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+            "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analyte name",
+            "description" : "The name of the analyte result.",
+            "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Comment",
+            "description" : "Additional narrative about the analyte result, not captured in other fields.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyte result sequence",
+            "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+            "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Reference range guidance",
+            "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+            "comment" : "For example, 'within normal limits for age and sex'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Result status",
+            "description" : "The status of the analyte result value.",
+            "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identification of the specimen used for the analyte result.",
+            "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Result status time",
+            "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Test method",
+            "description" : "Description about the method used to perform the test on this analyte only.",
+            "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+          }
+        },
+        "ca" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "ki67",
+            "description" : "Resultat d'una prova de laboratori per a un valor d'analit únic."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Prosent Ki-67",
+            "description" : "Valor del resultat de l'analit.",
+            "comment" : "Per exemple, '7,3 mmol/l', 'Elevat'. El tipus de dades \"Qualsevol\" s'haurà de limitar a un tipus de dades apropiat en una especialització, una plantilla o en temps d'execució per reflectir el resultat de l'anàlisi real. El tipus de dades \"Quantitat\" té atributs de model de referència que inclouen indicadors per a normal/anormal, rangs de referència i aproximacions; vegeu https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class per obtenir-ne més detalls.",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "at0025.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025",
+            "text" : "Validation time",
+            "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+            "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+          },
+          "at0024.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024",
+            "text" : "Analyte name",
+            "description" : "The name of the analyte result.",
+            "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Comment",
+            "description" : "Additional narrative about the analyte result, not captured in other fields.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          },
+          "at0027.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0027",
+            "text" : "Analyte result sequence",
+            "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+            "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Reference range guidance",
+            "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+            "comment" : "For example, 'within normal limits for age and sex'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Result status",
+            "description" : "The status of the analyte result value.",
+            "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Specimen",
+            "description" : "Identification of the specimen used for the analyte result.",
+            "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Result status time",
+            "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028",
+            "text" : "Test method",
+            "description" : "Description about the method used to perform the test on this analyte only.",
+            "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+          }
+        },
+        "zh-cn" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "bcb96bdf-9e91-4454-97cd-25444223b7af",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser, Antje Wulff, Natalia Strauch",
+        "organisation" : "Department of Infectious Diseases, Heidelberg University Hospital, Medizinische Hochschule Hannover",
+        "email" : "michael.lieser@med.uni-heidelberg.de, wulff.antje@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin, Linda Aulin Lundeqvist",
+        "organisation" : "Region Stockholm, Karolinska University Hospital, Karolinska University Hospital, Region Stockholm",
+        "email" : "linda.aulin@sll.se, linda.aulin-lundeqvist@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "liv.laugen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "Freelancer",
+        "email" : "linforest@163.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "e122bd26-a4f2-40ff-abd4-8e4cfceae9cc",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "430B520EC4563F96465173ED840F7A4A"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-007.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : { },
+        "sl" : { },
+        "en" : { },
+        "nb" : { },
+        "pt-br" : { },
+        "de" : { },
+        "nl" : { },
+        "sv" : { },
+        "fr" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "a35e9727-a67b-469f-ab59-a7216d21f7df",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Darin Leonhardt",
+        "organisation" : "PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Linda Aulin, Romi Shweta Pathak, Henna Haapa Hybinette, sofia Lång Janstad, Sajjad Saffari Miandoab",
+        "organisation" : "Region Östergötland, Region Stockholm, Karolinska universitetssjukhuset, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, linda.aulin@sll.se, romi.pathak@regionstockholm.se, henna.haapa-hybinette@regionstockholm.se, sofia.lang-janstad@regionstockholm.se, sajjad.saffari-miandoab@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen, Vebjørn Arntzen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway, Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Biljana Princic"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Michiel Klitsie",
+        "organisation" : "Nedap Healthcare",
+        "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "90225e36-20a8-403a-8172-77e53b9990b2",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : {
+        "date" : "2025-01-10"
+      },
+      "otherContributors" : [ ],
+      "lifecycleState" : {
+        "codeString" : "unmanaged"
+      },
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+        "custodian_organisation" : "openEHR Foundation",
+        "original_namespace" : "org.openehr",
+        "original_publisher" : "openEHR Foundation",
+        "custodian_namespace" : "org.openehr",
+        "MD5-CAM-1.0.1" : "8c7a39953b48fcd616a52b6ff5cc8921",
+        "PARENT:MD5-CAM-1.0.1" : "AB458098681E9505986ADFCEC7FEC742"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "ar-sy" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0100]" : {
+            "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0118]" : {
+            "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0057.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
+          }
+        },
+        "en" : { },
+        "nb" : { },
+        "zh-cn" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0100]" : {
+            "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0118]" : {
+            "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
+          },
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0057.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
+          }
+        },
+        "de" : { },
+        "it" : { },
+        "nl" : { },
+        "sv" : { },
+        "pt-br" : { },
+        "es" : { },
+        "ca" : { }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "108257001",
+                                "value" : "Anatomic pathology procedure"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0073.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0107", "at0037", "at0120", "at0038", "at0040", "at0115", "at0119", "at0074", "at0116" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0075.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0077.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "0..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "existence" : "0..1",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "714797009",
+                                "value" : "Histology"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0100.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0057.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0098.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1162814007",
+                                "value" : "DCIS - intraduktalt carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "408643008",
+                                "value" : "Infiltrerende karsinom NST"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "77284006",
+                                "value" : "LCIS - lobulær carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444739008",
+                                "value" : "Classic lobular carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "89740008",
+                                "value" : "ILC - infiltrerende lobulært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32968003",
+                                "value" : "IBC - inflammatorisk karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "32913002",
+                                "value" : "Medullært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "72495009",
+                                "value" : "Mucinøst (kolloid) adenokarsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "703596001",
+                                "value" : "Tubulær karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "25910003",
+                                "value" : "Papilært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "128674003",
+                                "value" : "Mikropapillært karsinom"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "87913009",
+                                "value" : "Malign phylloidestumor"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2985005",
+                                "value" : "Pagets sykdom i mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444591006",
+                                "value" : "PLCIC - pleomorft lobulært carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "372269006",
+                                "value" : "Histologic type cannot be determined"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "860895001",
+                                "value" : "Flat epitelial atypi i mamma (FEA)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "55465005",
+                                "value" : "Columnar cell change (CCC) (atypiske sylindereptelceller)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "2",
+                                "value" : "columnar cell hyperplasia (CCH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "427785007",
+                                "value" : "atypisk duktal mammahyperplasi (ADH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "450697004",
+                                "value" : "atypisk lobulær mammahyperplasi (ALH)"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "444591006",
+                                "value" : "pleomorft lobulært carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "1290750006",
+                                "value" : "Florid lobular carcinoma in situ"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "6",
+                                "value" : "Florid LCIS med comedonekrose"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0101.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0101.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0065.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-specimen-005.v1",
+                      "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0097.4",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-030.v1",
+                      "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0065.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-007.v1",
+                      "referenceType" : "archetypeOverlay"
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0112",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0113.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0068.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0094.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0106.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0062.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0063.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0111.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0121.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "*The result, including findings and interpretation, of a laboratory investigation performed on specimens from individuals or related materials(en)"
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "*Single word, phrase or brief description that represents the clinical meaning and significance of the laboratory test result. (en)",
+            "comment" : "*For example: 'Severe hepatic impairment', 'Salmonella contamination'. Coding of the diagnosis with a terminology is strongly recommended, where possible. This diagnosis should be aligned with the narrative in the 'Conclusion'. (en)"
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "*The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).(en)",
+            "comment" : "*Assigning an identifier to a request by the Laboratory lnformation System (LIS) enables tracking progress of the request and enables linking results to requests. It also provides a reference to assist with enquiries and it is usually equivalent to the HL7 Filler Order Identifier.(en)"
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "*Comment(en) (2)",
+            "description" : "*Additional narrative about the test result not captured in other fields.(en)"
+          }
+        },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "The result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Single word, phrase or brief description that represents the clinical meaning and significance of the laboratory test result.",
+            "comment" : "For example: 'Severe hepatic impairment', 'Salmonella contamination'. Coding of the diagnosis with a terminology is strongly recommended, where possible. This diagnosis should be aligned with the narrative in the 'Conclusion'."
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "The local identifier assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).",
+            "comment" : "Assigning an identifier to a request by the Laboratory lnformation System (LIS) enables tracking progress of the request and enables linking results to requests. It also provides a reference to assist with enquiries and it is usually equivalent to the HL7 Filler Order Identifier."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Comment (2)",
+            "description" : "Additional narrative about the test result not captured in other fields."
+          }
+        },
+        "nb" : {
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "Bestillingens/rekvisisjonens lokale identifikator/referansenummer tildelt av tjenesteyter/mottaker, som regel av LIMS.",
+            "comment" : "Når Laboratorieinformasjonssystemet (LIMS) tildeler en identifikator, åpnes det for sporing av fremdriften/prosessforløpet på bestillingen av undersøkelsen/rekvisisjonen og for å koble undersøkelsesresultatet til rekvisisjonen/bestillingen. Som regel tilsvarer dette HL7 \"Filler Order Identifier\".\r\n\r\nDenne identifikatoren kalles også ofte \"rekvisisjonsnummer\" eller \"remissenummer\"."
+          },
+          "at0057.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0057.1",
+            "text" : "Konklusjon Patologi",
+            "description" : "Fritekstbeskrivelse av de viktigste funnene.",
+            "comment" : "For eksempel \"mønsteret indikerer betydelig nedsatt nyrefunksjon\". Innholdet av konklusjonen vil variere, basert på hvilken undersøkelse som er utført. Konklusjonen bør være i overensstemmelse med kodene brukt i elementet \"Diagnose\"."
+          },
+          "at0101.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101.1",
+            "text" : "Kommentar morfologi",
+            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Biomarkør Genetikk",
+            "description" : "Resultat, inkludert funn og laboratoriets tolkning, av en laboratorieundersøkelse utført på prøvemateriale fra et individ eller relatert til individet."
+          }
+        },
+        "zh-cn" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "*The result, including findings and interpretation, of a laboratory investigation performed on specimens from individuals or related materials(en)"
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "*Single word, phrase or brief description that represents the clinical meaning and significance of the laboratory test result. (en)",
+            "comment" : "*For example: 'Severe hepatic impairment', 'Salmonella contamination'. Coding of the diagnosis with a terminology is strongly recommended, where possible. This diagnosis should be aligned with the narrative in the 'Conclusion'. (en)"
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "医嘱执行方赋予当前检验项目医嘱的本地标识符。其中，医嘱执行方通常为实验室信息系统（ Laboratory Information System，LIS）。",
+            "comment" : "实验室信息系统（ Laboratory Information System，LIS）为申请赋予标识符，便于实现对于申请进展情况的跟踪以及结果与相应申请的链接。同时，这也是有助于查询的一种参考信息，且通常等价于HL7执行方医嘱标识符（Filler Order Identifier）。"
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "*Comment(en) (2)",
+            "description" : "*Additional narrative about the test result not captured in other fields.(en)"
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "Das Ergebnis - einschließlich der Befunde und der Interpretation des Labors - einer Untersuchung, die an Proben durchgeführt wurde, die von einer Einzelperson stammen oder mit dieser Person zusammenhängen."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Kurze Beschreibung der klinischen Bedeutung und der Aussagekraft des Laborergebnisses.",
+            "comment" : "Zum Beispiel: \"Schwere hepatische Beeinträchtigung\", \"Salmonellenbefall\". Die Kodierung der Diagnose mit einer Terminologie, wird nach Möglichkeit dringend empfohlen. Die Diagnose soll zu der Beschreibung im Datenelement \"Zusammenfassung\" passen."
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "Lokale Auftrags-ID, die vom auftragsempfangendem System, gewöhnlich dem Laborinformationssystem (LIS) zugewiesen wird.",
+            "comment" : "Die Vergabe einer solchen ID ermöglicht das Nachverfolgen des Auftragsstatus und das Verlinken der Ergebnisse zum Auftrag. Es erlaubt auch das Verwalten von weiteren Erkundigungen und Nachfragen und ist äquivalent zum \"HL7 Filler Order Identifier\"."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Kommentar (2)",
+            "description" : "Weitere Informationen über das Laborergebnis, welche bisher nicht in den anderen Feldern erfasst wurden."
+          }
+        },
+        "it" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "L'esito, inclusi i risultati e l'interpretazione, di una indagine di laboratorio effettuata su campioni provenienti da individui o relativi materiali."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Singola parola, frase o breve descrizione che rappresenta il significato clinico e la significatività del risultato del test di laboratorio.",
+            "comment" : "Per esempio: 'Grave insufficienza epatica', 'Contaminazione da Salmonella'. Si raccomanda vivamente, ove possibile, di codificare la diagnosi con una terminologia. Questa diagnosi dovrebbe essere allineata con la narrazione nella 'Conclusione'."
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "Identificativo locale assegnato all'ordine dell'esame dall'order filler, solitamente dal Sistema Informativo di Laboratorio (LIS).",
+            "comment" : "L'identificativo assegnato alla richiesta dal Sistema Informativo di Laboratorio (LIS) permette di tracciare lo stato di avanzamento della richiesta e di associare i risultati alle richieste. Fornisce anche un riferimento utile nelle indagini e di solito è equivalente al campo HL7 \"Filler Order Identifier\"."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Commento (2)",
+            "description" : "Narrativa aggiuntiva sul risultato del test non catturato in altri campi."
+          }
+        },
+        "nl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "*The result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual.(en)"
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "*Single word, phrase or brief description that represents the clinical meaning and significance of the laboratory test result.(en)"
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "*The local identifier assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).(en)"
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "*Comment(en) (2)",
+            "description" : "*Additional narrative about the test result not captured in other fields.(en)"
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "Resultatet av en undersökning, inklusive fynd och laboratoriets tolkning, utförd på provmaterial från en individ eller relaterad till individen. Exempel på provmaterial relaterat till individen kan vara fostervattenprov där provet tas från mammans kropp men provet avser fostret."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Ett ord, en fras eller en kort beskrivning som representerar den kliniska betydelsen eller konsekvensen av laboratorietestresultatet.\r\n",
+            "comment" : "Till exempel: \"Allvarligt nedsatt leverfunktion\", \"Akut hepatit B\". Kodning med en terminologi är att föredra där det är möjligt. Undersökningsdiagnosen bör vara i enlighet med texten i \"Tolkning av resultat\".\r\n\r\n"
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "Den lokala identifierare som tilldelats beställningen av ordermottagningssystemet, vanligtvis av laboratorieinformationssystemet (LIS).",
+            "comment" : "Tilldelningen av en identifierare i LIS möjliggör spårning av beställningens status och länkning av resultaten till beställningen. Det tillåter också hantering av ytterligare förfrågningar och motsvarar \"HL7 Filler Order Identifier\"."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Kommentar (2)",
+            "description" : "Ytterligare textuell beskrivning som inte registrerats i andra fält."
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "O resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "*Single word, phrase or brief description that represents the clinical meaning and significance of the laboratory test result.(en)",
+            "comment" : "*For example: 'Severe hepatic impairment', 'Salmonella contamination'. Coding of the diagnosis with a terminology is strongly recommended, where possible. This diagnosis should be aligned with the narrative in the 'Conclusion'.(en)"
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "*The local identifier assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).(en)",
+            "comment" : "*Assigning an identifier to a request by the Laboratory lnformation System (LIS) enables tracking progress of the request and enables linking results to requests. It also provides a reference to assist with enquiries and it is usually equivalent to the HL7 Filler Order Identifier.(en)"
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "*Comment(en) (2)",
+            "description" : "*Additional narrative about the test result not captured in other fields.(en)"
+          }
+        },
+        "es" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "El resultado, incluidas las conclusiones y la interpretación del laboratorio, de una investigación realizada con muestras recogidas de una persona o relacionadas con ella."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Palabra única, frase o breve descripción que representa el significado clínico y la importancia del resultado de la prueba de laboratorio.",
+            "comment" : "Por ejemplo: 'Insuficiencia hepática grave', 'Contaminación por Salmonella'. Se recomienda encarecidamente codificar el diagnóstico con una terminología, siempre que sea posible. Este diagnóstico debe estar alineado con la información registrada en la 'Conclusión'."
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "El identificador local asignado a la orden de prueba por el cumplimentador de la orden, normalmente por el Sistema de Información del Laboratorio (SIL).",
+            "comment" : "La asignación de un identificador a una solicitud por parte del Sistema de Información de Laboratorio (SIL) permite seguir el progreso de la solicitud y relacionar los resultados con las solicitudes. También proporciona una referencia para ayudar con las consultas y suele ser equivalente al identificador HL7 Filler Order Identifier."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Comentarios (2)",
+            "description" : "Información adicional sobre el resultado de la prueba no recogida en otros campos."
+          }
+        },
+        "ca" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Histologi og cytologi pr lesjon (2)",
+            "description" : "El resultat, incloses les conclusions i la interpretació del laboratori, d'una investigació realitzada amb mostres recollides o relacionades amb una persona."
+          },
+          "at0098.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0098.1",
+            "text" : "Diagnose/Tumor morfologi",
+            "description" : "Paraula única, frase o breu descripció que representa el significat clínic i la importància del resultat de la prova de laboratori.",
+            "comment" : "Per exemple: 'Insuficiència hepàtica greu', 'Contaminació per Salmonella'. Es recomana encaridament codificar el diagnòstic amb una terminologia, sempre que sigui possible. Aquest diagnòstic ha d'estar alineat amb la informació registrada a la 'Conclusió'."
+          },
+          "at0063.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0063.1",
+            "text" : "Rekvisisjonsnummer",
+            "description" : "L'identificador local assignat a l'ordre de prova per l'emplenador de l'ordre, normalment pel Sistema d'Informació del Laboratori (SIL).",
+            "comment" : "L'assignació d'un identificador a una sol·licitud per part del Sistema d'Informació de Laboratori (SIL) permet seguir el progrés de la sol·licitud i relacionar els resultats amb les sol·licituds. També proporciona una referència per ajudar amb les consultes i sol ser equivalent a l'identificador HL7 Filler Order Identifier."
+          },
+          "at0101.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0101",
+            "text" : "Comentaris (2)",
+            "description" : "Informació addicional sobre el resultat de la prova no recollida a altres camps."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "b3415f11-68ff-3fa4-b614-3c3425189b32",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
       },
       "author" : { },
       "otherDetails" : { }
