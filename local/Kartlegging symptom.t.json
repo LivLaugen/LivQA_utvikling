@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "6.0.0",
+      "sem_ver" : "7.0.0",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73",
       "MD5-CAM-1.0.1" : "e7dba5482b89254ce681b0d3860007ee"
@@ -81,7 +81,9 @@
           },
           "codeString" : "nb"
         },
+        "purpose" : "For å kartlegge symptomer/sykdomstegn i forbindelse med felles kreftjournalprosjektet.",
         "keywords" : [ ],
+        "use" : "Brukes for å kartlegge symptom/sykdomstegn. \nHvis kartleggingen viser at det foreligger et bestemt symptom/sykdomstegn i spesifikk detaljer, skal dette symptomet/sykdomstegnet arves ned i symptom_sign cluster arketypen.",
         "originalResourceUri" : { },
         "otherDetails" : { }
       },
