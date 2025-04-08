@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73",
-      "MD5-CAM-1.0.1" : "e7dba5482b89254ce681b0d3860007ee"
+      "MD5-CAM-1.0.1" : "df8558b300eb8ed05d973cda4e7e66aa"
     },
     "details" : {
       "de" : {
@@ -83,7 +83,7 @@
         },
         "purpose" : "For å kartlegge symptomer/sykdomstegn i forbindelse med felles kreftjournalprosjektet.",
         "keywords" : [ ],
-        "use" : "Brukes for å kartlegge symptom/sykdomstegn. \nHvis kartleggingen viser at det foreligger et bestemt symptom/sykdomstegn i spesifikk detaljer, skal dette symptomet/sykdomstegnet arves ned i symptom_sign cluster arketypen.",
+        "use" : "Brukes for å kartlegge symptom/sykdomstegn. \nHvis kartleggingen viser at det foreligger et bestemt symptom/sykdomstegn i spesifikk detaljer, skal dette symptomet/sykdomstegnet arves ned i symptom_sign cluster arketypen som ligger i slotet Ytterligere detaljer i kartleggingsarketypen.",
         "originalResourceUri" : { },
         "otherDetails" : { }
       },
@@ -617,7 +617,29 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "22253000",
+                                    "value" : "Smerter (finding)"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "247347003",
+                                    "value" : "Ubehag (finding)"
+                                  } ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -3668,7 +3690,39 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "22253000",
+                    "value" : "Smerter (finding)"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "247347003",
+                    "value" : "Ubehag (finding)"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -3939,7 +3993,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0018",
+          "occurrences" : "0..0",
+          "nodeId" : "at0018.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -3991,7 +4046,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0165",
+          "occurrences" : "0..0",
+          "nodeId" : "at0165.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -4022,7 +4078,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0190",
+          "occurrences" : "0..0",
+          "nodeId" : "at0190.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -4133,7 +4190,7 @@
             "code" : "at0001.1",
             "text" : "Navn på symptom/sykdomstegn",
             "description" : "Navnet på det rapporterte symptomet eller sykdomstegnet.",
-            "comment" : "Hvis man har svart ja i \"spesifikt symptom/sykdomstegn\" i kartleggingsarketypen, arves navnet ned til dette elementet."
+            "comment" : "Hvis man har svart ja i \"spesifikt symptom/sykdomstegn\" i kartleggingsarketypen, arves navnet ned til dette elementet.\nKodes med SNOMED-CT hvis mulig."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
