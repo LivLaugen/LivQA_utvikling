@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73",
-      "MD5-CAM-1.0.1" : "bc64fd3fc8160b819adccf30d0e5aa86"
+      "MD5-CAM-1.0.1" : "884bf28c37f4dacc7cf3cdfbf16f41ff"
     },
     "details" : {
       "de" : {
@@ -1295,6 +1295,13 @@
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0036.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
                       "nodeId" : "at0022.1",
                       "attributes" : [ {
@@ -1495,6 +1502,12 @@
             "text" : "Navn på symptom/sykdomstegn",
             "description" : "Navn på det spesifikke symptomet eller sykdomstegnet; eller gruppen av symptomer eller sykdomstegn.",
             "comment" : "Her skal symptomet navnet være, så skal tilstede være spm. Hvis ja skal dette arves til navn på symptom i clusteret symptom"
+          },
+          "at0036.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0036.1",
+            "text" : "Beskrivelse",
+            "description" : "Fritekstbeskrivelse om symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
           }
         },
         "de" : {
@@ -1930,7 +1943,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0002.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -2385,6 +2397,13 @@
             "text" : "Navn på symptom/sykdomstegn",
             "description" : "Navnet på det rapporterte symptomet eller sykdomstegnet.",
             "comment" : "hvis ja i spesifikke detaljer, så arver du "
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Beskrivelse",
+            "description" : "Fritekstbeskrivelse av det rapporterte symptomet eller sykdomstegnet.",
+            "comment" : "Hvis man velger \"annet\" på symptom så kan man legge inn tekst i dette feltet. "
           }
         },
         "fi" : { },
