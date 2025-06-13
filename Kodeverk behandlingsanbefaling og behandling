@@ -1,0 +1,58 @@
+== Intensjon med behandling
+Kodeverk: `no.onk.behandlingsintensjon` (MDT-Execution-TreatmentIntention)
+
+[cols="1,3", options="header"]
+|===
+|Kode |Beskrivelse
+|K1   |Kurativt
+|K2   |Aktiv overvåkning
+|K3   |Livsforlengende - ikke kurativ
+|K4   |Symptomlindrende - ikke kurativ
+|K5   |Lokal kontroll - ikke kurativ
+|K6   |Ukjent
+|===
+
+== Hovedbehandling
+Kodeverk: `SNOMED-CT`
+
+[cols="1,3", options="header"]
+|===
+|Kode |Beskrivelse
+|128303001     |Kirurgisk fjerning
+|64597002      |Ablation
+|1287742003    |Stråleterapi (alle typer)
+|1156506007    |Fotonterapi - Stråle (ekstern)
+|10611004      |Protonterapi - Stråle (ekstern) _Endret i Oncology-MDT-Execution_v21 - 05/14/2025_
+|45643008      |Elektronterapi - Stråle (ekstern)
+|152198000     |Brakyterapi - Stråle (intern)
+|399315003     |Radioisotope/systemisk radionuklidebehandling - Stråle (intern)
+|416608005     |Medikamentell behandling (alle typer)
+|367336001     |Kjemoterapi - Medikamentell
+|347531000202105|Målrettet - Medikamentell
+|76334006      |Immunterapi - Medikamentell behandling
+|169413002     |Hormonterapi - Medikamentell
+|373818007     |Ingen kreftbehandling, aktiv oppfølging
+|438758006     |Ekspektans (avventende behandling)
+|74964007      |Annen behandling
+|===
+
+== Tilleggsbehandling i forhold til hovedbehandling
+Kodeverk: `MDT-Execution-SecondaryTreatment`
+
+[cols="1,3", options="header"]
+|===
+|Kode |Beskrivelse
+|ST1       |Neoadjuvant strålebehandling
+|ST2       |Neoadjuvant medikamentell behandling
+|ST3       |Neoauvant konkomitant stråle og medikamentell behandling (CRT)
+|ST4       |Konkomitant medikamentell behandling
+|ST5       |Konkomitant stråleterapi (Intraoperativ strålebehandling)
+|ST7       |Adjuvant strålebehandling
+|ST8       |Adjuvant medikamentell behandling
+|ST9       |Adjuvant konkomitant stråle og medikamentell behandling (CRT)
+|ST10      |Kirurgisk behandling av restsykdom/-tumor (Salvage kirurgi)
+|ST11      |Stråling av restsykdom/-tumor (Salvage stråle)
+|ST12      |Annet
+|373818007 |Ingen kreftbehandling, aktiv oppfølging _Lagt til 19.11.24 etter ønske fra onkologer_
+|182992009 |Ferdig behandlet _Lagt til 19.11.24 etter ønske fra onkologer_
+|===
