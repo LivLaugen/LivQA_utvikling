@@ -23,7 +23,7 @@ Kodeverk: `SNOMED-CT`
 |64597002      |Ablation
 |1287742003    |Stråleterapi (alle typer)
 |1156506007    |Fotonterapi - Stråle (ekstern)
-|10611004      |Protonterapi - Stråle (ekstern) _Endret i Oncology-MDT-Execution_v21 - 05/14/2025_
+|10611004      |Protonterapi - Stråle (ekstern)
 |45643008      |Elektronterapi - Stråle (ekstern)
 |152198000     |Brakyterapi - Stråle (intern)
 |399315003     |Radioisotope/systemisk radionuklidebehandling - Stråle (intern)
@@ -54,6 +54,6 @@ Kodeverk: `MDT-Execution-SecondaryTreatment`
 |ST10      |Kirurgisk behandling av restsykdom/-tumor (Salvage kirurgi)
 |ST11      |Stråling av restsykdom/-tumor (Salvage stråle)
 |ST12      |Annet
-|373818007 |Ingen kreftbehandling, aktiv oppfølging _Lagt til 19.11.24 etter ønske fra onkologer_
-|182992009 |Ferdig behandlet _Lagt til 19.11.24 etter ønske fra onkologer_
+|373818007 |Ingen kreftbehandling, aktiv oppfølging
+|182992009 |Ferdig behandlet
 |===
