@@ -1,0 +1,739 @@
+= Behandlingsoppsummering
+:toc:
+:toc-title: Innholdsfortegnelse
+:toclevels: 3
+
+
+== Metadata
+
+
+TemplateId:: Behandlingsoppsummering_02_smaatemplat
+
+
+Archetype:: openEHR-EHR-SECTION.adhoc.v1
+
+
+
+
+:toc:
+
+
+
+
+== Behandlingsoppsummering
+== Overordnet behandlingdetaljer
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Overordnet behandlingdetaljer* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Kreftbehandling (no.onk.behandlig.type: 1)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 1..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+|at0028| 0..1| DV_TEXT | Beskrivelse
+a|
+|at0054| 0..1| DV_TEXT | Behandlingsprotokoll
+a|
+
+
+**Skal dette være kun fritekst? Har vi noe verdisett?
+|at0033| 0..*| DV_CODED_TEXT | Klinisk indikasjon
+a|
+* Primær malign tumor (disorder) (SNOMED-CT: 372087000)
+* Residiv av malign tumor (disorder) (SNOMED-CT: 1259237005)
+* Metastase malign tumor (disorder) (SNOMED-CT: 128462008)
+* Komplikasjon av medisinsk behandling (disorder) (på norsk heter det kun metastase) (SNOMED-CT: 35688006)
+* Annen (qualifier value) (SNOMED-CT: 74964007)
+* Primærtumor (ikke malign eller beningn) (SNOMED-CT: ???)
+* lokalt residiv av malign primær neoplasma (disorder) (SNOMED-CT: 87961000202104)
+
+
+*** Bør dette harmoniseres med tumorevent?
+Kodeverk må oppdateres (hvilken koder bruker vi?)
+|at0034| 0..1| DV_CODED_TEXT | Intensjon
+a|
+* Kurativt (no.onk.behandlingsintensjon: K1)
+* Aktiv overvåkning (no.onk.behandlingsintensjon: K2)
+* Livsforlengende - ikke kurativ (no.onk.behandlingsintensjon: K3)
+* Symptomlindrende - ikke kurativ (no.onk.behandlingsintensjon: K4)
+* Lokal kontroll - ikke kurativ (no.onk.behandlingsintensjon: K5)
+* Ukjent (no.onk.behandlingsintensjon: K6)
+
+
+Designkommentar:
+Dette er det samme verdisettet som behandlingsanbefaling i MDT referat. 
+|at0051| 0..1| DV_CODED_TEXT | Treatment line
+a|
+* First line treatment (SNOMED-CT: 708255002)
+* Second line treatment (SNOMED-CT: 708256001)
+* Third line treatment (SNOMED-CT: 708257005)
+
+
+For eksempel: Førstelinje-, andrelinje- eller rednings-/salvage-behandlinger.
+|at0032| 0..1| DV_DATE_TIME | Start behandlingsforløp
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+|at0004| 0..1| DV_DATE_TIME | Stopp behandlingsforløp
+|
+
+
+For eksempel datoen da den siste i en serie med cellegiftinfusjoner ble gitt.
+|at0005| 0..1| DV_CODED_TEXT | Fullføringsstatus
+a|
+* at0021 -> Fullført 
+* at0022 -> Ikke fullført 
+* at0060 -> Ukjent 
+|at0007| 0..1| DV_TEXT | Årsak til fullføringsstatus
+a|
+
+
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0008| 0..1| DV_CODED_TEXT | Resultatkategori
+a|
+* Vellykket i henhold til intensjon (no.onk.behandling.resultatkategori: 1)
+* Ikke vellykket i henhold til intensjon (no.onk.behandling.resultatkategori: 2)
+* Usikkert (no.onk.behandling.resultatkategori: 3)
+
+
+For eksempel: vellykket, ikke vellykket, usikkert.
+Koding med en terminologi er foretrukket, dersom det er mulig. 
+
+Designkommentar:
+**er dette kodesettet ok? Finnes det noe snomed-ct kodesett for dette?
+|at0027| 0..1| DV_TEXT | Årsak til resultatkategori
+a|
+
+
+For eksempel: «Legemiddelresistens», «Tumor responderte på behandling» og «Tumor responderte ikke på behandling».
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Tilleggsbehandling
+== Invasiv prosedyre
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Kirurgisk inngrep (SNOMED-CT: 387713003)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+
+**Skal denne være med, eller skal det være et annet verdisett?
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Eksisjon (reseksjon) (local_terms: 65801008)
+* Reeksisjon (ny utskjæring) (local_terms: 65854006)
+* Amputasjon (local_terms: 81723002)
+* Curettage (local_terms: 68688001)
+* Revisjon (gjentakelse av tidligere prosedyre for å korrigere eller forbedre resultat) (local_terms: 118635009)
+* Annet (local_terms: 74964007)
+
+
+For eksempel «Brakyterapi», «Motiverende intervju-teknikk» eller «Laparoskopisk».
+|at0028| 0..1| DV_TEXT | Beskrivelse
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0055| 0..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Adjuvant hensikt (SNOMED-CT: 373846009)
+* Neoadjuvant hensikt (SNOMED-CT: 373847000)
+* Konkomitant (adjunkt) hensikt) (SNOMED-CT: 421974008)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Intervensjonsdato
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_TEXT | Navn på kroppssted
+a|
+
+
+Dette dataelementet er det eneste obligatoriske dataelementet i arketypen og bør brukes som det primære dataelementet for registrering av en anatomisk lokalisering. Det er sterkt anbefalt at "Navn på kroppssted" registreres så anatomisk spesifikt som mulig. For eksempel; registrer "øvre øyelokk" heller enn "øyelokk" med "øvre" som kvalifikator; "femte ribben" heller enn "ribben" med en numerisk kvalifikator. Bruk de andre dataelementene for lateralitet, aspekt, region og anatomisk linje for å gi mer detaljer. Dette dataelementet bør kodes med en terminologi som kan assistere beslutningsstøtte dersom mulig - en passende terminologi for bruk her kunne omfatte individuelle konsepter eller lister av prekoordinerte termer. Fritekst bør kun brukes hvis det ikke finnes en passende terminologi. 
+
+Dersom navn på kroppssted er oppgitt i arketypen som denne arketypen er nøstet inn i, kan dette dataelementet være redundant. Imidlertid kan det være fornuftig å dobbeltregistrere navnet på kroppstedet for å støtte semantiske spørringer basert på denne arketypen i stedet for i arketypen den er nøstet inn i.
+|at0065| 0..*| DV_TEXT | Spesifikt sted
+a|
+
+
+Brukes til å øke presisjonen ved spesifisering av kroppsstedet, dersom påkrevd. For eksempel den øvre høyre kvadranten eller McBurneys punkt på bukveggen, eller interfalangealleddet på stortåen. Dersom dataelementet "Navn på kroppssted" er registrert ved hjelp av prekoordinerte termer som omfatter det spesifikke stedet er dette dataelementet overflødig. I de fleste tilfeller vil dette være ett enkelt sted på kroppen. Dataelementet åpner for flere forekomster i de sjeldne tilfellene der man trenger å angi et spesifikt anatomisk sted som omfatter to eller flere sammenhengende spesifikke steder. For eksempel for å beskrive det spesifikke stedet en svulst strekker seg over andre, tredje og fjerde ribben.
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+
+
+Hvis den identifiserte kroppssiden ikke har noen lateralitet, bør dette datalementet stå tomt. Hvis dataelementet "Navn på kroppsted" bruker prekoordinerte termer som inkluderer lateralitet, er dette dataelementet overflødig.
+|at0016| 0..1| DV_TEXT | Kommentar
+a|
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Medikamentell
+== Templat-overskrift
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Medikamentell behandling (procedure) (local_terms: 416608005)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+**Skal denne være med?
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Kjemoterapi (SNOMED-CT: 367336001)
+* Målrettet medikamentell kreftbehandling (SNOMED-CT: 347531000202105)
+* Immunterapi for kreft (SNOMED-CT: 76334006)
+* Hormonterapi (SNOMED-CT: 169413002)
+
+
+
+
+
+|at0028| 0..1| DV_TEXT | Beskrivelse
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0055| 0..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Adjuvant hensikt (SNOMED-CT: 373846009)
+* Neoadjuvant hensikt (SNOMED-CT: 373847000)
+* Konkomitant (adjunkt) hensikt) (SNOMED-CT: 421974008)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Startdato
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+|at0004| 0..1| DV_DATE_TIME | Sluttdato
+|
+
+
+For eksempel datoen da den siste i en serie med cellegiftinfusjoner ble gitt.
+|at0005| 0..1| DV_CODED_TEXT | Fullføringsstatus
+a|
+* at0021 -> Fullført 
+* at0022 -> Ikke fullført 
+* at0060 -> Ukjent 
+|at0007| 0..1| DV_TEXT | Årsak til fullføringsstatus
+a|
+
+
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Legemiddelsammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Legemiddelsammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.medication_summary.v1_
+|at0002| 1..1| DV_TEXT | Navn på kur/medikament
+a|
+
+
+Navn på legemiddel kan representeres som en generisk substans, handelsnavn, gruppe eller klasse av legemidler. Det anbefales å kode "Navn på legemiddel" med en terminologi om mulig, slik at det kan brukes for eksempel i beslutningsstøtte. Fritekst bør bare benyttes der det ikke finnes en passende terminologi.
+For eksempel: '"Adriamycin"; "doxorubicin" eller "anthracycliner"; "Fosamax", "alendronsyre" eller "bifosonater".
+|at0009| 0..1| DV_DATE_TIME | Startdato for bruk
+|
+
+
+Kan være en deldato, for eksempel kun årstall.
+|at0015| 0..1| DV_QUANTITY | Kumulativ mengde
+|
+
+
+For eksempel: monitorering av kumulativ mengde av doxorubicin.
+Kan regnes ut manuelt eller utledes via ulike kilder, som for eksempel kurvesystemet eller andre deler av den elektroniske pasientjournalen.
+|at0010| 0..1| DV_DATE_TIME | Sluttdato for bruk
+|
+
+
+Kan være en deldato, for eksempel kun årstall.
+|at0006| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Stråleterapi
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Radiotherapy (procedure) (SNOMED-CT: 1287742003)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Fotonterapi - Stråle (ekstern) (SNOMED-CT: 1156506007)
+* Protonterapi -Stråle (ekstern) (SNOMED-CT: 10611004)
+* Elektronterapi - Stråle (ekstern) (SNOMED-CT: 45643008)
+* Brakyterapi - Stråle (intern) (SNOMED-CT: 152198000)
+* Radioisotope/systemisk radionuklidebehandling - Stråle (intern) (SNOMED-CT: 399315003)
+* Partikkelstråleterapi (karbon eller proton) (SNOMED-CT: WEOC)
+* Karbonterapi (SNOMED-CT: WEOC10)
+* Protonterapi (NKPK) (SNOMED-CT: WEOC00)
+* Ekstern stråleterapi (SNOMED-CT: WEOA)
+* Brakyterapi (SNOMED-CT: WEOB)
+* Stråleterapi (SNOMED-CT: WE)
+* External beam radiation therapy particulate radiation (procedure) (SNOMED-CT: 113117004)
+* External beam radiation therapy using carbon ions (procedure) (SNOMED-CT: 1156505006)
+
+
+** Se på kodesettet
+|at0028| 0..1| DV_TEXT | Beskrivelse av stråleintervensjonen
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0055| 0..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Adjuvant hensikt (SNOMED-CT: 373846009)
+* Neoadjuvant hensikt (SNOMED-CT: 373847000)
+* Konkomitant (adjunkt) hensikt) (SNOMED-CT: 421974008)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Dato første fraksjon
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+|at0004| 0..1| DV_DATE_TIME | Dato siste fraksjon
+|
+
+
+For eksempel datoen da den siste i en serie med cellegiftinfusjoner ble gitt.
+|at0005| 0..1| DV_CODED_TEXT | Fullføringsstatus
+a|
+* at0021 -> Fullført 
+* at0022 -> Ikke fullført 
+* at0060 -> Ukjent 
+|at0007| 0..1| DV_TEXT | Årsak til fullføringsstatus
+a|
+
+
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|at0057| 0..1| DV_TEXT | Stråleterapi course ID
+a|
+|====
+== Hovedbehandling
+== Invasiv prosedyre
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Kirurgisk inngrep (SNOMED-CT: 387713003)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+
+**Skal denne være med, eller skal det være et annet verdisett?
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Eksisjon (reseksjon) (local_terms: 65801008)
+* Reeksisjon (ny utskjæring) (local_terms: 65854006)
+* Amputasjon (local_terms: 81723002)
+* Curettage (local_terms: 68688001)
+* Revisjon (gjentakelse av tidligere prosedyre for å korrigere eller forbedre resultat) (local_terms: 118635009)
+* Annet (local_terms: 74964007)
+
+
+For eksempel «Brakyterapi», «Motiverende intervju-teknikk» eller «Laparoskopisk».
+|at0028| 0..1| DV_TEXT | Beskrivelse
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0033| 0..1| DV_TEXT | Indikasjon for behandling/behandlingsgrunnlag
+a|
+
+
+*
+|at0055| 1..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Hovedbehandling (no.onk.behandling.kategori: 1)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Intervensjonsdato
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+5+a|*Anatomisk lokalisering* + 
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+|at0001| 1..1| DV_TEXT | Navn på kroppssted
+a|
+
+
+Dette dataelementet er det eneste obligatoriske dataelementet i arketypen og bør brukes som det primære dataelementet for registrering av en anatomisk lokalisering. Det er sterkt anbefalt at "Navn på kroppssted" registreres så anatomisk spesifikt som mulig. For eksempel; registrer "øvre øyelokk" heller enn "øyelokk" med "øvre" som kvalifikator; "femte ribben" heller enn "ribben" med en numerisk kvalifikator. Bruk de andre dataelementene for lateralitet, aspekt, region og anatomisk linje for å gi mer detaljer. Dette dataelementet bør kodes med en terminologi som kan assistere beslutningsstøtte dersom mulig - en passende terminologi for bruk her kunne omfatte individuelle konsepter eller lister av prekoordinerte termer. Fritekst bør kun brukes hvis det ikke finnes en passende terminologi. 
+
+Dersom navn på kroppssted er oppgitt i arketypen som denne arketypen er nøstet inn i, kan dette dataelementet være redundant. Imidlertid kan det være fornuftig å dobbeltregistrere navnet på kroppstedet for å støtte semantiske spørringer basert på denne arketypen i stedet for i arketypen den er nøstet inn i.
+|at0065| 0..1| DV_TEXT | Spesifikt sted
+a|
+
+
+Brukes til å øke presisjonen ved spesifisering av kroppsstedet, dersom påkrevd. For eksempel den øvre høyre kvadranten eller McBurneys punkt på bukveggen, eller interfalangealleddet på stortåen. Dersom dataelementet "Navn på kroppssted" er registrert ved hjelp av prekoordinerte termer som omfatter det spesifikke stedet er dette dataelementet overflødig. I de fleste tilfeller vil dette være ett enkelt sted på kroppen. Dataelementet åpner for flere forekomster i de sjeldne tilfellene der man trenger å angi et spesifikt anatomisk sted som omfatter to eller flere sammenhengende spesifikke steder. For eksempel for å beskrive det spesifikke stedet en svulst strekker seg over andre, tredje og fjerde ribben.
+|at0002| 0..1| DV_CODED_TEXT | Kroppsside
+a|
+* at0003 -> Venstre 
+* at0004 -> Høyre 
+
+
+Hvis den identifiserte kroppssiden ikke har noen lateralitet, bør dette datalementet stå tomt. Hvis dataelementet "Navn på kroppsted" bruker prekoordinerte termer som inkluderer lateralitet, er dette dataelementet overflødig.
+|at0016| 0..1| DV_TEXT | Kommentar
+a|
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Medikamentell
+== Templat-overskrift
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Medikamentell behandling (procedure) (local_terms: 416608005)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+
+**Skal denne være med?
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Kjemoterapi (SNOMED-CT: 367336001)
+* Målrettet medikamentell kreftbehandling (SNOMED-CT: 347531000202105)
+* Immunterapi for kreft (SNOMED-CT: 76334006)
+* Hormonterapi (SNOMED-CT: 169413002)
+
+
+
+
+
+|at0028| 0..1| DV_TEXT | Beskrivelse
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0055| 1..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Hovedbehandling (no.onk.behandling.kategori: 1)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Startdato
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+|at0004| 0..1| DV_DATE_TIME | Sluttdato
+|
+
+
+For eksempel datoen da den siste i en serie med cellegiftinfusjoner ble gitt.
+|at0005| 0..1| DV_CODED_TEXT | Fullføringsstatus
+a|
+* at0021 -> Fullført 
+* at0022 -> Ikke fullført 
+* at0060 -> Ukjent 
+|at0007| 0..1| DV_TEXT | Årsak til fullføringsstatus
+a|
+
+
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0008| 0..1| DV_CODED_TEXT | Resultatkategori
+a|
+* Vellykket i henhold til intensjon (no.onk.behandling.resultatkategori: 1)
+* Ikke vellykket i henhold til intensjon (no.onk.behandling.resultatkategori: 2)
+* Usikkert (no.onk.behandling.resultatkategori: 3)
+
+
+For eksempel: vellykket, ikke vellykket, usikkert.
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Legemiddelsammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Legemiddelsammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.medication_summary.v1_
+|at0002| 1..1| DV_TEXT | Navn på kur/medikament
+a|
+
+
+Navn på legemiddel kan representeres som en generisk substans, handelsnavn, gruppe eller klasse av legemidler. Det anbefales å kode "Navn på legemiddel" med en terminologi om mulig, slik at det kan brukes for eksempel i beslutningsstøtte. Fritekst bør bare benyttes der det ikke finnes en passende terminologi.
+For eksempel: '"Adriamycin"; "doxorubicin" eller "anthracycliner"; "Fosamax", "alendronsyre" eller "bifosonater".
+|at0009| 0..1| DV_DATE_TIME | Startdato for bruk
+|
+
+
+Kan være en deldato, for eksempel kun årstall.
+|at0015| 0..1| DV_QUANTITY | Kumulativ mengde
+|
+
+
+For eksempel: monitorering av kumulativ mengde av doxorubicin.
+Kan regnes ut manuelt eller utledes via ulike kilder, som for eksempel kurvesystemet eller andre deler av den elektroniske pasientjournalen.
+|at0010| 0..1| DV_DATE_TIME | Sluttdato for bruk
+|
+
+
+Kan være en deldato, for eksempel kun årstall.
+|at0006| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+== Stråleterapi
+== Intervensjonssammendrag
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Intervensjonssammendrag* + 
+EVALUATION: _openEHR-EHR-EVALUATION.intervention_summary_onk_no.v1_
+|at0003| 1..1| DV_CODED_TEXT | Intervensjonsnavn
+a|
+* Radiotherapy (procedure) (SNOMED-CT: 1287742003)
+
+
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+|at0059| 0..1| DV_CODED_TEXT | Behandling for krefttype
+a|
+* Sarkom (no.onk.kreftgruppering: 1)
+* Kreft i hode og hals (no.onk.kreftgruppering: 2)
+* Hjernesvulst (no.onk.kreftgruppering: 3)
+* Brystkreft (no.onk.kreftgruppering: 4)
+* Lungekreft (no.onk.kreftgruppering: 5)
+* Kreft i fordøyelsessystemet (no.onk.kreftgruppering: 6)
+* Gynekologisk kreft (no.onk.kreftgruppering: 7)
+* Kreft i nyre og urinveier (no.onk.kreftgruppering: 8)
+* Benmargs- og blodkreft (no.onk.kreftgruppering: 9)
+* Lymfom (no.onk.kreftgruppering: 10)
+* Hudkreft (no.onk.kreftgruppering: 11)
+* Kreft i mannlige kjønnsorganer (no.onk.kreftgruppering: 12)
+* Kreft i endokrine kjertler (no.onk.kreftgruppering: 13)
+* Nevroendokrin kreft (no.onk.kreftgruppering: 14)
+* Barnekreft (no.onk.kreftgruppering: 15)
+* Øyekreft (no.onk.kreftgruppering: 16)
+* Svulst av ukjent opprinnelse / Annet (no.onk.kreftgruppering: 17)
+
+
+For eksempel «Kreftbehandling», «Psykososial» eller «Kirurgi».
+
+**Skal denne være med?
+|at0058| 0..1| DV_CODED_TEXT | Intervensjonstype
+a|
+* Fotonterapi - Stråle (ekstern) (SNOMED-CT: 1156506007)
+* Protonterapi -Stråle (ekstern) (SNOMED-CT: 10611004)
+* Elektronterapi - Stråle (ekstern) (SNOMED-CT: 45643008)
+* Brakyterapi - Stråle (intern) (SNOMED-CT: 152198000)
+* Radioisotope/systemisk radionuklidebehandling - Stråle (intern) (SNOMED-CT: 399315003)
+* Partikkelstråleterapi (karbon eller proton) (SNOMED-CT: WEOC)
+* Karbonterapi (SNOMED-CT: WEOC10)
+* Protonterapi (NKPK) (SNOMED-CT: WEOC00)
+* Ekstern stråleterapi (SNOMED-CT: WEOA)
+* Brakyterapi (SNOMED-CT: WEOB)
+* Stråleterapi (SNOMED-CT: WE)
+* External beam radiation therapy particulate radiation (procedure) (SNOMED-CT: 113117004)
+* External beam radiation therapy using carbon ions (procedure) (SNOMED-CT: 1156505006)
+
+
+** Se på kodesettet
+|at0028| 0..1| DV_TEXT | Beskrivelse av stråleintervensjonen
+a|
+|at0054| 0..1| DV_TEXT | Protokollnavn
+a|
+|at0055| 1..1| DV_CODED_TEXT | Terapeutisk rolle
+a|
+* Hovedbehandling (no.onk.behandling.kategori: 1)
+
+
+For eksempel hovedbehandling, neoadjuvant, samtidig (concomitant), adjuvant, preoperativ eller postoperativ.
+|at0032| 0..1| DV_DATE_TIME | Dato første fraksjon
+|
+
+
+For eksempel datoen da den første i en serie med cellegiftinfusjoner startet.
+|at0004| 0..1| DV_DATE_TIME | Dato siste fraksjon
+|
+
+
+For eksempel datoen da den siste i en serie med cellegiftinfusjoner ble gitt.
+|at0005| 0..1| DV_CODED_TEXT | Fullføringsstatus
+a|
+* at0021 -> Fullført 
+* at0022 -> Ikke fullført 
+* at0060 -> Ukjent 
+|at0007| 0..1| DV_TEXT | Årsak til fullføringsstatus
+a|
+
+
+Koding med en terminologi er foretrukket, dersom det er mulig.
+|at0018| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|at0057| 0..1| DV_TEXT | Stråleterapi course ID
+a|
+|====
