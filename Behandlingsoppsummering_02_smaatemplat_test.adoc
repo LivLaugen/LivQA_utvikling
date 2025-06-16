@@ -1,7 +1,7 @@
 = Behandlingsoppsummering
 :toc:
 :toc-title: Innholdsfortegnelse
-:toclevels: 3
+:toclevels: 2
 
 
 == Metadata
