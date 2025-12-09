@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "623d0252efe4b77fb0d495de33e49bd6",
+      "MD5-CAM-1.0.1" : "84f2be9c9677329bc5116cdb337d5cd3",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -18613,33 +18613,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "73056007",
-                    "value" : "Høyre bryst"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "19654004",
-                    "value" : "Høyre aksilleregion"
-                  }, {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "74964007",
-                    "value" : "Annet (spesifiser)"
-                  } ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -18732,7 +18706,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0055.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -18745,12 +18718,13 @@
                 "rmAttributeName" : "defining_code",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+                  "constraint" : [ "ac0.186" ],
+                  "selectedTerminologies" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -18783,6 +18757,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "sl" : {
@@ -18791,6 +18771,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "en" : {
@@ -18798,6 +18784,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.184",
+            "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.186",
             "description" : ""
           }
         },
@@ -18821,6 +18813,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -18828,6 +18826,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
+            "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
             "description" : ""
           }
         },
@@ -18837,6 +18841,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "nl" : {
@@ -18844,6 +18854,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
+            "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
             "description" : ""
           }
         },
@@ -18853,6 +18869,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "fr" : {
@@ -18860,6 +18882,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.184",
+            "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
             "description" : ""
           }
         },
@@ -18869,6 +18897,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.184",
             "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
+            "description" : ""
           }
         },
         "es" : {
@@ -18876,6 +18910,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.184",
+            "description" : ""
+          },
+          "ac0.186" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.186",
             "description" : ""
           }
         }
@@ -19806,6 +19846,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.184",
           "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.185" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.185",
+          "members" : [ "at0062" ]
+        },
+        "ac0.186" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.186",
+          "members" : [ "at0062" ]
         }
       }
     },
@@ -20304,7 +20354,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille",
+            "text" : "Lesjon/funn spesifisert",
             "description" : "Et tilfeldig eller tvetydig funn eller observasjon av en anomali som fraviker fra det som er forventet eller normalt i en identifisert kroppsstruktur eller region, gjort ved bildediagnostisk undersøkelse.",
             "comment" : "Designkommentar:\nHer brukes arketypen CLUSTER.imaging_exam_anomaly_dips.v1 - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. \nI denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn.\n"
           },
@@ -20570,25 +20620,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT",
-                    "code" : "735379000",
-                    "value" : "Høyre brystvorte"
-                  } ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -20753,7 +20785,7 @@
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079.1",
-            "text" : "Brystvorte",
+            "text" : "Midtpunkt",
             "description" : "Stedet på kroppen som brukes som referansepunkt for midtpunktet i den tenkte sirkelen.",
             "comment" : "Designkommentar:\nMidtpunkt er satt som brystvorte."
           },
