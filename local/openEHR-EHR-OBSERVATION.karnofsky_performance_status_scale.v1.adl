@@ -1,12 +1,19 @@
-archetype (adl_version=1.4; uid=62ea8bed-06f8-46eb-933e-1cde8db053cc)
+﻿archetype (adl_version=1.4; uid=2ba05447-b01d-4a7e-b891-787e71093252)
 	openEHR-EHR-OBSERVATION.karnofsky_performance_status_scale.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Karnofsky Performance Status (KPS) scale
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Natalia Strauch">
+				["organisation"] = <"Medizinische Hochschule Hannover">
+				["email"] = <"Strauch.Natalia@mh-hannover.de">
+			>
+		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
 			author = <
@@ -16,7 +23,7 @@ language
 			language = <[ISO_639-1::nb]>
 			author = <
 				["name"] = <"John Tore Valand, Liv Laugen, Kanika Kuwelker, Vebjørn Arntzen">
-				["organisation"] = <"Helse Vest IKT, Oslo University Hospital, Helse Bergen, Haukeland Universitetssjukehus">
+				["organisation"] = <"Helse Vest IKT, Oslo University Hospital, Helse Bergen">
 				["email"] = <"john.tore.valand@helse-vest-ikt.no, kanika.kuwelker@helse-vest-ikt.no, varntzen@ous-hf.no">
 			>
 		>
@@ -30,54 +37,62 @@ language
 			accreditation = <"MD">
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2019-06-08">
 		["name"] = <"Henry Lenzi">
 		["email"] = <"hank.lenzi@gmail.com">
+		["date"] = <"2019-06-08">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Nuno Abreu, Oporto Hospital Center, Portugal","Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)","Kashmira Bhake, Karkinos Healthcare, India","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Samanta Dallagnese, Prontmed, Brazil","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Anjali Kulkarni, Karkinos, India","Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Siri Laronningen, Kreftregisteret, Norway","Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Bjørn Næss, DIPS ASA, Norway","Norwegian Review Summary, Norwegian Public Hospitals, Norway","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Syeeda S Farruque, Cambio Healthcare Systems","Alexandra Saraiva Leao, Sweden","Natalia Strauch, Medizinische Hochschule Hannover, Germany","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)","Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Ina Wille, Helse-Vest RHF, Norway">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Um den Karnofsky-Index darzustellen. Im Original Karnofsky Performance Status Scale (KPS).">
+			use = <"Der Archetyp wird verwendet, um das Ergebnis einer Bewertung nach Karnofsky-Performance Status (KPS)-Skala darzustellen.
+
+Obwohl in diesem Archetyp auf die Originalarbeit von Karnofsky et al. aus dem Jahr 1949 verwiesen wird, war es nicht möglich, eine Nachbildung zu erhalten, um den ursprünglichen Inhalt sicherzustellen. Dieser Archetyp wurde jedoch so konzipiert, dass er eher die praktische Verwendung den Karnofsky-Index als ein akademisches Konstrukt widerspiegelt, und der aktuelle Wortlaut spiegelt Beschreibungen wider, die in den anderen Referenzen allgemein verwendet werden.">
+			keywords = <"KPS", "Bewertung", "funktionell", "Leistung", "Onkologie", "Krebs", "Karnofsky", "Status", "Qualität", "Skala", "Score", "Index">
+			misuse = <"Darf nicht verwendet werden, um Variationen der Karnofsky-Performance Status-Skala darzustellen, wie z. B. der Thorne-modified Karnofsky-Performance Status (TKPS) oder der Australian-modified Karnofsky-Performance Status (AKPS). Verwenden Sie dazu zweckspezifische Archetypen.">
+		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
 			purpose = <"*To record the result of a Karnofsky Performance Status (KPS) scale assessment. (en)">
-			keywords = <"*KPS (en)","*assessment (en)","*functional (en)","*performance (en)","*oncology (en)","*cancer (en)","*Karnofsky (en)","*status (en)","*quality (en)","*score (en)","*index (en)">
 			use = <"*Use to record the result of a Karnofsky Performance Status (KPS) scale assessment.
 
 While the original 1949 paper by Karnofsky et al is referenced in this archetype, it has not been possible to obtain a copy to verify the original content. However, this archetype has been designed to reflect the practical use of Karnofsky Performance Status scale rather than an academic construct, and and the current wording reflects descriptions found in common use within the other references. (en)">
+			keywords = <"*KPS (en)", "*assessment (en)", "*functional (en)", "*performance (en)", "*oncology (en)", "*cancer (en)", "*Karnofsky (en)", "*status (en)", "*quality (en)", "*score (en)", "*index (en)">
 			misuse = <"*Not to be used to record variations of the KPS scale, such as the Thorne-modified Karnofsky (TKPS) or the Australia-modified Karnofsky (AKPS). Use purpose-specific archetypes for this purpose. (en)">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere resultatet av Karnofsky Performance Status (KPS) scale.">
-			keywords = <"KPS","vurdering","funksjonell","funksjon","onkologi","kreft","Karnofsky","status","ytelse","aktivitet","palliativ","skår","indeks">
 			use = <"Brukes til å registrere resultatet av Karnofsky Performance Status (KPS) scale.
 
 Selv om den originale artikkelen av Karnofsky et al fra 1949 er referert i denne arketypen, har det ikke vært mulig å finne en kopi av originalartikkelen for å verifisere innholdet opp mot den. Denne arketypen har derfor blitt utarbeidet for å reflektere den praktiske bruken av Karnofsky Performance Status scale, i stedet for å være en ren akademisk konstruksjon. Ordlyden er derfor basert på beskrivelser som er funnet i de andre referansene og som er i praktisk bruk.">
-			misuse = <"Brukes ikke til å registrere variasjoner av KPS skala, slik som Thorne-modifisert Karnofsky (TKPS) eller Australia-modifisert Karnofsky (AKPS). Bruk spesifikke arketyper til dette formålet.">
+			keywords = <"KPS", "vurdering", "funksjonell", "funksjon", "onkologi", "kreft", "Karnofsky", "status", "ytelse", "aktivitet", "palliativ", "skår", "indeks">
+			misuse = <"Brukes ikke til å registrere variasjoner av KPS skala, slik som Thorne-modifisert Karnofsky (TKPS) eller Australia-modifisert Karnofsky (AKPS). Bruk formålsspesifikke arketyper til dette formålet.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the result of a Karnofsky Performance Status (KPS) scale assessment.">
-			keywords = <"KPS","assessment","functional","performance","oncology","cancer","Karnofsky","status","quality","score","index">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record the result of a Karnofsky Performance Status (KPS) scale assessment.
 
 While the original 1949 paper by Karnofsky et al is referenced in this archetype, it has not been possible to obtain a copy to verify the original content. However, this archetype has been designed to reflect the practical use of Karnofsky Performance Status scale rather than an academic construct and the current wording reflects descriptions found in common use within the other references.">
+			keywords = <"KPS", "assessment", "functional", "performance", "oncology", "cancer", "Karnofsky", "status", "quality", "score", "index">
 			misuse = <"Not to be used to record variations of the KPS scale, such as the Thorne-modified Karnofsky (TKPS) or the Australia-modified Karnofsky (AKPS). Use purpose-specific archetypes for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"Voor het vastleggen van het resultaat van een Karnofsky Performance Status (KPS) schaal meting.">
-			keywords = <"KPS","Meetinstrument","Functioneel","Prestatie","Oncologie","Kanker","Karnofsky","Status","Kwaliteit","Score","Index">
 			use = <"Gebruik voor het vastleggen voor de uitslag van een Karnofsky Performace Status (KPS) schaal meting. 
 
 Hoewel de originele publicatie van Karnofsky er al. uit 1949 als referentie is opgegeven in dit archetype, bleek het niet mogelijk dit origineel te verkrijgen ter verificatie van de originele inhoud. Echter is dit archetype ontwikkeld voor het praktisch gebruik van de KPS in plaats van een academische bron te zijn en de huidige verwoording geeft de beschrijvingen weer zoals gevonden in de andere referenties.">
+			keywords = <"KPS", "Meetinstrument", "Functioneel", "Prestatie", "Oncologie", "Kanker", "Karnofsky", "Status", "Kwaliteit", "Score", "Index">
 			misuse = <"Niet te gebruiken voor het vastleggen van variaties op de KPS schaal, zoals de Thorne-modified Karnofosky (TKPS) of de Australië aangepaste Karnofsky (AKPS). Gebruik archetypes die speciaal daarvoor ontwikkeld zijn.">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Nuno Abreu, Oporto Hospital Center, Portugal", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Astrid Askeland, Dips AS, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Kashmira Bhake, Karkinos Healthcare, India", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Samanta Dallagnese, Prontmed, Brazil", "Are Edvardsen, SKDE, Helse Nord RHF, Norway", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)", "Joost Holslag, Nedap, Netherlands", "Evelyn Hovenga, EJSH Consulting, Australia", "Anjali Kulkarni, Karkinos, India", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Siri Laronningen, Kreftregisteret, Norway", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Syeeda S Farruque, Cambio Healthcare Systems", "Alexandra Saraiva Leao, Sweden", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -94,10 +109,10 @@ Oncoline [Online]. Integraal Kankercentrum Nederland. Appendix 1 - Karnofsky/ECO
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BE2B473934EB5D9FA412411C87201559">
-		["build_uid"] = <"5018ca9f-460a-4315-95b5-2be2bf934f51">
+		["MD5-CAM-1.0.1"] = <"C5295942ACCCC02840EFBECAA609187A">
+		["build_uid"] = <"0f9accd7-cc76-4dcd-bcfb-56d69c797828">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"1.0.0">
+		["revision"] = <"1.0.2">
 	>
 
 definition
@@ -142,6 +157,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -455,8 +471,85 @@ ontology
 				>
 			>
 		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Karnofsky-Performance Status (KPS-Skala)">
+					description = <"Eine Bewertungsskala zur Quantifizierung der funktionellen Leistungsfähigkeit einer Person.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Beliebiges Ereignis">
+					description = <"Standardwert, ein undefinierter Zeitpunkt, der explizit im Template oder zur Laufzeit der Anwendung definiert werden kann.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Karnofsky-Performance Status">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Tot">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Sterbend; fatale Prozesse, die schnell voranschreiten">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Schwerkrank; stationäre Aufnahme erforderlich; aktive supportive Behandlung notwendig">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Schwerbehindert; stationäre Aufnahme ist angezeigt, obwohl der Tod nicht unmittelbar bevorsteht">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Behindert; erfordert qualifizierte Pflege und Hilfe">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Benötigt beträchtliche Unterstützung und häufige medizinische Versorgung">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Benötigt gelegentlich fremde Hilfe, ist aber in der Lage, sich um die meisten seiner persönlichen Bedürfnisse zu kümmern">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Selbstversorgend; unfähig, einer normalen Tätigkeit nachzugehen oder aktiv zu arbeiten">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Normale Aktivität mit Anstrengung; einige Anzeichen oder Symptome der Krankheit">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"In der Lage, normale Aktivitäten fortzusetzen; geringe Anzeichen oder Symptome einer Krankheit">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Normalzustand; weder Beschwerden noch Symptome sind vorhanden">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen, die zur Erfassung lokaler Inhalte oder zur Anpassung an andere Referenzmodelle/Formalismen erforderlich sind.">
+					comment = <"Zum Beispiel: Lokale Informationsanforderungen oder zusätzliche Metadaten, um Verknüpfungen mit FHIR herzustellen.">
+				>
+			>
+		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0000"] = <[SNOMED-CT::273546003]>
