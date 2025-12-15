@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e015c58c3083618594ba5e99a900747e",
+      "MD5-CAM-1.0.1" : "c26bb86f76c8b9d81147a1aa45e6446e",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "6.0.0",
+      "sem_ver" : "6.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -1470,7 +1470,7 @@
             "code" : "at0012.1",
             "text" : "Beliggenhet",
             "description" : "Registrering av det anatomisk stedet der diagnosen er lokalisert.",
-            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\n--- skal det her kun være overordnet kategorisering? og så heller bruke cluster anatomisk lokalisering.\n\n\n1: skal man kanskje her i parorganer si at det er høyre eller venstre kroppsdel (spesifisert f.eks. høyre bryst, venstre bryst), når man velger høyre bryst så settes man automatisk anatomisk lokalisering cluster for mamma (ikke side)og side i arketypen. \n\n"
+            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\n--- skal det her kun være overordnet kategorisering? og så heller bruke cluster anatomisk lokalisering.\n\n\n1: skal man kanskje her i parorganer si at det er høyre eller venstre kroppsdel (spesifisert f.eks. høyre bryst, venstre bryst), når man velger høyre bryst så settes man automatisk anatomisk lokalisering cluster for mamma (ikke side)og side i arketypen. \n\nparorgen da setter man spesifikk kode for den siden, mens på sarkom har man en gruppering her f.eks. bløtvev, gentalia osv. \n\n"
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
