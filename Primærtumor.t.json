@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c26bb86f76c8b9d81147a1aa45e6446e",
+      "MD5-CAM-1.0.1" : "0b112feafe15ecef8bffdc51ed180bd0",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "6.0.1",
+      "sem_ver" : "7.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -4046,22 +4046,30 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "373795004",
                     "value" : "Bekreftet (kreftdiagnose på grunnlag av kliniske funn)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Bekreftet (kreftdiagnose på grunnlag av kliniske funn)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "269497004",
                     "value" : "Usikker  (usikker om tumor er beningn eller malign)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Usikker  (usikker om tumor er beningn eller malign)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "109889007",
                     "value" : "Forstadium (DCIS)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Forstadium (DCIS)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "395100000",
                     "value" : "Ingen tegn til malign neoplasme/kreft",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Ingen tegn til malign neoplasme/kreft"
+                    }
                   } ]
                 } ]
               } ],
@@ -5130,7 +5138,15 @@
             "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
           }
         },
-        "zh-cn" : { }
+        "zh-cn" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "问题/诊断 (2)",
+            "description" : "关于单个已明确的健康状况、损伤、残疾或任何其他影响个人身体健康、心理健康和/或社会福祉的问题/事项的详情。",
+            "comment" : "在实践当中，问题与诊断范围的明确区分/划定并非易事。对于利用本原始型的临床文档记录目的来说，在此会将问题与诊断视为统一的连续体系，且由问题到诊断，不断增加的细节水平和支持性证据通常会为“诊断”标签带来更大的权重。"
+          }
+        }
       },
       "termBindings" : {
         "ICD10" : {
@@ -6448,7 +6464,15 @@
             "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
           }
         },
-        "zh-cn" : { }
+        "zh-cn" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "问题/诊断 (3)",
+            "description" : "关于单个已明确的健康状况、损伤、残疾或任何其他影响个人身体健康、心理健康和/或社会福祉的问题/事项的详情。",
+            "comment" : "在实践当中，问题与诊断范围的明确区分/划定并非易事。对于利用本原始型的临床文档记录目的来说，在此会将问题与诊断视为统一的连续体系，且由问题到诊断，不断增加的细节水平和支持性证据通常会为“诊断”标签带来更大的权重。"
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -46605,7 +46629,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0018",
+          "occurrences" : "0..0",
+          "nodeId" : "at0018.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -46657,7 +46682,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0165",
+          "occurrences" : "0..0",
+          "nodeId" : "at0165.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -46688,7 +46714,8 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0190",
+          "occurrences" : "0..0",
+          "nodeId" : "at0190.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
