@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "3f6ca0bd26f244262c60481ff2662dab",
+      "MD5-CAM-1.0.1" : "54e78411b6083a43c065da6bb2cb87dc",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "7.1.0",
+      "sem_ver" : "7.2.0",
       "build_uid" : ""
     },
     "details" : {
@@ -229,15 +229,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-004.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.6",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-003.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -17008,449 +16999,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "2f8ed048-700f-4ffd-9e18-862c06bd68d1",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : {
-        "date" : "2025-05-28"
-      },
-      "otherContributors" : [ ],
-      "lifecycleState" : {
-        "codeString" : "unmanaged"
-      },
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-        "custodian_organisation" : "openEHR Foundation",
-        "original_namespace" : "org.openehr",
-        "original_publisher" : "openEHR Foundation",
-        "custodian_namespace" : "org.openehr",
-        "MD5-CAM-1.0.1" : "8c3d85246e1b681457c50c36b6cb2c3c",
-        "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ru" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ru"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sl"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "it" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "it"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es"
-          },
-          "purpose" : "Per proporcionar una capçalera de secció genèrica que es canviarà de nom en una plantilla per adaptar-se a un context clínic específic.",
-          "keywords" : [ ],
-          "use" : "Utilitzar-se per construir un encapçalament de secció en una plantilla que es canviarà de nom per adaptar-se al context clínic específic. Per exemple: \"Encapçalament ad hoc\" canviat de nom a \"Conclusió de l'examen\".",
-          "misuse" : "No es deixarà sense canvis en una plantilla.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-pt" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-pt"
-          },
-          "purpose" : "Para fornecer um cabeçalho de secção genérico que será renomeado ao nível do template para se adequar a um contexto clínico específico.",
-          "keywords" : [ ],
-          "use" : "Use para criar um título de secção ao nível do template que será renomeado para se adequar ao contexto clínico específico. Por exemplo: «Título ad hoc» renomeado para «Resultados do exame».",
-          "misuse" : "Não deve ser deixado inalterado ao nível do template.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ca" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ca"
-          },
-          "purpose" : "Proporcionar un encapçalament de secció genèric que serà rebatejat en una plantilla per adaptar-se a un context clínic específic.",
-          "keywords" : [ ],
-          "use" : "Utilitzar per a construir un encapçalament de secció en una plantilla que serà rebatejada per adaptar-se al context clínic específic. Per exemple: «Títol ad hoc» rebatejat a «Resultats de l'examen».",
-          "misuse" : "No s'ha de deixar sense canvis en una plantilla.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-SECTION.ovl-adhoc-003.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "SECTION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
-          }
-        },
-        "ru" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Образец заголовка раздела"
-          }
-        },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico."
-          }
-        },
-        "sl" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Naslov sekcije"
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn",
-            "description" : "Klinikers vurdering av bildediagnostikk av et funn/lesjon med eventuelt tilhørende patologiresultat.",
-            "comment" : "- vurdere å lage egen templat arketype\n\nDesignkommentar:\nKlinikers vurdering av bildediagnostikk av et funn/lesjon med eventuelt tilhørende patologiresultat.\n\nHovedoverskriften er orientert rundt Lesjon/funn - det kan være mer generelle funn her, f.eks. en kalsifikasjon i hele brystet, en skygge eller en lesjon. \nMeningen er at bildediagnostikk og vevs- eller celleprøven kan nøstes sammen for å kunne linke disse sammen. Dette gjøres ved å ha samme ID på lesjon/funn i bildediagnostikk arketypen og laboratoriearketypen. "
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Um cabeçalho de sessão genérico que deve ser renomeado no template para adequar-se a um contexto clínico específico."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte."
-          }
-        },
-        "it" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Un'intestazione di sezione generica che dovrebbe essere rinominata in un template per adattarsi ad uno specifico contesto clinico."
-          }
-        },
-        "fr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Lesjon/funn i bryst og aksille høyre",
-            "description" : "Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique."
-          }
-        },
-        "ca" : { },
-        "es" : { },
-        "pt-pt" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "55d25d5f-6693-3233-98c4-c97b4f6c7845",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ru"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "it"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-pt"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ca"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com, lauramoral@catsalut.cat"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "c14c6e6c-a9d7-42fb-8f4e-3876865d16a6",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -20406,32 +19954,44 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110493007",
                     "value" : "Sentralt",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Sentralt"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110496004",
                     "value" : "Øvre ytre kvadrant",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Øvre ytre kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110494001",
                     "value" : "Øvre indre kvadrant",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Øvre indre kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110497008",
                     "value" : "Nedre ytre kvadrant",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Nedre ytre kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "110495000",
                     "value" : "Nedre indre kvadrant",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Nedre indre kvadrant"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "735379000",
                     "value" : "Brystvorte",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Brystvorte"
+                    }
                   } ]
                 } ]
               } ],
@@ -20473,17 +20033,23 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "30807003",
                     "value" : "Benign",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Benign"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "64957009",
                     "value" : "Usikker",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Usikker"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "415684004",
                     "value" : "Suspekt",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Suspekt"
+                    }
                   } ]
                 } ]
               } ],
@@ -28774,7 +28340,9 @@
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "108257001",
                                 "value" : "Anatomic pathology procedure",
-                                "translations" : { }
+                                "translations" : {
+                                  "nb" : "Anatomic pathology procedure"
+                                }
                               } ]
                             } ]
                           } ],
@@ -29987,12 +29555,16 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "119376003",
                     "value" : "Vev",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Vev"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "48469005",
                     "value" : "Cytologisk materiale",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Cytologisk materiale"
+                    }
                   } ]
                 } ]
               } ],
@@ -30103,42 +29675,58 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "122548005",
                     "value" : "Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "771625002",
                     "value" : "Vakuumbiopsi av lesjon i mamma",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Vakuumbiopsi av lesjon i mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "274331003",
                     "value" : "Kirurgisk biopsi av mamma",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Kirurgisk biopsi av mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "10940003",
                     "value" : "Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "234271004",
                     "value" : "Biopsi av aksillær lymfeknute (grovnål)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Biopsi av aksillær lymfeknute (grovnål)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "58347006",
                     "value" : "Kirurgisk eksisjon av lymfeknute (tilfeldig funn av lymfeknute) (lymfadenektomi)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Kirurgisk eksisjon av lymfeknute (tilfeldig funn av lymfeknute) (lymfadenektomi)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "387736007",
                     "value" : "FNAC (finnålsaspirasjon) av mamma",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "FNAC (finnålsaspirasjon) av mamma"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "234282007",
                     "value" : "FNAC (finnålsaspirasjon) av lymfeknute i aksille",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "FNAC (finnålsaspirasjon) av lymfeknute i aksille"
+                    }
                   } ]
                 } ]
               } ],
@@ -30753,17 +30341,23 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "73056007",
                     "value" : "Høyre bryst",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Høyre bryst"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "19654004",
                     "value" : "Høyre aksilleregion",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Høyre aksilleregion"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
                     "value" : "Annet (spesifiser)",
-                    "translations" : { }
+                    "translations" : {
+                      "nb" : "Annet (spesifiser)"
+                    }
                   } ]
                 } ]
               } ],
