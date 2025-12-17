@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "54e78411b6083a43c065da6bb2cb87dc",
+      "MD5-CAM-1.0.1" : "93464c130594132ceca2918df4ad961d",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "7.2.0",
+      "sem_ver" : "7.3.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1014,7 +1014,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0079.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1039,7 +1038,9 @@
                         "terminologyId" : "SNOMED-CT",
                         "code" : "399506006",
                         "value" : "Multifokal tumor",
-                        "translations" : { }
+                        "translations" : {
+                          "nb" : "Multifokal tumor"
+                        }
                       } ]
                     } ]
                   } ],
@@ -1452,7 +1453,7 @@
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079.1",
-            "text" : "Tumorutbredelsesmønster",
+            "text" : "Variant",
             "description" : "Multifokalitet - dvs. to eller flere svulster i samme bryst. ",
             "comment" : "Designkommentar:\nLagres hvis denne er krysset denne ut at det er multifokal tumor. \n\nBruker koden - 399506006  Multifocal tumor (finding), Definisjon: Den er enten multifokal eller multisentrisk brystkreft. \" multifocality and multicentricity has been based on the anatomic quadrant of the breast, i.e., multiple foci in the same quadrant being labeled multifocal, with the designation of multicentric disease being reserved for foci in more than one quadrant.\""
           },
@@ -1468,7 +1469,7 @@
             "code" : "at0002.1",
             "text" : "Diagnose",
             "description" : "Diagnose er satt til neoplastisk sykdom.",
-            "comment" : "Designkommentar:\nDenne skal ikke vises i skjermbildet, men settes skjult. Da trenger ikke diagnosen å være obligatorisk, og den finnes i clusteret Problem/diagnose detaljer. \n"
+            "comment" : "Designkommentar:\nDenne skal ikke vises i skjermbildet, men settes default skjult. Dermed trenger ikke diagnosen å være obligatorisk, noe som kan være vanskelig i utredningsøyeblikket. Selve diagnosen som de settes i utredningen settes inn i arketypen \"CLUSTER.problem_diagnosis_dips.v1\". \n"
           },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
