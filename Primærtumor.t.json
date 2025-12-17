@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e698d73d6c2c2a1a8f91b4c91e95c52b",
+      "MD5-CAM-1.0.1" : "c85ccf2dc77c1c5d2424a8c3184849cb",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "10.0.0",
+      "sem_ver" : "10.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -45392,7 +45392,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.5" ],
+                  "constraint" : [ "ac0.295" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -45493,16 +45493,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45513,16 +45513,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45533,16 +45533,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45551,12 +45551,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.4",
-            "description" : ""
-          },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
             "description" : ""
           },
           "at0001.1" : {
@@ -45573,6 +45567,13 @@
             "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
             "comment" : "Designkommentar:\nDenne er av og til brukt til å si spesifikt sted - og vi ønsker av og til å si at det er til høyre for eller venstre for eller midlinjen for et organ, ikke kroppssiden. Kunne man da ha brukt følgende koder_\n\n272139009 - Left direction (qualifier value)\n264745005 - To the left (qualifier value)\n264731004 -  Lateral to the left (qualifier value)\n\n272138001 - Right direction (qualifier value)\n264746006 - To the right (qualifier value)\n264732006 - Lateral to the right (qualifier value)\n"
           },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Kroppsside",
+            "description" : "Den identifiserte kroppssiden.",
+            "comment" : "Designkommentar:\n"
+          },
           "at0055.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0055",
@@ -45585,12 +45586,18 @@
             "code" : "at0065.1",
             "text" : "Spesifikt sted",
             "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
-            "comment" : "Designkommentar \n\nspm. kunne man brukt denne for å speisfisere til venstre for, til høyre for, i midten av et organ? \nF.eks. ved å bruke kodene \n\n-264731004\t Lateral to the left (qualifier value) (topografisk modifikator)\n-264732006\t Lateral to the right (qualifier value)\n(topografisk modifikator)\n- 260528009\t Median (Middle) (qualifier value)\t(selve senterlinjen)\n-255561001\t Medial (qualifier value)\t(nær midline, men ikke nødvendigvis på den).\n- 272442009\t Mid-location (qualifier value) (General site descriptor, topografisk modifikator)\n- 399488007\t Midline (qualifier value) (Denne er under Mid-location,  Anatomical relationship descriptor)\n\n\"https://hsorhf.sharepoint.com/:x:/r/sites/OUSHF-X-Strukturertkreftjournal/Shared%20Documents/General/Kodeverk/Relativ%20anatomisk%20lokalisering.xlsx?d=w9bef0a1d916846f1ad624e9add162c1d&csf=1&web=1&e=FnCNAf\"\n\n\n"
+            "comment" : "Designkommentar \n\n****spm. kunne man brukt denne for å speisfisere til venstre for, til høyre for, i midten av et organ? \nMen se også relativ anatomisk lokalisering. \n\nF.eks. ved å bruke kodene \n-264731004\t Lateral to the left (qualifier value) (topografisk modifikator)\n-264732006\t Lateral to the right (qualifier value)\n(topografisk modifikator)\n- 260528009\t Median (Middle) (qualifier value)\t(selve senterlinjen)\n-255561001\t Medial (qualifier value)\t(nær midline, men ikke nødvendigvis på den).\n- 272442009\t Mid-location (qualifier value) (General site descriptor, topografisk modifikator)\n- 399488007\t Midline (qualifier value) (Denne er under Mid-location,  Anatomical relationship descriptor)\n\n\"https://hsorhf.sharepoint.com/:x:/r/sites/OUSHF-X-Strukturertkreftjournal/Shared%20Documents/General/Kodeverk/Relativ%20anatomisk%20lokalisering.xlsx?d=w9bef0a1d916846f1ad624e9add162c1d&csf=1&web=1&e=FnCNAf\"\n\n\n"
           },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45601,16 +45608,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45621,16 +45628,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45641,16 +45648,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45661,16 +45668,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45681,16 +45688,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45701,16 +45708,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         },
@@ -45721,16 +45728,16 @@
             "code" : "ac0.4",
             "description" : ""
           },
-          "ac0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.5",
-            "description" : ""
-          },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.277",
+            "description" : ""
+          },
+          "ac0.295" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.295",
             "description" : ""
           }
         }
@@ -47126,6 +47133,96 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.277",
           "members" : [ "at0062" ]
+        },
+        "ac0.278" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.278",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.279" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.279",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.280" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.280",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.281" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.281",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.282" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.282",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.283" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.283",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.284" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.284",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.285" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.285",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.286" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.286",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.287" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.287",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.288" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.288",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.289" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.289",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.290" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.290",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.291" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.291",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.292" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.292",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.293" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.293",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.294" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.294",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.295" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.295",
+          "members" : [ "at0003", "at0004" ]
         }
       }
     },
