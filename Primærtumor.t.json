@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2e14c2d01d7a630b3b5f718be78915a2",
+      "MD5-CAM-1.0.1" : "295a69736f9e03b80d7ed6af4875b6fd",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "11.0.0",
+      "sem_ver" : "11.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -2141,7 +2141,7 @@
             "code" : "at0003.1",
             "text" : "Tumorutbredelsesmønster",
             "description" : "Multifokalitet - dvs. to eller flere svulster i samme bryst. ",
-            "comment" : "Designkommentar:\nSkal være avkryssing. \nLagres hvis denne er krysset denne ut at det er multifokal tumor. \n\nBruker koden - 399506006  Multifocal tumor (finding), Definisjon for multifokal brystkreft: Den er enten multifokal eller multisentrisk brystkreft. \" multifocality and multicentricity has been based on the anatomic quadrant of the breast, i.e., multiple foci in the same quadrant being labeled multifocal, with the designation of multicentric disease being reserved for foci in more than one quadrant.\" \nBruker koden 399506006  Multifocal tumor (finding) , for bryst vil da definisjonen være Multifokalitet - dvs. to eller flere svulster i samme bryst. Og så må man bruke kontekst for definisjonen av multifokal tumor."
+            "comment" : "Designkommentar:\nSkal være avkryssing. \nLagres hvis denne er krysset denne ut at det er multifokal tumor. \n\nBruker koden - 399506006  Multifocal tumor (finding), \nMultifokalitet er vanskelig for det er litt forskjellige definisjoner / bruk i de forskjellige kreftformene. \n\nFor solide svulster brukes ofte T(m) (lille m) for mulitifokal tumor, spesielt ved cT. Dette fordi det er vanskelig å vite om den er faktisk multifokal (springer ut av samme tumor, men har \"delt seg\" til flere tumorer, eller om det er multiple primærtumorer som defineres i TNM som \"m: multiple primary tumors of the same histology in the same organ\". \n\nDefinisjon for multifokal brystkreft: Den er enten multifokal eller multisentrisk brystkreft. \" multifocality and multicentricity has been based on the anatomic quadrant of the breast, i.e., multiple foci in the same quadrant being labeled multifocal, with the designation of multicentric disease being reserved for foci in more than one quadrant.\" \nBruker koden 399506006  Multifocal tumor (finding) , for bryst vil da definisjonen være Multifokalitet - dvs. to eller flere svulster i samme bryst. Og så må man bruke kontekst for definisjonen av multifokal tumor."
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
