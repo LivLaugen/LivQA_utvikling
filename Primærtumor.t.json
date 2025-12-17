@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c85ccf2dc77c1c5d2424a8c3184849cb",
+      "MD5-CAM-1.0.1" : "fa206ecdbe549eed6c9dd36131876816",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "10.0.1",
+      "sem_ver" : "10.0.2",
       "build_uid" : ""
     },
     "details" : {
@@ -45586,7 +45586,7 @@
             "code" : "at0065.1",
             "text" : "Spesifikt sted",
             "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
-            "comment" : "Designkommentar \n\n****spm. kunne man brukt denne for å speisfisere til venstre for, til høyre for, i midten av et organ? \nMen se også relativ anatomisk lokalisering. \n\nF.eks. ved å bruke kodene \n-264731004\t Lateral to the left (qualifier value) (topografisk modifikator)\n-264732006\t Lateral to the right (qualifier value)\n(topografisk modifikator)\n- 260528009\t Median (Middle) (qualifier value)\t(selve senterlinjen)\n-255561001\t Medial (qualifier value)\t(nær midline, men ikke nødvendigvis på den).\n- 272442009\t Mid-location (qualifier value) (General site descriptor, topografisk modifikator)\n- 399488007\t Midline (qualifier value) (Denne er under Mid-location,  Anatomical relationship descriptor)\n\n\"https://hsorhf.sharepoint.com/:x:/r/sites/OUSHF-X-Strukturertkreftjournal/Shared%20Documents/General/Kodeverk/Relativ%20anatomisk%20lokalisering.xlsx?d=w9bef0a1d916846f1ad624e9add162c1d&csf=1&web=1&e=FnCNAf\"\n\n\n"
+            "comment" : "Designkommentar \n\n****spm. kunne man brukt denne for å speisfisere til venstre for, til høyre for, i midten av et organ? \nMen se også relativ anatomisk lokalisering. \n\nF.eks. ved å bruke kodene \n-264731004\t Lateral to the left (qualifier value) (topografisk modifikator)\n-264732006\t Lateral to the right (qualifier value)\n(topografisk modifikator)\n- 260528009\t Median (Middle) (qualifier value)\t(selve senterlinjen)\n-255561001\t Medial (qualifier value)\t(nær midline, men ikke nødvendigvis på den).\n- 272442009\t Mid-location (qualifier value) (General site descriptor, topografisk modifikator)\n- 399488007\t Midline (qualifier value) (Denne er under Mid-location,  Anatomical relationship descriptor)\n-  261128008  Medial part (qualifier value) (  Anatomical part descriptor_ Part structure)\n\n\"https://hsorhf.sharepoint.com/:x:/r/sites/OUSHF-X-Strukturertkreftjournal/Shared%20Documents/General/Kodeverk/Relativ%20anatomisk%20lokalisering.xlsx?d=w9bef0a1d916846f1ad624e9add162c1d&csf=1&web=1&e=FnCNAf\"\n\n\n"
           },
           "ac0.277" : {
             "@type" : "ARCHETYPE_TERM",
