@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "ef1d51d7203a4f59be8343bea1cb257c",
+      "MD5-CAM-1.0.1" : "1ed2c18ba210379b68e81c2b96eca11b",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "7.4.0",
+      "sem_ver" : "8.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1463,7 +1463,7 @@
             "code" : "at0012.1",
             "text" : "Beliggenhet",
             "description" : "Registrering av det anatomisk stedet der diagnosen er lokalisert.",
-            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nVed parorganer kan man bruke denne for å sette direktekode til kroppssiden og anatomisk sted, f.eks. venstre bryst eller høyre bryst. \nVed slik koding bør man sette navn på kroppssted - den overordnede koden for organet f.eks.  mamma  samt sette kroppsside i clusteret \"anatomisk lokalisering\" i strukturert anatomisk lokalisering slotet. \nI andre tilfeller kan man sette organkoden her og arve den til navn på kroppssted uten å sette side. Dermed har man lik koding på dette i modellen. \n\nI andre tilfeller, f.eks. i sarkom, kan man bruke dette elementet til gruppering av organer som genitalia, bløtvev osv. \n\n\n"
+            "comment" : "Designkommentar:\nRegistrering av det anatomisk stedet der diagnosen er lokalisert.\n\nVed parorganer kan man bruke denne for å sette direktekode til kroppssiden og anatomisk sted, f.eks. venstre bryst eller høyre bryst. \nVed slik koding bør man sette navn på kroppssted - den overordnede koden for organet f.eks.  mamma  samt sette kroppsside i clusteret \"anatomisk lokalisering\" i strukturert anatomisk lokalisering slotet. \nI andre tilfeller kan man sette organkoden her og arve den til navn på kroppssted uten å sette side. Dermed har man lik koding på dette i modellen. \n\nI andre tilfeller, f.eks. i sarkom, kan man bruke dette elementet til gruppering av organer som genitalia, bløtvev osv. \n\nHvis man ønsker å skrive \n\n\n"
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -45355,6 +45355,12 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0065.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -45546,6 +45552,19 @@
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
             "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen."
+          },
+          "at0065" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0065",
+            "text" : "Spesifikt sted",
+            "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
+            "comment" : "Designkommentar:\nDenne er av og til brukt til å si spesifikt sted - og vi ønsker av og til å si at det er til høyre for eller venstre for eller midlinjen for et organ, ikke kroppssiden. Kunne man da ha brukt følgende koder_\n\n272139009 - Left direction (qualifier value)\n264745005 - To the left (qualifier value)\n264731004 -  Lateral to the left (qualifier value)\n\n272138001 - Right direction (qualifier value)\n264746006 - To the right (qualifier value)\n264732006 - Lateral to the right (qualifier value)\n"
+          },
+          "at0065.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0065.1",
+            "text" : "Spesifikt sted",
+            "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet."
           }
         },
         "pt-br" : {
