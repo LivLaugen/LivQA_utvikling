@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "19e4c68ec358928bf2d8ab083104520b",
+      "MD5-CAM-1.0.1" : "1016767b5c2b19042851821ecd0df3ba",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB",
       "original_language" : "ISO_639-1::nb",
-      "sem_ver" : "276.0.0",
+      "sem_ver" : "276.1.0",
       "build_uid" : "4a8e0ae9-5bc9-4429-9d1a-3e377fc6f52b"
     },
     "details" : {
@@ -32223,7 +32223,7 @@
         "children" : [ {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
-          "occurrences" : "0..1",
+          "occurrences" : "0..*",
           "nodeId" : "at0.11",
           "attributes" : [ ],
           "attributeTuples" : [ ],
