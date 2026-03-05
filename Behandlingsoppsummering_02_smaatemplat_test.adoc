@@ -52,7 +52,7 @@ a|
 * Kreftbehandling (no.onk.behandlig.type: 1)
 
 
-For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi». Koding med en ekstern terminologi er foretrukket der det er mulig.
+For eksempel: «Stråleterapi», «Kort intervensjon for røykeslutt» eller «Appendektomi».Koding med en ekstern terminologi er foretrukket der det er mulig.
 |at0059| 1..1| DV_CODED_TEXT | Behandling for krefttype
 a|
 * Sarkom (no.onk.kreftgruppering: 1)
